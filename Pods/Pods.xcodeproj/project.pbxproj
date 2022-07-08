@@ -1,0 +1,1365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EE7320CAB1FEB84DAC5DE11C9FCDBE38 /* Build configuration list for PBXAggregateTarget "FBSDKLoginKit" */;
+			buildPhases = (
+				427658F3E294DB5EF79EE37BA04E64E1 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				A9EE837649E2B6FE214F990788596C62 /* PBXTargetDependency */,
+			);
+			name = FBSDKLoginKit;
+		};
+		28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C320C79E1F381838923FC2BF4FAB74A1 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit" */;
+			buildPhases = (
+				C05801FB1115AB56CF9E73BB6786A73A /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				B0CD437C0BBA8546E54637443F048F6A /* PBXTargetDependency */,
+				847FDCB19BF8828CA239B562DEC3B644 /* PBXTargetDependency */,
+			);
+			name = FBSDKCoreKit;
+		};
+		479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 442545805DAF10650DBA7C00DEAAD47B /* Build configuration list for PBXAggregateTarget "FBAEMKit" */;
+			buildPhases = (
+				A261CEA870C48433C3575F1CCC2BB166 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				8017335E7BE5E4F2AA7C704D34F729C7 /* PBXTargetDependency */,
+			);
+			name = FBAEMKit;
+		};
+		8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 035656960A067353649EA423EF370480 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */;
+			buildPhases = (
+				71CD0B926100C36B517BE2052E600140 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = FBSDKCoreKit_Basics;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3412F9F82958E1D8E5D493CBDD81393D /* Pods-FarmacyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA822294B05162091B7B9C0E741292 /* Pods-FarmacyTests-dummy.m */; };
+		37EF953CF682B014E5F18AA81CC43402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8B69D35406D303406BC8A8BE6F557588 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8BDBFFA4841D22A58AA743564EA19A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B8217E67BE0EBDA067EFD0A2591A7C61 /* Pods-Farmacy-FarmacyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE41CE1F099DB71A29A2DCCF2EA97D29 /* Pods-Farmacy-FarmacyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B85F1E633C922519C1DE68DBD68B9C70 /* Pods-FarmacyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9105FBEFE43FB0FFE68F80CA1948A967 /* Pods-FarmacyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDF606EC4DA998A72CCECBA1A46C8B4D /* Pods-Farmacy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 237873148FB207DF924EC2B8B120FDA8 /* Pods-Farmacy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F399BDAACB4C597485F5D90FA53D997A /* Pods-Farmacy-FarmacyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E96FDDD7CC91B865C975A6A195D284 /* Pods-Farmacy-FarmacyUITests-dummy.m */; };
+		F617042BBBED3F063F9B74FFD846F25A /* Pods-Farmacy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BC176DABD5285F7DBD9DD4D05ABC /* Pods-Farmacy-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02A4BE5D668F3B5CEA0FBEEE1CF2E5CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		0DCA4AA76EC0F317B70DF947EA759CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
+			remoteInfo = FBSDKCoreKit;
+		};
+		210DB81B55581C544B4813A98A7DEBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
+			remoteInfo = FBSDKLoginKit;
+		};
+		455177C95E6246AA992048A75180C235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		57E36C505D9FC9D26D3B1CBB8A4C588D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
+			remoteInfo = FBSDKCoreKit;
+		};
+		61154F5DB11EC1D0B76ABB887B42E1E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D28F7206FEFD4C14BB8719CF219F5ECF;
+			remoteInfo = "Pods-Farmacy";
+		};
+		68246FC3197E59510DAD343F82754EEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		6A8B4B3F4035DA9AE1EC72505527D31E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
+			remoteInfo = FBAEMKit;
+		};
+		8771D5B5E0633C4B7698AF033573B165 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
+			remoteInfo = FBSDKLoginKit;
+		};
+		B4B596AFAD6406CBFBD4F7B5E4E0B35E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
+			remoteInfo = FBAEMKit;
+		};
+		C59C6E8B3308D042FC87FF994BFD41F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		DACF7C5B811CAA003FAD162B4B202ED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
+			remoteInfo = FBAEMKit;
+		};
+		FCABB065035E5FAF2E3A00046BDEFF1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
+			remoteInfo = FBSDKCoreKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		021C119046339CA3FD4779A57310693A /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		03DB54D6C6E018A44014308ED558AB17 /* FBAEMKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBAEMKit.xcframework; path = XCFrameworks/FBAEMKit.xcframework; sourceTree = "<group>"; };
+		03DC3806D6D51648DEDE970DB6ADC0C8 /* Pods-FarmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FarmacyTests.release.xcconfig"; sourceTree = "<group>"; };
+		055F35A855A46DE8568050DBDA4F3215 /* FBSDKLoginKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.release.xcconfig; sourceTree = "<group>"; };
+		0B04280DF2F54308070B5624CCDCF5E5 /* Pods-Farmacy-FarmacyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Farmacy-FarmacyUITests-frameworks.sh"; sourceTree = "<group>"; };
+		0E44BC176DABD5285F7DBD9DD4D05ABC /* Pods-Farmacy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Farmacy-dummy.m"; sourceTree = "<group>"; };
+		19E96FDDD7CC91B865C975A6A195D284 /* Pods-Farmacy-FarmacyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Farmacy-FarmacyUITests-dummy.m"; sourceTree = "<group>"; };
+		1BFA822294B05162091B7B9C0E741292 /* Pods-FarmacyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FarmacyTests-dummy.m"; sourceTree = "<group>"; };
+		237873148FB207DF924EC2B8B120FDA8 /* Pods-Farmacy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Farmacy-umbrella.h"; sourceTree = "<group>"; };
+		24072D45ECBFFF10571F8DE7E0A29780 /* FBSDKCoreKit_Basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.debug.xcconfig; sourceTree = "<group>"; };
+		2420BCB7540A780B6AF0ADCB3ADC92AE /* Pods-Farmacy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Farmacy-frameworks.sh"; sourceTree = "<group>"; };
+		2E33D764651A8BE65FF0CBB02D085F80 /* Pods-Farmacy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Farmacy"; path = Pods_Farmacy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		301548F7BB44B19CB3FC75A48E0E3745 /* Pods-FarmacyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FarmacyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		321E368B049F1CA7DAEDF3E6B0B84379 /* Pods-Farmacy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E8E69D7C40373EB7C9AAA8C31C6561E /* FBSDKCoreKit_Basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.release.xcconfig; sourceTree = "<group>"; };
+		426C22699EF9E897AEBECB2D22AA61B9 /* Pods-Farmacy-FarmacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy-FarmacyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		50CB1837E78B7FF50B90F338B971EEB8 /* Pods-FarmacyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FarmacyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54DE81EE50CD12F5E0A29B5186147536 /* Pods-Farmacy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Farmacy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56EF0EFC931B00CC98D40430A90194AE /* FBSDKCoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.debug.xcconfig; sourceTree = "<group>"; };
+		5FCBF9CD8E7A727C6CD398814AA801EB /* Pods-Farmacy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Farmacy.modulemap"; sourceTree = "<group>"; };
+		634CE559C857C25CD11F8CFC1275D6E3 /* Pods-Farmacy-FarmacyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy-FarmacyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BE5213F5B774A01C96833B6D3087C6D /* FBSDKCoreKit_Basics-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit_Basics-xcframeworks.sh"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A735004D2266C28B48D8AE67B2486F8 /* Pods-FarmacyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FarmacyTests.modulemap"; sourceTree = "<group>"; };
+		7F425DA829755E64862A61B60172CC37 /* Pods-Farmacy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy.release.xcconfig"; sourceTree = "<group>"; };
+		801E164FEC5D4FB901637693081ABF9B /* FBSDKLoginKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKLoginKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		904774319F1098CD4C92BAE5A0510C81 /* Pods-Farmacy-FarmacyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Farmacy-FarmacyUITests.modulemap"; sourceTree = "<group>"; };
+		9105FBEFE43FB0FFE68F80CA1948A967 /* Pods-FarmacyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FarmacyTests-umbrella.h"; sourceTree = "<group>"; };
+		984B6AC039907CE6A7E6716FD0D7E9B4 /* Pods-Farmacy-FarmacyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Farmacy-FarmacyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E831B77285573378F80A5B68FFEB8CA /* Pods-FarmacyTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FarmacyTests-Info.plist"; sourceTree = "<group>"; };
+		A8502AF22D8542D820978BA445ABCD6C /* Pods-FarmacyTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FarmacyTests"; path = Pods_FarmacyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC271F4651EE6ECD3590EC600A95B9A9 /* FBAEMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.release.xcconfig; sourceTree = "<group>"; };
+		AFA210CDA57FBFF5AB1CAC3A2B6D897E /* FBAEMKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBAEMKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy.debug.xcconfig"; sourceTree = "<group>"; };
+		BA95E40CA0F046CC8F164E634803D97F /* Pods-Farmacy-FarmacyUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Farmacy-FarmacyUITests"; path = Pods_Farmacy_FarmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD89167A35A6A57EA6B1B9B9F3F26032 /* FBSDKLoginKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.debug.xcconfig; sourceTree = "<group>"; };
+		C749044868A3FB46DD4FF6746F84D565 /* Pods-FarmacyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FarmacyTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C8C6F8D9A91E61295CE1F306C7255804 /* FBSDKCoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.release.xcconfig; sourceTree = "<group>"; };
+		D2E7697D962BA32517093D8AF288AA77 /* FBSDKCoreKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		E7B318545F108D862B8F30BBF07138B7 /* FBSDKLoginKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKLoginKit.xcframework; path = XCFrameworks/FBSDKLoginKit.xcframework; sourceTree = "<group>"; };
+		EC70EC629D3D1E824E5D47E7961853C0 /* FBAEMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.debug.xcconfig; sourceTree = "<group>"; };
+		F11D1DA174A3DB526A23CBF0ABC73AFB /* Pods-Farmacy-FarmacyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-FarmacyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F661CD9A8497EA7CC870D24138E03BCC /* Pods-Farmacy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-Info.plist"; sourceTree = "<group>"; };
+		F99B0F40D87BE2F52589B9B52F134E2B /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit_Basics.xcframework; path = XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		FE41CE1F099DB71A29A2DCCF2EA97D29 /* Pods-Farmacy-FarmacyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Farmacy-FarmacyUITests-umbrella.h"; sourceTree = "<group>"; };
+		FEB6DCBBF57211924A317AA386981517 /* Pods-Farmacy-FarmacyUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-FarmacyUITests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E2C40320E36EA7252B972880078AD02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BDBFFA4841D22A58AA743564EA19A66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E6F29953AD61681B073D541C3776BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B69D35406D303406BC8A8BE6F557588 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CD27BFC65F737CD09424A1B70EB926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EF953CF682B014E5F18AA81CC43402 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09D3C43B690561F0D90D1630485C6E27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F99B0F40D87BE2F52589B9B52F134E2B /* FBSDKCoreKit_Basics.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11E2D339A8BA269DFDF1CB63DA8CAA97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D764651A8BE65FF0CBB02D085F80 /* Pods-Farmacy */,
+				BA95E40CA0F046CC8F164E634803D97F /* Pods-Farmacy-FarmacyUITests */,
+				A8502AF22D8542D820978BA445ABCD6C /* Pods-FarmacyTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		244E1277BE62D22EEC2BACC7BBB5CA62 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				801E164FEC5D4FB901637693081ABF9B /* FBSDKLoginKit-xcframeworks.sh */,
+				BD89167A35A6A57EA6B1B9B9F3F26032 /* FBSDKLoginKit.debug.xcconfig */,
+				055F35A855A46DE8568050DBDA4F3215 /* FBSDKLoginKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKLoginKit";
+			sourceTree = "<group>";
+		};
+		2C58D0B4869E299587DC419752182C37 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2E7697D962BA32517093D8AF288AA77 /* FBSDKCoreKit-xcframeworks.sh */,
+				56EF0EFC931B00CC98D40430A90194AE /* FBSDKCoreKit.debug.xcconfig */,
+				C8C6F8D9A91E61295CE1F306C7255804 /* FBSDKCoreKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKCoreKit";
+			sourceTree = "<group>";
+		};
+		3AEB5A0D846B0E5B32E1BECB4F05DF12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7B318545F108D862B8F30BBF07138B7 /* FBSDKLoginKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		458876DDAC38E3007E98A962DC2D5740 /* Pods-Farmacy */ = {
+			isa = PBXGroup;
+			children = (
+				5FCBF9CD8E7A727C6CD398814AA801EB /* Pods-Farmacy.modulemap */,
+				54DE81EE50CD12F5E0A29B5186147536 /* Pods-Farmacy-acknowledgements.markdown */,
+				321E368B049F1CA7DAEDF3E6B0B84379 /* Pods-Farmacy-acknowledgements.plist */,
+				0E44BC176DABD5285F7DBD9DD4D05ABC /* Pods-Farmacy-dummy.m */,
+				2420BCB7540A780B6AF0ADCB3ADC92AE /* Pods-Farmacy-frameworks.sh */,
+				F661CD9A8497EA7CC870D24138E03BCC /* Pods-Farmacy-Info.plist */,
+				237873148FB207DF924EC2B8B120FDA8 /* Pods-Farmacy-umbrella.h */,
+				B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */,
+				7F425DA829755E64862A61B60172CC37 /* Pods-Farmacy.release.xcconfig */,
+			);
+			name = "Pods-Farmacy";
+			path = "Target Support Files/Pods-Farmacy";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5F251279E7EBFC16DAD82263B660B227 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFA210CDA57FBFF5AB1CAC3A2B6D897E /* FBAEMKit-xcframeworks.sh */,
+				EC70EC629D3D1E824E5D47E7961853C0 /* FBAEMKit.debug.xcconfig */,
+				AC271F4651EE6ECD3590EC600A95B9A9 /* FBAEMKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBAEMKit";
+			sourceTree = "<group>";
+		};
+		6D4448CE022842FFC47BDD61F8CE2E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				021C119046339CA3FD4779A57310693A /* FBSDKCoreKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DD9324788C70DE6E1D2F553E03E7D30 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BE5213F5B774A01C96833B6D3087C6D /* FBSDKCoreKit_Basics-xcframeworks.sh */,
+				24072D45ECBFFF10571F8DE7E0A29780 /* FBSDKCoreKit_Basics.debug.xcconfig */,
+				3E8E69D7C40373EB7C9AAA8C31C6561E /* FBSDKCoreKit_Basics.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKCoreKit_Basics";
+			sourceTree = "<group>";
+		};
+		6F61346BD432118ABE3FC9922D808BFB /* FBSDKLoginKit */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB5A0D846B0E5B32E1BECB4F05DF12 /* Frameworks */,
+				244E1277BE62D22EEC2BACC7BBB5CA62 /* Support Files */,
+			);
+			name = FBSDKLoginKit;
+			path = FBSDKLoginKit;
+			sourceTree = "<group>";
+		};
+		ACAF4A628F2254A64AFCB6B38D20EC16 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				458876DDAC38E3007E98A962DC2D5740 /* Pods-Farmacy */,
+				C23DB31D1D37CB00E35776DB416910CC /* Pods-Farmacy-FarmacyUITests */,
+				ADDE20CA42DAEECB1A28D48EA68E3910 /* Pods-FarmacyTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ADDE20CA42DAEECB1A28D48EA68E3910 /* Pods-FarmacyTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A735004D2266C28B48D8AE67B2486F8 /* Pods-FarmacyTests.modulemap */,
+				301548F7BB44B19CB3FC75A48E0E3745 /* Pods-FarmacyTests-acknowledgements.markdown */,
+				C749044868A3FB46DD4FF6746F84D565 /* Pods-FarmacyTests-acknowledgements.plist */,
+				1BFA822294B05162091B7B9C0E741292 /* Pods-FarmacyTests-dummy.m */,
+				9E831B77285573378F80A5B68FFEB8CA /* Pods-FarmacyTests-Info.plist */,
+				9105FBEFE43FB0FFE68F80CA1948A967 /* Pods-FarmacyTests-umbrella.h */,
+				50CB1837E78B7FF50B90F338B971EEB8 /* Pods-FarmacyTests.debug.xcconfig */,
+				03DC3806D6D51648DEDE970DB6ADC0C8 /* Pods-FarmacyTests.release.xcconfig */,
+			);
+			name = "Pods-FarmacyTests";
+			path = "Target Support Files/Pods-FarmacyTests";
+			sourceTree = "<group>";
+		};
+		B244ACAFADCAA2004439D0342D3E5603 /* FBSDKCoreKit_Basics */ = {
+			isa = PBXGroup;
+			children = (
+				09D3C43B690561F0D90D1630485C6E27 /* Frameworks */,
+				6DD9324788C70DE6E1D2F553E03E7D30 /* Support Files */,
+			);
+			name = FBSDKCoreKit_Basics;
+			path = FBSDKCoreKit_Basics;
+			sourceTree = "<group>";
+		};
+		BAF55A8CB508B9869BC21897687EC403 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03DB54D6C6E018A44014308ED558AB17 /* FBAEMKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C23DB31D1D37CB00E35776DB416910CC /* Pods-Farmacy-FarmacyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				904774319F1098CD4C92BAE5A0510C81 /* Pods-Farmacy-FarmacyUITests.modulemap */,
+				984B6AC039907CE6A7E6716FD0D7E9B4 /* Pods-Farmacy-FarmacyUITests-acknowledgements.markdown */,
+				F11D1DA174A3DB526A23CBF0ABC73AFB /* Pods-Farmacy-FarmacyUITests-acknowledgements.plist */,
+				19E96FDDD7CC91B865C975A6A195D284 /* Pods-Farmacy-FarmacyUITests-dummy.m */,
+				0B04280DF2F54308070B5624CCDCF5E5 /* Pods-Farmacy-FarmacyUITests-frameworks.sh */,
+				FEB6DCBBF57211924A317AA386981517 /* Pods-Farmacy-FarmacyUITests-Info.plist */,
+				FE41CE1F099DB71A29A2DCCF2EA97D29 /* Pods-Farmacy-FarmacyUITests-umbrella.h */,
+				634CE559C857C25CD11F8CFC1275D6E3 /* Pods-Farmacy-FarmacyUITests.debug.xcconfig */,
+				426C22699EF9E897AEBECB2D22AA61B9 /* Pods-Farmacy-FarmacyUITests.release.xcconfig */,
+			);
+			name = "Pods-Farmacy-FarmacyUITests";
+			path = "Target Support Files/Pods-Farmacy-FarmacyUITests";
+			sourceTree = "<group>";
+		};
+		CC2DD7D7FCD91DCCD84F4928A5128B38 /* FBSDKCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				6D4448CE022842FFC47BDD61F8CE2E50 /* Frameworks */,
+				2C58D0B4869E299587DC419752182C37 /* Support Files */,
+			);
+			name = FBSDKCoreKit;
+			path = FBSDKCoreKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				FA9D709ADCFE9F2286C39E4049A18205 /* Pods */,
+				11E2D339A8BA269DFDF1CB63DA8CAA97 /* Products */,
+				ACAF4A628F2254A64AFCB6B38D20EC16 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8D635C0E36113A84379F9823F5AFE87 /* FBAEMKit */ = {
+			isa = PBXGroup;
+			children = (
+				BAF55A8CB508B9869BC21897687EC403 /* Frameworks */,
+				5F251279E7EBFC16DAD82263B660B227 /* Support Files */,
+			);
+			name = FBAEMKit;
+			path = FBAEMKit;
+			sourceTree = "<group>";
+		};
+		FA9D709ADCFE9F2286C39E4049A18205 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8D635C0E36113A84379F9823F5AFE87 /* FBAEMKit */,
+				CC2DD7D7FCD91DCCD84F4928A5128B38 /* FBSDKCoreKit */,
+				B244ACAFADCAA2004439D0342D3E5603 /* FBSDKCoreKit_Basics */,
+				6F61346BD432118ABE3FC9922D808BFB /* FBSDKLoginKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AE28B9395D4025C077716D1AEEC284B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B85F1E633C922519C1DE68DBD68B9C70 /* Pods-FarmacyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D50B497728F19E45648A8D5D4876FFDC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8217E67BE0EBDA067EFD0A2591A7C61 /* Pods-Farmacy-FarmacyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D54795F71B2B4926A843C7018CDA8699 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF606EC4DA998A72CCECBA1A46C8B4D /* Pods-Farmacy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5565231F8E97D87E79DBAB128C6C6B4C /* Pods-Farmacy-FarmacyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FE37685F8F10E03C211B74E09C0AAF8 /* Build configuration list for PBXNativeTarget "Pods-Farmacy-FarmacyUITests" */;
+			buildPhases = (
+				D50B497728F19E45648A8D5D4876FFDC /* Headers */,
+				89012F1E6E55AD0EAEFF1FDF7158BF7E /* Sources */,
+				1E2C40320E36EA7252B972880078AD02 /* Frameworks */,
+				2671D195CAFB1283307E56E70EA09EB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8123D8CC2E5C2F39A52744DCEA2E9C0B /* PBXTargetDependency */,
+				8FFDFB2047E785E4BA9D739A51E7A5A7 /* PBXTargetDependency */,
+				09585BDF46794891E3C7AA101450158C /* PBXTargetDependency */,
+				0585044AF7BC8B972923DB5407237351 /* PBXTargetDependency */,
+			);
+			name = "Pods-Farmacy-FarmacyUITests";
+			productName = Pods_Farmacy_FarmacyUITests;
+			productReference = BA95E40CA0F046CC8F164E634803D97F /* Pods-Farmacy-FarmacyUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		58BE73C762FC1209CF64E40DA3D94265 /* Pods-FarmacyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56BDF8D092431567EDF64400D8BF113 /* Build configuration list for PBXNativeTarget "Pods-FarmacyTests" */;
+			buildPhases = (
+				4AE28B9395D4025C077716D1AEEC284B /* Headers */,
+				D310EA8E7FF3C92FE0A73B3B47422405 /* Sources */,
+				55E6F29953AD61681B073D541C3776BC /* Frameworks */,
+				2A08F78B9FE5F8C4323B6881490C4B7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				795F1B77699FB54125D09496198C7504 /* PBXTargetDependency */,
+			);
+			name = "Pods-FarmacyTests";
+			productName = Pods_FarmacyTests;
+			productReference = A8502AF22D8542D820978BA445ABCD6C /* Pods-FarmacyTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		D28F7206FEFD4C14BB8719CF219F5ECF /* Pods-Farmacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47C6FD916B8C3F4CDF933CD139BA61DD /* Build configuration list for PBXNativeTarget "Pods-Farmacy" */;
+			buildPhases = (
+				D54795F71B2B4926A843C7018CDA8699 /* Headers */,
+				D93A641E012DB9CDCE6A6E6848E8CD4F /* Sources */,
+				B8CD27BFC65F737CD09424A1B70EB926 /* Frameworks */,
+				B87F7C09F34A68726D06CA449576D056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8698FAEA383B54326D256F2FBD6C4AD /* PBXTargetDependency */,
+				9B1B3674EFC1274F5A124265688368BC /* PBXTargetDependency */,
+				414F83EE60493A93F25B3934C8E8228D /* PBXTargetDependency */,
+				6BE75180FC8C31623A5B3FECA658F30B /* PBXTargetDependency */,
+			);
+			name = "Pods-Farmacy";
+			productName = Pods_Farmacy;
+			productReference = 2E33D764651A8BE65FF0CBB02D085F80 /* Pods-Farmacy */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 11E2D339A8BA269DFDF1CB63DA8CAA97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */,
+				28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */,
+				8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */,
+				10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */,
+				D28F7206FEFD4C14BB8719CF219F5ECF /* Pods-Farmacy */,
+				5565231F8E97D87E79DBAB128C6C6B4C /* Pods-Farmacy-FarmacyUITests */,
+				58BE73C762FC1209CF64E40DA3D94265 /* Pods-FarmacyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2671D195CAFB1283307E56E70EA09EB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A08F78B9FE5F8C4323B6881490C4B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B87F7C09F34A68726D06CA449576D056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		427658F3E294DB5EF79EE37BA04E64E1 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71CD0B926100C36B517BE2052E600140 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A261CEA870C48433C3575F1CCC2BB166 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBAEMKit/FBAEMKit-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBAEMKit/FBAEMKit-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/FBAEMKit/FBAEMKit-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C05801FB1115AB56CF9E73BB6786A73A /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit/FBSDKCoreKit-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit/FBSDKCoreKit-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/FBSDKCoreKit/FBSDKCoreKit-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89012F1E6E55AD0EAEFF1FDF7158BF7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F399BDAACB4C597485F5D90FA53D997A /* Pods-Farmacy-FarmacyUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D310EA8E7FF3C92FE0A73B3B47422405 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3412F9F82958E1D8E5D493CBDD81393D /* Pods-FarmacyTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93A641E012DB9CDCE6A6E6848E8CD4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F617042BBBED3F063F9B74FFD846F25A /* Pods-Farmacy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0585044AF7BC8B972923DB5407237351 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKLoginKit;
+			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
+			targetProxy = 8771D5B5E0633C4B7698AF033573B165 /* PBXContainerItemProxy */;
+		};
+		09585BDF46794891E3C7AA101450158C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit_Basics;
+			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
+			targetProxy = 68246FC3197E59510DAD343F82754EEC /* PBXContainerItemProxy */;
+		};
+		414F83EE60493A93F25B3934C8E8228D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit_Basics;
+			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
+			targetProxy = 455177C95E6246AA992048A75180C235 /* PBXContainerItemProxy */;
+		};
+		6BE75180FC8C31623A5B3FECA658F30B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKLoginKit;
+			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
+			targetProxy = 210DB81B55581C544B4813A98A7DEBAB /* PBXContainerItemProxy */;
+		};
+		795F1B77699FB54125D09496198C7504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Farmacy";
+			target = D28F7206FEFD4C14BB8719CF219F5ECF /* Pods-Farmacy */;
+			targetProxy = 61154F5DB11EC1D0B76ABB887B42E1E8 /* PBXContainerItemProxy */;
+		};
+		8017335E7BE5E4F2AA7C704D34F729C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit_Basics;
+			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
+			targetProxy = 02A4BE5D668F3B5CEA0FBEEE1CF2E5CD /* PBXContainerItemProxy */;
+		};
+		8123D8CC2E5C2F39A52744DCEA2E9C0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = 6A8B4B3F4035DA9AE1EC72505527D31E /* PBXContainerItemProxy */;
+		};
+		847FDCB19BF8828CA239B562DEC3B644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit_Basics;
+			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
+			targetProxy = C59C6E8B3308D042FC87FF994BFD41F9 /* PBXContainerItemProxy */;
+		};
+		8FFDFB2047E785E4BA9D739A51E7A5A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
+			targetProxy = 57E36C505D9FC9D26D3B1CBB8A4C588D /* PBXContainerItemProxy */;
+		};
+		9B1B3674EFC1274F5A124265688368BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
+			targetProxy = 0DCA4AA76EC0F317B70DF947EA759CC5 /* PBXContainerItemProxy */;
+		};
+		A8698FAEA383B54326D256F2FBD6C4AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = DACF7C5B811CAA003FAD162B4B202ED8 /* PBXContainerItemProxy */;
+		};
+		A9EE837649E2B6FE214F990788596C62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
+			targetProxy = FCABB065035E5FAF2E3A00046BDEFF1F /* PBXContainerItemProxy */;
+		};
+		B0CD437C0BBA8546E54637443F048F6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = B4B596AFAD6406CBFBD4F7B5E4E0B35E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09021EE11A9EC6AE51859B4122A7A914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 634CE559C857C25CD11F8CFC1275D6E3 /* Pods-Farmacy-FarmacyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		20F12DCB994BF591703AD65323D9048B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03DC3806D6D51648DEDE970DB6ADC0C8 /* Pods-FarmacyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		273A8B8CC56714E67783FB76650B523A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD89167A35A6A57EA6B1B9B9F3F26032 /* FBSDKLoginKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		276B1CBE600B90E6F08B7A75A97FE393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC70EC629D3D1E824E5D47E7961853C0 /* FBAEMKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DE0D8898245310716431F92FA4989FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3B7DEA7221037A97C05B840B69BA73F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50CB1837E78B7FF50B90F338B971EEB8 /* Pods-FarmacyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BF888A64D1B8FB8A87A24294C820899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3DDCC5BBB07FCA81DFF52C7704279A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C6F8D9A91E61295CE1F306C7255804 /* FBSDKCoreKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E07DC5AA81D5CB20D5A5E77E0918C3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24072D45ECBFFF10571F8DE7E0A29780 /* FBSDKCoreKit_Basics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		535A0BFA2AA5677B8970E78B89D340F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC271F4651EE6ECD3590EC600A95B9A9 /* FBAEMKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57821C348C39408A19EC4E6A700A33E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56EF0EFC931B00CC98D40430A90194AE /* FBSDKCoreKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99B004F832923E4438F3051E28E4DCE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 426C22699EF9E897AEBECB2D22AA61B9 /* Pods-Farmacy-FarmacyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC4B3FE6EE9F82FE425FEC1F15C6FCFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 055F35A855A46DE8568050DBDA4F3215 /* FBSDKLoginKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDAF99577D3427421146B659C1F33A35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F425DA829755E64862A61B60172CC37 /* Pods-Farmacy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EF16FB4CD95BE7E289581AA42F469DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8E69D7C40373EB7C9AAA8C31C6561E /* FBSDKCoreKit_Basics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		035656960A067353649EA423EF370480 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E07DC5AA81D5CB20D5A5E77E0918C3A /* Debug */,
+				EF16FB4CD95BE7E289581AA42F469DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		442545805DAF10650DBA7C00DEAAD47B /* Build configuration list for PBXAggregateTarget "FBAEMKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276B1CBE600B90E6F08B7A75A97FE393 /* Debug */,
+				535A0BFA2AA5677B8970E78B89D340F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47C6FD916B8C3F4CDF933CD139BA61DD /* Build configuration list for PBXNativeTarget "Pods-Farmacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF888A64D1B8FB8A87A24294C820899 /* Debug */,
+				EDAF99577D3427421146B659C1F33A35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09909ECBA13E8F70A928465E7F7A9A92 /* Debug */,
+				2DE0D8898245310716431F92FA4989FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FE37685F8F10E03C211B74E09C0AAF8 /* Build configuration list for PBXNativeTarget "Pods-Farmacy-FarmacyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09021EE11A9EC6AE51859B4122A7A914 /* Debug */,
+				99B004F832923E4438F3051E28E4DCE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A56BDF8D092431567EDF64400D8BF113 /* Build configuration list for PBXNativeTarget "Pods-FarmacyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7DEA7221037A97C05B840B69BA73F8 /* Debug */,
+				20F12DCB994BF591703AD65323D9048B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C320C79E1F381838923FC2BF4FAB74A1 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57821C348C39408A19EC4E6A700A33E8 /* Debug */,
+				3DDCC5BBB07FCA81DFF52C7704279A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE7320CAB1FEB84DAC5DE11C9FCDBE38 /* Build configuration list for PBXAggregateTarget "FBSDKLoginKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				273A8B8CC56714E67783FB76650B523A /* Debug */,
+				AC4B3FE6EE9F82FE425FEC1F15C6FCFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -6,18 +6,37 @@
 //
 
 #import "SceneDelegate.h"
-
+#import "FBSDKCoreKit/FBSDKCoreKit.h"
+#import "MyCropsViewController.h"
+#import "LoginViewController.h"
 @interface SceneDelegate ()
 
 @end
 
 @implementation SceneDelegate
 
+- (void) scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts{
+    NSURL *url = [[URLContexts allObjects] firstObject].URL;
+    if (url){
+        [[FBSDKApplicationDelegate sharedInstance] application:[UIApplication sharedApplication] openURL:url sourceApplication:nil annotation:UIApplicationOpenURLOptionsAnnotationKey];
+    }
+}
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    if([FBSDKAccessToken currentAccessToken]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    }
+    
 }
 
 

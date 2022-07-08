@@ -6,7 +6,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LoginViewController.h"
+#import "MyCropsViewController.h"
+#import "FBSDKCoreKit/FBSDKCoreKit.h"
 @interface AppDelegate ()
 
 @end
@@ -15,10 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
     return YES;
 }
-
 
 #pragma mark - UISceneSession lifecycle
 
