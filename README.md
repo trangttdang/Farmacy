@@ -1,79 +1,121 @@
-# Project 3 - *Instagram*
+# FARMACY
 
-**Instagram** is a photo sharing app using Parse as its backend.
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
 
-Time spent: **13** hours spent in total
+## Overview
+### Description
+Farmacy provides farmers with recommendations on the best crops to grow based on their market, geographic, and environmental patterns to optimal product yields
 
-## User Stories
+### App Evaluation
+- **Category:** Agriculture
+- **Mobile:** Farmacy helps farmers with chat and video call feature to connect with agriculture experts, weather API and push notifications feature to reminder when to plant, fertilize, and irrigate. These features make mobile app more than website
+- **Story:** Given insightful data, recommendations on best crops, and crop schedule, farmers will have more informed decision on crops to grow to optimal product yields and decrease exposure to volatility
+- **Market:** Farmacy targets on farmers who need help with their crop plan
+- **Habit:** Farmers use Farmacy on a daily basis to check on the weather API along with reminders on when to plant, fertilize, and irrigate
+- **Scope:** Technical Challenge is to analyze and provide insightful data, and provide recommendations to optimal product yields
 
-The following **required** functionality is completed:
+## Product Spec
 
-- [x] User can sign up to create a new account using Parse authentication
-- [x] User can log in and log out of his or her account
-- [x] The current signed in user is persisted across app restarts
-- [x] User can take a photo, add a caption, and post it to "Instagram"
-- [x] User can view the last 20 posts submitted to "Instagram"
-- [x] User can pull to refresh the last 20 posts submitted to "Instagram"
-- [x] User can tap a post to view post details, including timestamp and caption
+### 1. User Stories (Required and Optional)
 
-The following **optional** features are implemented:
+**Required Must-have Stories**
 
-- [x] Run your app on your phone and use the camera to take the photo
-- [x] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling
-- [x] Show the username and creation time for each post
-- [x] User can use a Tab Bar to switch between a Home Feed tab (all posts) and a Profile tab (only posts published by the current user)
-- User Profiles:
-  - [x] Allow the logged in user to add a profile photo
-  - [x] Display the profile photo with each post
-  - [x] Tapping on a post's username or profile photo goes to that user's profile page
-- [x] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse
-- [ ] User can comment on a post and see all comments for each post in the post details screen
-- [ ] User can like a post and see number of likes for each post in the post details screen
-- [x] Style the login page to look like the real Instagram login page
-- [x] Style the feed to look like the real Instagram feed
-- [ ] Implement a custom camera view
+* Farmer can log in and sign up
+* Based on recommendations, Farmers can choose which crops to grow or remove
+* Farmer can manage when to plant, fertilize, and irrigate them with reminders/ notifications
+* Farmer can chat with agriculture experts
+* Farmer can view weather forecast
 
-The following **additional** features are implemented:
+**Optional Nice-to-have Stories**
 
-- [ ] List anything else that you can get done to improve the app functionality!
+* Farmer can view data visualization of weather data, data oncrop variation datasets, soil data projections, market, geographic, and environmental patterns
+* Farmer can make a video call with agriculture experts
+* Farmer can view calendar of when to plant, fertilize, and irrigate
+* Farmer can view knowledge hub with list of disease and treatments
 
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
+### 2. Screen Archetypes
+* Login Screen
+  * User can login
+* Registration Screen
+  * User can create a new account
+* Dashboard (Nice-to-have)
+  * User can view data visualation on data oncrop variation datasets, soil data projections, market, geographic, and environmental patterns
+* Weather Forecast
+  *User can view weather forecast
+* Recommendations
+  *User can view recommendations on crops to grow
+* Calendar
+  * User can view schedule when to plant, fertilize, and irrigate crops
+* My Crops
+  *User can view their choosen crops' progress.
+  
+### 3. Navigation
 
-1.
-2.
+**Tab Navigation** (Tab to Screen)
 
-## Video Walkthrough
+* My Crops
+* Calendar
+* Weather Forecast
+* Dashboard (Nice-to-have)
 
-Here's a walkthrough of implemented user stories:
-- (FINAL) https://i.imgur.com/hYssfIQ.mp4
-- https://i.imgur.com/ar9Z5Cm.gif
-- https://i.imgur.com/sq8WovI.mp4
-- Instagram Login screen
+**Flow Navigation** (Screen to Screen)
 
-<img src="https://i.imgur.com/PiOYbUD.jpg" width=200><br>
+* Login Screen
 
-## Credits
+=> My crops Screen
 
-List an 3rd party libraries, icons, graphics, or other assets you used in your app.
+* Register Screen
 
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+=> Recommendation Screen
 
-## Notes
+* Recommendation Screen
 
-Describe any challenges encountered while building the app.
+=> My Crops Screen (when the adding all crops to list clicked)
 
-## License
+=> Dashboard (when the insightful icon is clicked)
 
-    Copyright [2022] [Trang Dang]
+* Calendar Screen
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+=> None
 
-        http://www.apache.org/licenses/LICENSE-2.0
+* Weather Forecast Screen
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+=> Calendar Screen (when calendar icon is clicked)
+
+* My Crops Screen
+
+=> Detail Crop Screen (when select specific crop cell)
+
+=> Calendar Screen (when calendar icon is clicked)
+
+## Wireframes
+
+<img src="https://i.imgur.com/AoxP5x6.jpg" width=400>
+
+## Schema
+### Models: Crops
+| Property | Type	| Description |
+| --- | --- | --- |
+| objectId | DateTime	| unique id for the crop |
+| plantedAt	| String	date when crop is planted
+| image	| Image	| image of the crop |
+| name	| String	| string name of the crop |
+| schedule	| File	| file schedule on when to plant, fertilize, and irrigate |
+| progress	| Number | percentage shows progress until it is harvested |
+
+### Networking
+- Weather Forecast Screen
+(READ/GET) Query weather forecast in the next 10 days
+- Calendar Screen
+(READ/GET) Query combination of schedule of chosen crops
+(CREATE/POST) Create a new tick "Done" for specific task
+- My Crops Screen
+(CREATE/POST) Create a new crop from Recommendation Screen to My Crops
+(Delete) Delete the crop from My Crops
+(READ/GET) Query information on each crop
+- Recommendation
+(READ/GET) Query top recommendations from analyzing data on weather, soil,..
