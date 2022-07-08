@@ -8,15 +8,15 @@
 
 ## Overview
 ### Description
-Farmacy provides farmers with recommendations on the best crops to grow based on their market, geographic, and environmental patterns to optimal product yields
+Farmacy provides farmers with personalized plans on when to plant, fertilize, and irrigate based on weather and trend data
 
 ### App Evaluation
 - **Category:** Agriculture
-- **Mobile:** Farmacy helps farmers with chat and video call feature to connect with agriculture experts, weather API and push notifications feature to reminder when to plant, fertilize, and irrigate. These features make mobile app more than website
-- **Story:** Given insightful data, recommendations on best crops, and crop schedule, farmers will have more informed decision on crops to grow to optimal product yields and decrease exposure to volatility
+- **Mobile:** Farmacy helps farmers with chat and video call (optional) feature to connect with agriculture experts, weather API and push notifications feature to reminder when to plant, fertilize, and irrigate. These features make mobile app more than website
+- **Story:** Given insightful data, personalized plans on when to plant, fertilize, and irrigate, Farmacy can help increase the farmer’s yield
 - **Market:** Farmacy targets on farmers who need help with their crop plan
 - **Habit:** Farmers use Farmacy on a daily basis to check on the weather API along with reminders on when to plant, fertilize, and irrigate
-- **Scope:** Technical Challenge is to analyze and provide insightful data, and provide recommendations to optimal product yields
+- **Scope:** Technical Challenge is to analyze and provide insightful data, and provide personalized plan to optimal product yields
 
 ## Product Spec
 
@@ -24,35 +24,40 @@ Farmacy provides farmers with recommendations on the best crops to grow based on
 
 **Required Must-have Stories**
 
-* Farmer can log in and sign up
-* Based on recommendations, Farmers can choose which crops to grow or remove
-* Farmer can manage when to plant, fertilize, and irrigate them with reminders/ notifications
-* Farmer can chat with agriculture experts
+* Farmer can log in/sign up and log out 
+* Farmer can add/delete crops to/from grow to My Crops list
+* Farmer can view calendar to know when to plant, fertilize, and irrigate
+* Farmer can view their crops' progress 
+* Farmer can chat with agriculture experts 
 * Farmer can view weather forecast
+* Farmer can be notified the schedule by chat bot and via notifications
+* Farmer can be advised with some tips of the day via notifications
 
 **Optional Nice-to-have Stories**
-
+* Farmer can view Farmacy's recommendations on the best crops to grow based on their market, geographic, and environmental patterns 
+* Based on recommendations, Farmers can choose which crops to grow or remove 
 * Farmer can view data visualization of weather data, data oncrop variation datasets, soil data projections, market, geographic, and environmental patterns
 * Farmer can make a video call with agriculture experts
-* Farmer can view calendar of when to plant, fertilize, and irrigate
 * Farmer can view knowledge hub with list of disease and treatments
 
+
 ### 2. Screen Archetypes
+
 * Login Screen
-  * User can login
+   * User can login
 * Registration Screen
-  * User can create a new account
+   * User can create a new account
 * Dashboard (Nice-to-have)
-  * User can view data visualation on data oncrop variation datasets, soil data projections, market, geographic, and environmental patterns
+    * User can view data visualation on data oncrop variation datasets, soil data projections, market, geographic, and environmental patterns
 * Weather Forecast
-  *User can view weather forecast
-* Recommendations
-  *User can view recommendations on crops to grow
+    * User can view weather forecast
+* Recommendations (Nice-to-have)
+    * User can view recommendations on crops to grow
 * Calendar
-  * User can view schedule when to plant, fertilize, and irrigate crops
+    * User can view schedule when to plant, fertilize, and irrigate crops
 * My Crops
-  *User can view their choosen crops' progress.
-  
+    * User can view their choosen crops' progress.
+
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
@@ -65,57 +70,53 @@ Farmacy provides farmers with recommendations on the best crops to grow based on
 **Flow Navigation** (Screen to Screen)
 
 * Login Screen
-
-=> My crops Screen
-
+   
+   => My crops Screen
 * Register Screen
-
-=> Recommendation Screen
-
-* Recommendation Screen
-
-=> My Crops Screen (when the adding all crops to list clicked)
-
-=> Dashboard (when the insightful icon is clicked)
-
+   
+   => Recommendation Screen (Nice-to-have)
+* Recommendation Screen (Nice-to-have)
+   
+   => My Crops Screen (when the adding all crops to list clicked)
+   
+   => Dashboard (when the insightful icon is clicked)
 * Calendar Screen
-
-=> None
-
+   
+   => None
 * Weather Forecast Screen
 
-=> Calendar Screen (when calendar icon is clicked)
-
+  => Calendar Screen (when calendar icon is clicked)
+  
 * My Crops Screen
 
-=> Detail Crop Screen (when select specific crop cell)
-
-=> Calendar Screen (when calendar icon is clicked)
+  => Detail Crop Screen (when select specific crop cell)
+  
+  => Calendar Screen (when calendar icon is clicked)
 
 ## Wireframes
 
-<img src="https://i.imgur.com/AoxP5x6.jpg" width=400>
+<img src="https://i.imgur.com/RPUwqYd.jpeg" width=900>
 
-## Schema
+## Schema 
 ### Models: Crops
-| Property | Type	| Description |
+| Property | Type | Description |
 | --- | --- | --- |
-| objectId | DateTime	| unique id for the crop |
-| plantedAt	| String	date when crop is planted
-| image	| Image	| image of the crop |
-| name	| String	| string name of the crop |
-| schedule	| File	| file schedule on when to plant, fertilize, and irrigate |
-| progress	| Number | percentage shows progress until it is harvested |
+| objectId | DateTime | unique id for the crop |
+| plantedAt | String | date when crop is planted |
+| image | Image | image of the crop |
+| name | String | string name of the crop | 
+ | schedule | File | file schedule on when to plant, fertilize, and irrigate |
+ | progress | Number | percentage shows progress until it is harvested |
 
 ### Networking
-- Weather Forecast Screen
-(READ/GET) Query weather forecast in the next 10 days
-- Calendar Screen
-(READ/GET) Query combination of schedule of chosen crops
-(CREATE/POST) Create a new tick "Done" for specific task
-- My Crops Screen
-(CREATE/POST) Create a new crop from Recommendation Screen to My Crops
-(Delete) Delete the crop from My Crops
-(READ/GET) Query information on each crop
-- Recommendation
-(READ/GET) Query top recommendations from analyzing data on weather, soil,..
+* Weather Forecast Screen
+  * (READ/GET) Query weather forecast in the next 10 days
+* Calendar Screen
+  * (READ/GET) Query combination of schedule of chosen crops
+  * (CREATE/POST) Create a new tick "Done" for specific task
+* My Crops Screen
+  * (CREATE/POST) Create a new crop from Recommendation Screen to My Crops
+  * (Delete) Delete the crop from My Crops
+  * (READ/GET) Query information on each crop
+* Recommendation (Nice-to-have)
+  * (READ/GET) Query top recommendations from analyzing data on weather, soil,..
