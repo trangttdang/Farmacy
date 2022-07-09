@@ -49,7 +49,7 @@
         
         SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
+        LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
         mySceneDelegate.window.rootViewController = loginViewController;
         
     }

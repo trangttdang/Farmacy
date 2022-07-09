@@ -30,7 +30,7 @@
     if([FBSDKAccessToken currentAccessToken]){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
