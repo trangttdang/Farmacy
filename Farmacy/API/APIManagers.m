@@ -32,22 +32,6 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
     return self;
 }
 
-//- (void)getCurrentWeatherData:(NSString *)location completion:(void(^)(NSMutableArray *weatherData, NSError *error))completion{
-//
-//    NSDictionary *parameters = @{@"key": self.APIkey,@"q": location};
-//
-//    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:self.baseURL];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//
-//    [manager GET:@"v1/current.json" parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSMutableArray *  _Nullable weatherDictionaries) {
-//                   // Success
-//                NSMutableArray *weatherData = weatherDictionaries;
-//                NSLog(@"%@",@"Successfully get current weather");
-//                   completion(weatherData, nil);
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        completion(nil, error);
-//    }];
-//}
 
 - (void)getForecastWeatherData:(NSString *)location completion:(void(^)(NSMutableArray *weatherData, NSError *error))completion{
 
@@ -57,8 +41,7 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     [manager GET:@"v1/forecast.json" parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable weatherDictionaries) {
-                   // Success
-        
+        // Success
         NSMutableArray *weatherData = [WeatherCard weatherCardsWithArray:weatherDictionaries[@"forecast"][@"forecastday"]];
                 NSLog(@"%@",@"Successfully get forecast weather");
                    completion(weatherData, nil);

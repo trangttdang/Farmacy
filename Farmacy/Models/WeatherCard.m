@@ -10,8 +10,6 @@
 @implementation WeatherCard
 + (NSMutableArray *)weatherCardsWithArray:(NSArray *)dictionaries{
     NSMutableArray *weatherCards = [NSMutableArray array];
-//    NSArray *forecast = dictionaries[@"forecast"][@"forecastday"];
-//    NSDictionary *forecastDict = forecast[0];
     for (NSDictionary *dictionary in dictionaries) {
         NSLog(@"%@",dictionary);
         WeatherCard *weatherCard = [[WeatherCard alloc] initWithDictionary:dictionary];

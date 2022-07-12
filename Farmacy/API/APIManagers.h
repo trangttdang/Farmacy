@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *APIkey;
 @property (nonatomic, strong) NSURL *baseURL;
 + (instancetype)shared;
-//- (void)getCurrentWeatherData:(NSString *)location completion:(void(^)(NSMutableArray *weatherData, NSError *error))completion;
 - (void)getForecastWeatherData:(NSString *)location completion:(void(^)(NSMutableArray *weatherData, NSError *error))completion;
 @end
 
