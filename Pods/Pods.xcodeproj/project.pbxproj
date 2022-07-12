@@ -14,7 +14,7 @@
 				427658F3E294DB5EF79EE37BA04E64E1 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				A9EE837649E2B6FE214F990788596C62 /* PBXTargetDependency */,
+				521E91E1B8A1F8BA1844D354E83B99C0 /* PBXTargetDependency */,
 			);
 			name = FBSDKLoginKit;
 		};
@@ -25,8 +25,8 @@
 				C05801FB1115AB56CF9E73BB6786A73A /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				B0CD437C0BBA8546E54637443F048F6A /* PBXTargetDependency */,
-				847FDCB19BF8828CA239B562DEC3B644 /* PBXTargetDependency */,
+				9AFB4CDF53C3E38E6FC7A425D133FA34 /* PBXTargetDependency */,
+				6F8443144988F30DC1118991E2C63C07 /* PBXTargetDependency */,
 			);
 			name = FBSDKCoreKit;
 		};
@@ -37,15 +37,15 @@
 				A261CEA870C48433C3575F1CCC2BB166 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				8017335E7BE5E4F2AA7C704D34F729C7 /* PBXTargetDependency */,
+				43F837F19DDE7A88C75B991C3F79D3D3 /* PBXTargetDependency */,
 			);
 			name = FBAEMKit;
 		};
 		8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 035656960A067353649EA423EF370480 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */;
+			buildConfigurationList = A49D673DB8C57F3B1145C4F4424B73DE /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */;
 			buildPhases = (
-				71CD0B926100C36B517BE2052E600140 /* [CP] Copy XCFrameworks */,
+				BB5BDABCDEBB6FAE62083B819948B18B /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -54,167 +54,258 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0FC2C7300D3DE350BD73741888D9A1A8 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = E9287557E18E4A542A43DB278F94B388 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18AEFCE986FB74A0B6B092B3BA2267C6 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D831E72084C5936F93C045570D7316 /* UIImageView+AFNetworking.m */; };
+		22AD28E260EF21FECAAEF40B04E8E020 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915B0600CA06888C33FE9F04A71926D /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23AEAF5E77D59B98AE79C57BAE746C1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		26D2177669F00D21B87F1C3AA6EEA373 /* Pods-Farmacy-FarmacyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E96FDDD7CC91B865C975A6A195D284 /* Pods-Farmacy-FarmacyUITests-dummy.m */; };
+		27A1AA22D234973BA30D8493C546884C /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC45D64624D8DCAC7D57C419BDE1129 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27AB52C7962046BC8963B2CD626F22BD /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 92640EB4C1840C69385344E4EE55D8C4 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33B9A195FDB315F18465CB1BA24D74A9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3881D556B06869E57D0241542D1A5A /* AFHTTPSessionManager.m */; };
 		3412F9F82958E1D8E5D493CBDD81393D /* Pods-FarmacyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA822294B05162091B7B9C0E741292 /* Pods-FarmacyTests-dummy.m */; };
-		37EF953CF682B014E5F18AA81CC43402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		347731E8D4C4F27FC53DDFAC590481D6 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CF78AACFF4FF673AA18A01E8D1B32D /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E7A25BCE5BAC256FBBA56106C3192CD /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 74ED1162B2E448BB4FDAFB082BAEDA01 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DCB59DE84A69063E9485E4D8BF8C637 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9556288F187AE4D09CEA990564A91116 /* AFNetworking-dummy.m */; };
+		52E68E9AFF4A9C20F05A07F3E55EAF59 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 87591691A1F00FD32E05DC9AAB6A7A11 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57744CA757400E7183DFC0D37EFB5214 /* WKWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 914393602F58CF8D60810D08A1472851 /* WKWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		584233A4CEC7C9AA382A1A43C26B87EE /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4542F04DC8BFD78650ECD96D5E4BE98F /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BE27AF46E2DE81F61752081EDB7E52B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60F426D4D69474CB541D193CCFDCC3 /* AFSecurityPolicy.m */; };
+		63419018E7222B414E161CD480398E20 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F03B2D2FA841A13946BB1B8B111907D2 /* AFNetworkReachabilityManager.m */; };
+		637243EE5807271030AE4D9741392852 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C592A1C849537727FD7121E63F2E20 /* AFURLSessionManager.m */; };
+		65163D7E6539C8A1D65F5FCBA0E6EFD2 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B009DFEF3720EB662EDF9F5645F0E8D /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		657D596F7ED1260403D4E064E6BF8CD1 /* WKWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC46E79F3C44FB27705DF05EA12ABC /* WKWebView+AFNetworking.m */; };
+		66E5C449D2A32E546C7752AAA04A8819 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		68DE4F59E9E339986676CB8434271A77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6C239323DE74D9551EB571A31A24EC1E /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80B47D4A63B5996B7DF3EBC09848FA /* UIProgressView+AFNetworking.m */; };
+		6DB244706298D81730C5537279B7B635 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C98B8B7A76CBA876531961A23A82680E /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75D3AC51D1D5A7E3254EDD661AC8D901 /* Pods-Farmacy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BC176DABD5285F7DBD9DD4D05ABC /* Pods-Farmacy-dummy.m */; };
+		78BA26AC5FEDC369101AA06BA136F816 /* Pods-Farmacy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 237873148FB207DF924EC2B8B120FDA8 /* Pods-Farmacy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		801724F329AA434F8BB6A11E96E5805A /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 212BC37C9A2848A2E734077BFF5FBD77 /* AFAutoPurgingImageCache.m */; };
+		81C76941D750B3F226E07AE600A67FC6 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = C345BA47525C0DC63251F8A6730E8CE0 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B69D35406D303406BC8A8BE6F557588 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8BDBFFA4841D22A58AA743564EA19A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		B8217E67BE0EBDA067EFD0A2591A7C61 /* Pods-Farmacy-FarmacyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE41CE1F099DB71A29A2DCCF2EA97D29 /* Pods-Farmacy-FarmacyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		918AD88A49B79CD1B13BAD5415FE5621 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D967808A21E7D506CE02532D6E5544 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97EB8976E78AA2C17544A6453BC1EF04 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DB848C2497E0E41C0AC1CB801B43E02C /* AFURLResponseSerialization.m */; };
+		9F5D472E0B58C95613C76C43148FC8B5 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A2371DFFBAE13DD4CC563FA6DB50E394 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC29EE5318026D0BAF479C904536378F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D96E217BD2660181E3E62BF5496888EF /* UIRefreshControl+AFNetworking.m */; };
+		AD6158AF5746E99C7136F3ECA9423C63 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A26435D1CEDCC835EEFCE083836F4EFF /* UIActivityIndicatorView+AFNetworking.m */; };
+		B7DA5AE2EE8808176A31F845A204C190 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 127C1CE83404B7DF63A7AAFF0EF16B86 /* UIButton+AFNetworking.m */; };
 		B85F1E633C922519C1DE68DBD68B9C70 /* Pods-FarmacyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9105FBEFE43FB0FFE68F80CA1948A967 /* Pods-FarmacyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDF606EC4DA998A72CCECBA1A46C8B4D /* Pods-Farmacy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 237873148FB207DF924EC2B8B120FDA8 /* Pods-Farmacy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F399BDAACB4C597485F5D90FA53D997A /* Pods-Farmacy-FarmacyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E96FDDD7CC91B865C975A6A195D284 /* Pods-Farmacy-FarmacyUITests-dummy.m */; };
-		F617042BBBED3F063F9B74FFD846F25A /* Pods-Farmacy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E44BC176DABD5285F7DBD9DD4D05ABC /* Pods-Farmacy-dummy.m */; };
+		B8AD58C4501F99461CB07AC05DCB8705 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = DB67CCDFD3F5050191E3CB00967E6504 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8B4A245FEFA2CE20339CA8CA8BE68EC /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E87EE918F12B7A5CABA46EF490224ED /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAB08D6748C698A6AA6DC7D6A2BFFE49 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4813E8A729339FA6D4237B6F13ECF0EA /* AFNetworkActivityIndicatorManager.m */; };
+		CDEF12A353FEBC8FE4E2EA0D3FFAC615 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 667D1AF3D004917089248AA8D0057E1D /* AFURLRequestSerialization.m */; };
+		E8372DA8FDA0830EF5FF160493C0B37A /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 751AB3FA0D7FCFE27B5EE566403B677F /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9B168E5DFD275516CC9BF16C381F8CB /* Pods-Farmacy-FarmacyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE41CE1F099DB71A29A2DCCF2EA97D29 /* Pods-Farmacy-FarmacyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED0B81FF1DEC0B138947EA93D22E5A4E /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD88051FD2B37105C3064CF4735B9509 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE3B8613CDD20D58260C22D21BC61F38 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = BCFB61F18825EA941C97EB6743B9D2D8 /* AFCompatibilityMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA57C7B9116769DBBCAEE173060683A3 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6BF9AF5BF207BCA597125CD2B98016 /* AFImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02A4BE5D668F3B5CEA0FBEEE1CF2E5CD /* PBXContainerItemProxy */ = {
+		23B657D3169AC8AE4B9C71D075142631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
+			remoteInfo = FBAEMKit;
+		};
+		2631541CC98F597C75DE45C6857179B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
+			remoteInfo = FBAEMKit;
+		};
+		42D665347E44440928CD268C61A37B3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
+		4F37D831B9AEC94850EF4B1DD4CE89C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
 			remoteInfo = FBSDKCoreKit_Basics;
 		};
-		0DCA4AA76EC0F317B70DF947EA759CC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
-			remoteInfo = FBSDKCoreKit;
-		};
-		210DB81B55581C544B4813A98A7DEBAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
-			remoteInfo = FBSDKLoginKit;
-		};
-		455177C95E6246AA992048A75180C235 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
-		57E36C505D9FC9D26D3B1CBB8A4C588D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
-			remoteInfo = FBSDKCoreKit;
-		};
-		61154F5DB11EC1D0B76ABB887B42E1E8 /* PBXContainerItemProxy */ = {
+		714564E0BEB3DCA3B83DF3C31D8DF5F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D28F7206FEFD4C14BB8719CF219F5ECF;
 			remoteInfo = "Pods-Farmacy";
 		};
-		68246FC3197E59510DAD343F82754EEC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
-		6A8B4B3F4035DA9AE1EC72505527D31E /* PBXContainerItemProxy */ = {
+		7650A1132986F64703843DECD3660819 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
 			remoteInfo = FBAEMKit;
 		};
-		8771D5B5E0633C4B7698AF033573B165 /* PBXContainerItemProxy */ = {
+		87D93EC497302A503F3DA77DBD890F04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
-			remoteInfo = FBSDKLoginKit;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
 		};
-		B4B596AFAD6406CBFBD4F7B5E4E0B35E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
-			remoteInfo = FBAEMKit;
-		};
-		C59C6E8B3308D042FC87FF994BFD41F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
-		DACF7C5B811CAA003FAD162B4B202ED8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
-			remoteInfo = FBAEMKit;
-		};
-		FCABB065035E5FAF2E3A00046BDEFF1F /* PBXContainerItemProxy */ = {
+		8FD6E31BCF9377B0D575DA8B0B5CB8AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
 			remoteInfo = FBSDKCoreKit;
 		};
+		966B179227DA20AC41B7DD64C3058B36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
+			remoteInfo = FBSDKLoginKit;
+		};
+		9C24EAFE3DD8C05C08C83EBDCE3EBDF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		B7BADB2404659EBCB3425F8E075DA7B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
+			remoteInfo = FBSDKCoreKit;
+		};
+		BD3539011A59E264E47D4156B2610216 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		BEBEFDC35B339C09FBD3CEFADE6483C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		D99F296EBFC6CCFDA383DD152E4543A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
+			remoteInfo = FBSDKCoreKit;
+		};
+		D9FB616DEE3C253990CED67C68CC68FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10C5885FCB0908EF785774EE52473DAB;
+			remoteInfo = FBSDKLoginKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		021C119046339CA3FD4779A57310693A /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
-		03DB54D6C6E018A44014308ED558AB17 /* FBAEMKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBAEMKit.xcframework; path = XCFrameworks/FBAEMKit.xcframework; sourceTree = "<group>"; };
 		03DC3806D6D51648DEDE970DB6ADC0C8 /* Pods-FarmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FarmacyTests.release.xcconfig"; sourceTree = "<group>"; };
-		055F35A855A46DE8568050DBDA4F3215 /* FBSDKLoginKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.release.xcconfig; sourceTree = "<group>"; };
 		0B04280DF2F54308070B5624CCDCF5E5 /* Pods-Farmacy-FarmacyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Farmacy-FarmacyUITests-frameworks.sh"; sourceTree = "<group>"; };
 		0E44BC176DABD5285F7DBD9DD4D05ABC /* Pods-Farmacy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Farmacy-dummy.m"; sourceTree = "<group>"; };
+		10D831E72084C5936F93C045570D7316 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		127C1CE83404B7DF63A7AAFF0EF16B86 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		1915B0600CA06888C33FE9F04A71926D /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		19E96FDDD7CC91B865C975A6A195D284 /* Pods-Farmacy-FarmacyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Farmacy-FarmacyUITests-dummy.m"; sourceTree = "<group>"; };
 		1BFA822294B05162091B7B9C0E741292 /* Pods-FarmacyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FarmacyTests-dummy.m"; sourceTree = "<group>"; };
+		212BC37C9A2848A2E734077BFF5FBD77 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
+		2212717ECEA1CFDEEC7FDAD600213E96 /* FBSDKCoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.release.xcconfig; sourceTree = "<group>"; };
 		237873148FB207DF924EC2B8B120FDA8 /* Pods-Farmacy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Farmacy-umbrella.h"; sourceTree = "<group>"; };
-		24072D45ECBFFF10571F8DE7E0A29780 /* FBSDKCoreKit_Basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.debug.xcconfig; sourceTree = "<group>"; };
 		2420BCB7540A780B6AF0ADCB3ADC92AE /* Pods-Farmacy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Farmacy-frameworks.sh"; sourceTree = "<group>"; };
+		25E4EAC00E40671A777AC2BC40ECDA7C /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		2AE33DB924F1ADB50DFE80DBBA86D8F8 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		2E33D764651A8BE65FF0CBB02D085F80 /* Pods-Farmacy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Farmacy"; path = Pods_Farmacy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		301548F7BB44B19CB3FC75A48E0E3745 /* Pods-FarmacyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FarmacyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		31D967808A21E7D506CE02532D6E5544 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		321E368B049F1CA7DAEDF3E6B0B84379 /* Pods-Farmacy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-acknowledgements.plist"; sourceTree = "<group>"; };
-		3E8E69D7C40373EB7C9AAA8C31C6561E /* FBSDKCoreKit_Basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.release.xcconfig; sourceTree = "<group>"; };
+		37C592A1C849537727FD7121E63F2E20 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		38FC46E79F3C44FB27705DF05EA12ABC /* WKWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WKWebView+AFNetworking.m"; path = "UIKit+AFNetworking/WKWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		396BB0447ADA593C0D2D8DBCCD257B6D /* FBSDKLoginKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.debug.xcconfig; sourceTree = "<group>"; };
+		3B009DFEF3720EB662EDF9F5645F0E8D /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		426C22699EF9E897AEBECB2D22AA61B9 /* Pods-Farmacy-FarmacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy-FarmacyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4542F04DC8BFD78650ECD96D5E4BE98F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		4813E8A729339FA6D4237B6F13ECF0EA /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		507E14F1826C8796599396F0F0000D2D /* FBSDKLoginKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.release.xcconfig; sourceTree = "<group>"; };
 		50CB1837E78B7FF50B90F338B971EEB8 /* Pods-FarmacyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FarmacyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		54DE81EE50CD12F5E0A29B5186147536 /* Pods-Farmacy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Farmacy-acknowledgements.markdown"; sourceTree = "<group>"; };
-		56EF0EFC931B00CC98D40430A90194AE /* FBSDKCoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.debug.xcconfig; sourceTree = "<group>"; };
+		58B987D9C5D8C82EEF90D0058C5163CD /* FBSDKCoreKit_Basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.debug.xcconfig; sourceTree = "<group>"; };
+		5C60F426D4D69474CB541D193CCFDCC3 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		5FCBF9CD8E7A727C6CD398814AA801EB /* Pods-Farmacy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Farmacy.modulemap"; sourceTree = "<group>"; };
 		634CE559C857C25CD11F8CFC1275D6E3 /* Pods-Farmacy-FarmacyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy-FarmacyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6BE5213F5B774A01C96833B6D3087C6D /* FBSDKCoreKit_Basics-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit_Basics-xcframeworks.sh"; sourceTree = "<group>"; };
+		65BF18DC2F50DDFBDBF1FBF33083F622 /* FBAEMKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBAEMKit.xcframework; path = XCFrameworks/FBAEMKit.xcframework; sourceTree = "<group>"; };
+		667D1AF3D004917089248AA8D0057E1D /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		6B8BA61FBAEDB231EC5EB73997B4ED39 /* FBSDKCoreKit_Basics-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit_Basics-xcframeworks.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		74ED1162B2E448BB4FDAFB082BAEDA01 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		751AB3FA0D7FCFE27B5EE566403B677F /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
+		75FA2A480807C06E752FBDAA50C3790B /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		7A735004D2266C28B48D8AE67B2486F8 /* Pods-FarmacyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FarmacyTests.modulemap"; sourceTree = "<group>"; };
 		7F425DA829755E64862A61B60172CC37 /* Pods-Farmacy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy.release.xcconfig"; sourceTree = "<group>"; };
-		801E164FEC5D4FB901637693081ABF9B /* FBSDKLoginKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKLoginKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		81D92EC3FB8127A0A2F53F31CF29E3D7 /* AFNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AFNetworking-Info.plist"; sourceTree = "<group>"; };
+		87591691A1F00FD32E05DC9AAB6A7A11 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		892DDAC6E2128AB12AB6A6AD261A2BFB /* FBAEMKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBAEMKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		8E80B47D4A63B5996B7DF3EBC09848FA /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		904774319F1098CD4C92BAE5A0510C81 /* Pods-Farmacy-FarmacyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Farmacy-FarmacyUITests.modulemap"; sourceTree = "<group>"; };
 		9105FBEFE43FB0FFE68F80CA1948A967 /* Pods-FarmacyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FarmacyTests-umbrella.h"; sourceTree = "<group>"; };
+		914393602F58CF8D60810D08A1472851 /* WKWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WKWebView+AFNetworking.h"; path = "UIKit+AFNetworking/WKWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		91C23E421C383074A0F632D5F0EC55AC /* FBSDKCoreKit_Basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.release.xcconfig; sourceTree = "<group>"; };
+		92640EB4C1840C69385344E4EE55D8C4 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		9556288F187AE4D09CEA990564A91116 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		970AEB933EA59E765798A75328073E2E /* FBSDKLoginKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKLoginKit-xcframeworks.sh"; sourceTree = "<group>"; };
 		984B6AC039907CE6A7E6716FD0D7E9B4 /* Pods-Farmacy-FarmacyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Farmacy-FarmacyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E831B77285573378F80A5B68FFEB8CA /* Pods-FarmacyTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FarmacyTests-Info.plist"; sourceTree = "<group>"; };
+		9E87EE918F12B7A5CABA46EF490224ED /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		A2371DFFBAE13DD4CC563FA6DB50E394 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		A26435D1CEDCC835EEFCE083836F4EFF /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		A2DC49DA90065666423E1101714567A2 /* FBAEMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.release.xcconfig; sourceTree = "<group>"; };
+		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8502AF22D8542D820978BA445ABCD6C /* Pods-FarmacyTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FarmacyTests"; path = Pods_FarmacyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC271F4651EE6ECD3590EC600A95B9A9 /* FBAEMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.release.xcconfig; sourceTree = "<group>"; };
-		AFA210CDA57FBFF5AB1CAC3A2B6D897E /* FBAEMKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBAEMKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		AE28E8C2C034312025936DD87F3EFC70 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit_Basics.xcframework; path = XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
 		B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Farmacy.debug.xcconfig"; sourceTree = "<group>"; };
+		B50D7AB1D616223F878601F42F147F06 /* AFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.debug.xcconfig; sourceTree = "<group>"; };
 		BA95E40CA0F046CC8F164E634803D97F /* Pods-Farmacy-FarmacyUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Farmacy-FarmacyUITests"; path = Pods_Farmacy_FarmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD89167A35A6A57EA6B1B9B9F3F26032 /* FBSDKLoginKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.debug.xcconfig; sourceTree = "<group>"; };
+		BCFB61F18825EA941C97EB6743B9D2D8 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		BDB7B27506DC97306218B72FA8707043 /* FBSDKCoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.debug.xcconfig; sourceTree = "<group>"; };
+		BEC45D64624D8DCAC7D57C419BDE1129 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		BF61AD8087F95831275580A97E01719F /* FBAEMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.debug.xcconfig; sourceTree = "<group>"; };
+		C345BA47525C0DC63251F8A6730E8CE0 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		C749044868A3FB46DD4FF6746F84D565 /* Pods-FarmacyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FarmacyTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C8C6F8D9A91E61295CE1F306C7255804 /* FBSDKCoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.release.xcconfig; sourceTree = "<group>"; };
-		D2E7697D962BA32517093D8AF288AA77 /* FBSDKCoreKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit-xcframeworks.sh"; sourceTree = "<group>"; };
-		E7B318545F108D862B8F30BBF07138B7 /* FBSDKLoginKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKLoginKit.xcframework; path = XCFrameworks/FBSDKLoginKit.xcframework; sourceTree = "<group>"; };
-		EC70EC629D3D1E824E5D47E7961853C0 /* FBAEMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.debug.xcconfig; sourceTree = "<group>"; };
+		C98B8B7A76CBA876531961A23A82680E /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		CB6BF9AF5BF207BCA597125CD2B98016 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		CC2AFC8A1D87EC889F12AC9198A4F69A /* AFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.release.xcconfig; sourceTree = "<group>"; };
+		D5D009BF9C2719BFF069E2F838C51235 /* FBSDKLoginKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKLoginKit.xcframework; path = XCFrameworks/FBSDKLoginKit.xcframework; sourceTree = "<group>"; };
+		D96E217BD2660181E3E62BF5496888EF /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		DB67CCDFD3F5050191E3CB00967E6504 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		DB848C2497E0E41C0AC1CB801B43E02C /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		DD88051FD2B37105C3064CF4735B9509 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		E9287557E18E4A542A43DB278F94B388 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		E9CF78AACFF4FF673AA18A01E8D1B32D /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
+		EC3881D556B06869E57D0241542D1A5A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		F03B2D2FA841A13946BB1B8B111907D2 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		F11D1DA174A3DB526A23CBF0ABC73AFB /* Pods-Farmacy-FarmacyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-FarmacyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F661CD9A8497EA7CC870D24138E03BCC /* Pods-Farmacy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-Info.plist"; sourceTree = "<group>"; };
-		F99B0F40D87BE2F52589B9B52F134E2B /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit_Basics.xcframework; path = XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		FD51E34B1EA83CCB11A40D02FC4F9C9C /* FBSDKCoreKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit-xcframeworks.sh"; sourceTree = "<group>"; };
 		FE41CE1F099DB71A29A2DCCF2EA97D29 /* Pods-Farmacy-FarmacyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Farmacy-FarmacyUITests-umbrella.h"; sourceTree = "<group>"; };
 		FEB6DCBBF57211924A317AA386981517 /* Pods-Farmacy-FarmacyUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Farmacy-FarmacyUITests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1E2C40320E36EA7252B972880078AD02 /* Frameworks */ = {
+		3ACE788036A1C20CAE1B3EB160908114 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BDBFFA4841D22A58AA743564EA19A66 /* Foundation.framework in Frameworks */,
+				68DE4F59E9E339986676CB8434271A77 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,63 +317,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8CD27BFC65F737CD09424A1B70EB926 /* Frameworks */ = {
+		CBA59567B13F3EDBCCA091DDD3E51DD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EF953CF682B014E5F18AA81CC43402 /* Foundation.framework in Frameworks */,
+				23AEAF5E77D59B98AE79C57BAE746C1A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49F884A6B066399A4F61351F2012D8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E5C449D2A32E546C7752AAA04A8819 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09D3C43B690561F0D90D1630485C6E27 /* Frameworks */ = {
+		01730691B5939F178D7A8088D0B2DBAF /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				F99B0F40D87BE2F52589B9B52F134E2B /* FBSDKCoreKit_Basics.xcframework */,
+				87591691A1F00FD32E05DC9AAB6A7A11 /* AFNetworking.h */,
+				1A6602299A0B848374D48CA3716BA7EF /* NSURLSession */,
+				E3EC1288E51EDB3FD30FAC670893FEE3 /* Reachability */,
+				C23CCC81EEC2A92D63EBA80E6BEB9286 /* Security */,
+				CD29DC354797A8C81CD6B8D541D8C8C8 /* Serialization */,
+				0ACBC892267F7FE5D870CBA8A9C868F4 /* Support Files */,
+				50416CAF530A84A88BB41D7648D91EB9 /* UIKit */,
 			);
-			name = Frameworks;
+			name = AFNetworking;
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		11E2D339A8BA269DFDF1CB63DA8CAA97 /* Products */ = {
+		0ACBC892267F7FE5D870CBA8A9C868F4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				25E4EAC00E40671A777AC2BC40ECDA7C /* AFNetworking.modulemap */,
+				9556288F187AE4D09CEA990564A91116 /* AFNetworking-dummy.m */,
+				81D92EC3FB8127A0A2F53F31CF29E3D7 /* AFNetworking-Info.plist */,
+				2AE33DB924F1ADB50DFE80DBBA86D8F8 /* AFNetworking-prefix.pch */,
+				C98B8B7A76CBA876531961A23A82680E /* AFNetworking-umbrella.h */,
+				B50D7AB1D616223F878601F42F147F06 /* AFNetworking.debug.xcconfig */,
+				CC2AFC8A1D87EC889F12AC9198A4F69A /* AFNetworking.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		1A6602299A0B848374D48CA3716BA7EF /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				BCFB61F18825EA941C97EB6743B9D2D8 /* AFCompatibilityMacros.h */,
+				4542F04DC8BFD78650ECD96D5E4BE98F /* AFHTTPSessionManager.h */,
+				EC3881D556B06869E57D0241542D1A5A /* AFHTTPSessionManager.m */,
+				1915B0600CA06888C33FE9F04A71926D /* AFURLSessionManager.h */,
+				37C592A1C849537727FD7121E63F2E20 /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		30DDC1AFA75E97EE2B331237F3F2C436 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01730691B5939F178D7A8088D0B2DBAF /* AFNetworking */,
+				B054AF50417AB8DF172F80B2982E4A73 /* FBAEMKit */,
+				6E65D562C6CB2990C6509E3FBBFDFE5B /* FBSDKCoreKit */,
+				8B12E21D3774026FF0F4F9A7A9A4831C /* FBSDKCoreKit_Basics */,
+				70C371157EFEF590FF5457B64DA0CB84 /* FBSDKLoginKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D498E83119393A58E5E96CFA94559E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */,
 				2E33D764651A8BE65FF0CBB02D085F80 /* Pods-Farmacy */,
 				BA95E40CA0F046CC8F164E634803D97F /* Pods-Farmacy-FarmacyUITests */,
 				A8502AF22D8542D820978BA445ABCD6C /* Pods-FarmacyTests */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		244E1277BE62D22EEC2BACC7BBB5CA62 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				801E164FEC5D4FB901637693081ABF9B /* FBSDKLoginKit-xcframeworks.sh */,
-				BD89167A35A6A57EA6B1B9B9F3F26032 /* FBSDKLoginKit.debug.xcconfig */,
-				055F35A855A46DE8568050DBDA4F3215 /* FBSDKLoginKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSDKLoginKit";
-			sourceTree = "<group>";
-		};
-		2C58D0B4869E299587DC419752182C37 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D2E7697D962BA32517093D8AF288AA77 /* FBSDKCoreKit-xcframeworks.sh */,
-				56EF0EFC931B00CC98D40430A90194AE /* FBSDKCoreKit.debug.xcconfig */,
-				C8C6F8D9A91E61295CE1F306C7255804 /* FBSDKCoreKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSDKCoreKit";
-			sourceTree = "<group>";
-		};
-		3AEB5A0D846B0E5B32E1BECB4F05DF12 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E7B318545F108D862B8F30BBF07138B7 /* FBSDKLoginKit.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		458876DDAC38E3007E98A962DC2D5740 /* Pods-Farmacy */ = {
@@ -302,6 +418,32 @@
 			path = "Target Support Files/Pods-Farmacy";
 			sourceTree = "<group>";
 		};
+		50416CAF530A84A88BB41D7648D91EB9 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E9CF78AACFF4FF673AA18A01E8D1B32D /* AFAutoPurgingImageCache.h */,
+				212BC37C9A2848A2E734077BFF5FBD77 /* AFAutoPurgingImageCache.m */,
+				751AB3FA0D7FCFE27B5EE566403B677F /* AFImageDownloader.h */,
+				CB6BF9AF5BF207BCA597125CD2B98016 /* AFImageDownloader.m */,
+				DD88051FD2B37105C3064CF4735B9509 /* AFNetworkActivityIndicatorManager.h */,
+				4813E8A729339FA6D4237B6F13ECF0EA /* AFNetworkActivityIndicatorManager.m */,
+				DB67CCDFD3F5050191E3CB00967E6504 /* UIActivityIndicatorView+AFNetworking.h */,
+				A26435D1CEDCC835EEFCE083836F4EFF /* UIActivityIndicatorView+AFNetworking.m */,
+				A2371DFFBAE13DD4CC563FA6DB50E394 /* UIButton+AFNetworking.h */,
+				127C1CE83404B7DF63A7AAFF0EF16B86 /* UIButton+AFNetworking.m */,
+				BEC45D64624D8DCAC7D57C419BDE1129 /* UIImageView+AFNetworking.h */,
+				10D831E72084C5936F93C045570D7316 /* UIImageView+AFNetworking.m */,
+				74ED1162B2E448BB4FDAFB082BAEDA01 /* UIKit+AFNetworking.h */,
+				9E87EE918F12B7A5CABA46EF490224ED /* UIProgressView+AFNetworking.h */,
+				8E80B47D4A63B5996B7DF3EBC09848FA /* UIProgressView+AFNetworking.m */,
+				3B009DFEF3720EB662EDF9F5645F0E8D /* UIRefreshControl+AFNetworking.h */,
+				D96E217BD2660181E3E62BF5496888EF /* UIRefreshControl+AFNetworking.m */,
+				914393602F58CF8D60810D08A1472851 /* WKWebView+AFNetworking.h */,
+				38FC46E79F3C44FB27705DF05EA12ABC /* WKWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,44 +452,53 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5F251279E7EBFC16DAD82263B660B227 /* Support Files */ = {
+		6A3B4AA31462D9ADF6E21C17C5F2067A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFA210CDA57FBFF5AB1CAC3A2B6D897E /* FBAEMKit-xcframeworks.sh */,
-				EC70EC629D3D1E824E5D47E7961853C0 /* FBAEMKit.debug.xcconfig */,
-				AC271F4651EE6ECD3590EC600A95B9A9 /* FBAEMKit.release.xcconfig */,
+				AE28E8C2C034312025936DD87F3EFC70 /* FBSDKCoreKit_Basics.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E65D562C6CB2990C6509E3FBBFDFE5B /* FBSDKCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				BEE6979924F889C25A86045EE9AFB7A2 /* Frameworks */,
+				E2AC0EB975AE1FA1D0E7E06E6B7AA22B /* Support Files */,
+			);
+			name = FBSDKCoreKit;
+			path = FBSDKCoreKit;
+			sourceTree = "<group>";
+		};
+		70C371157EFEF590FF5457B64DA0CB84 /* FBSDKLoginKit */ = {
+			isa = PBXGroup;
+			children = (
+				EBF3DC3844597855E6FFF5E93234F2EB /* Frameworks */,
+				AD0C4D843851DAEAE61190C86F717C47 /* Support Files */,
+			);
+			name = FBSDKLoginKit;
+			path = FBSDKLoginKit;
+			sourceTree = "<group>";
+		};
+		7551D33CF2AB99F8C440B06273065707 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				892DDAC6E2128AB12AB6A6AD261A2BFB /* FBAEMKit-xcframeworks.sh */,
+				BF61AD8087F95831275580A97E01719F /* FBAEMKit.debug.xcconfig */,
+				A2DC49DA90065666423E1101714567A2 /* FBAEMKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBAEMKit";
 			sourceTree = "<group>";
 		};
-		6D4448CE022842FFC47BDD61F8CE2E50 /* Frameworks */ = {
+		8B12E21D3774026FF0F4F9A7A9A4831C /* FBSDKCoreKit_Basics */ = {
 			isa = PBXGroup;
 			children = (
-				021C119046339CA3FD4779A57310693A /* FBSDKCoreKit.xcframework */,
+				6A3B4AA31462D9ADF6E21C17C5F2067A /* Frameworks */,
+				B28B9ABF17E49C6BD09D4E3B461A4975 /* Support Files */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6DD9324788C70DE6E1D2F553E03E7D30 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6BE5213F5B774A01C96833B6D3087C6D /* FBSDKCoreKit_Basics-xcframeworks.sh */,
-				24072D45ECBFFF10571F8DE7E0A29780 /* FBSDKCoreKit_Basics.debug.xcconfig */,
-				3E8E69D7C40373EB7C9AAA8C31C6561E /* FBSDKCoreKit_Basics.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSDKCoreKit_Basics";
-			sourceTree = "<group>";
-		};
-		6F61346BD432118ABE3FC9922D808BFB /* FBSDKLoginKit */ = {
-			isa = PBXGroup;
-			children = (
-				3AEB5A0D846B0E5B32E1BECB4F05DF12 /* Frameworks */,
-				244E1277BE62D22EEC2BACC7BBB5CA62 /* Support Files */,
-			);
-			name = FBSDKLoginKit;
-			path = FBSDKLoginKit;
+			name = FBSDKCoreKit_Basics;
+			path = FBSDKCoreKit_Basics;
 			sourceTree = "<group>";
 		};
 		ACAF4A628F2254A64AFCB6B38D20EC16 /* Targets Support Files */ = {
@@ -358,6 +509,17 @@
 				ADDE20CA42DAEECB1A28D48EA68E3910 /* Pods-FarmacyTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AD0C4D843851DAEAE61190C86F717C47 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				970AEB933EA59E765798A75328073E2E /* FBSDKLoginKit-xcframeworks.sh */,
+				396BB0447ADA593C0D2D8DBCCD257B6D /* FBSDKLoginKit.debug.xcconfig */,
+				507E14F1826C8796599396F0F0000D2D /* FBSDKLoginKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKLoginKit";
 			sourceTree = "<group>";
 		};
 		ADDE20CA42DAEECB1A28D48EA68E3910 /* Pods-FarmacyTests */ = {
@@ -376,22 +538,42 @@
 			path = "Target Support Files/Pods-FarmacyTests";
 			sourceTree = "<group>";
 		};
-		B244ACAFADCAA2004439D0342D3E5603 /* FBSDKCoreKit_Basics */ = {
+		B054AF50417AB8DF172F80B2982E4A73 /* FBAEMKit */ = {
 			isa = PBXGroup;
 			children = (
-				09D3C43B690561F0D90D1630485C6E27 /* Frameworks */,
-				6DD9324788C70DE6E1D2F553E03E7D30 /* Support Files */,
+				D81D05E8E4ADFEAAD5056332DDF16E1F /* Frameworks */,
+				7551D33CF2AB99F8C440B06273065707 /* Support Files */,
 			);
-			name = FBSDKCoreKit_Basics;
-			path = FBSDKCoreKit_Basics;
+			name = FBAEMKit;
+			path = FBAEMKit;
 			sourceTree = "<group>";
 		};
-		BAF55A8CB508B9869BC21897687EC403 /* Frameworks */ = {
+		B28B9ABF17E49C6BD09D4E3B461A4975 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				03DB54D6C6E018A44014308ED558AB17 /* FBAEMKit.xcframework */,
+				6B8BA61FBAEDB231EC5EB73997B4ED39 /* FBSDKCoreKit_Basics-xcframeworks.sh */,
+				58B987D9C5D8C82EEF90D0058C5163CD /* FBSDKCoreKit_Basics.debug.xcconfig */,
+				91C23E421C383074A0F632D5F0EC55AC /* FBSDKCoreKit_Basics.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKCoreKit_Basics";
+			sourceTree = "<group>";
+		};
+		BEE6979924F889C25A86045EE9AFB7A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75FA2A480807C06E752FBDAA50C3790B /* FBSDKCoreKit.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C23CCC81EEC2A92D63EBA80E6BEB9286 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				E9287557E18E4A542A43DB278F94B388 /* AFSecurityPolicy.h */,
+				5C60F426D4D69474CB541D193CCFDCC3 /* AFSecurityPolicy.m */,
+			);
+			name = Security;
 			sourceTree = "<group>";
 		};
 		C23DB31D1D37CB00E35776DB416910CC /* Pods-Farmacy-FarmacyUITests */ = {
@@ -411,14 +593,15 @@
 			path = "Target Support Files/Pods-Farmacy-FarmacyUITests";
 			sourceTree = "<group>";
 		};
-		CC2DD7D7FCD91DCCD84F4928A5128B38 /* FBSDKCoreKit */ = {
+		CD29DC354797A8C81CD6B8D541D8C8C8 /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
-				6D4448CE022842FFC47BDD61F8CE2E50 /* Frameworks */,
-				2C58D0B4869E299587DC419752182C37 /* Support Files */,
+				31D967808A21E7D506CE02532D6E5544 /* AFURLRequestSerialization.h */,
+				667D1AF3D004917089248AA8D0057E1D /* AFURLRequestSerialization.m */,
+				C345BA47525C0DC63251F8A6730E8CE0 /* AFURLResponseSerialization.h */,
+				DB848C2497E0E41C0AC1CB801B43E02C /* AFURLResponseSerialization.m */,
 			);
-			name = FBSDKCoreKit;
-			path = FBSDKCoreKit;
+			name = Serialization;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -426,8 +609,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				FA9D709ADCFE9F2286C39E4049A18205 /* Pods */,
-				11E2D339A8BA269DFDF1CB63DA8CAA97 /* Products */,
+				30DDC1AFA75E97EE2B331237F3F2C436 /* Pods */,
+				3D498E83119393A58E5E96CFA94559E6 /* Products */,
 				ACAF4A628F2254A64AFCB6B38D20EC16 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -440,30 +623,61 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E8D635C0E36113A84379F9823F5AFE87 /* FBAEMKit */ = {
+		D81D05E8E4ADFEAAD5056332DDF16E1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BAF55A8CB508B9869BC21897687EC403 /* Frameworks */,
-				5F251279E7EBFC16DAD82263B660B227 /* Support Files */,
+				65BF18DC2F50DDFBDBF1FBF33083F622 /* FBAEMKit.xcframework */,
 			);
-			name = FBAEMKit;
-			path = FBAEMKit;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA9D709ADCFE9F2286C39E4049A18205 /* Pods */ = {
+		E2AC0EB975AE1FA1D0E7E06E6B7AA22B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E8D635C0E36113A84379F9823F5AFE87 /* FBAEMKit */,
-				CC2DD7D7FCD91DCCD84F4928A5128B38 /* FBSDKCoreKit */,
-				B244ACAFADCAA2004439D0342D3E5603 /* FBSDKCoreKit_Basics */,
-				6F61346BD432118ABE3FC9922D808BFB /* FBSDKLoginKit */,
+				FD51E34B1EA83CCB11A40D02FC4F9C9C /* FBSDKCoreKit-xcframeworks.sh */,
+				BDB7B27506DC97306218B72FA8707043 /* FBSDKCoreKit.debug.xcconfig */,
+				2212717ECEA1CFDEEC7FDAD600213E96 /* FBSDKCoreKit.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/FBSDKCoreKit";
+			sourceTree = "<group>";
+		};
+		E3EC1288E51EDB3FD30FAC670893FEE3 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				92640EB4C1840C69385344E4EE55D8C4 /* AFNetworkReachabilityManager.h */,
+				F03B2D2FA841A13946BB1B8B111907D2 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		EBF3DC3844597855E6FFF5E93234F2EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5D009BF9C2719BFF069E2F838C51235 /* FBSDKLoginKit.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		32EBD870F0E9E29CBA26A9C703BFA790 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78BA26AC5FEDC369101AA06BA136F816 /* Pods-Farmacy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475D472FB4C983170A07F11C12B3B187 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B168E5DFD275516CC9BF16C381F8CB /* Pods-Farmacy-FarmacyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AE28B9395D4025C077716D1AEEC284B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,41 +686,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D50B497728F19E45648A8D5D4876FFDC /* Headers */ = {
+		611427CBC37B16A455BA30DDD0F9104D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8217E67BE0EBDA067EFD0A2591A7C61 /* Pods-Farmacy-FarmacyUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D54795F71B2B4926A843C7018CDA8699 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDF606EC4DA998A72CCECBA1A46C8B4D /* Pods-Farmacy-umbrella.h in Headers */,
+				347731E8D4C4F27FC53DDFAC590481D6 /* AFAutoPurgingImageCache.h in Headers */,
+				EE3B8613CDD20D58260C22D21BC61F38 /* AFCompatibilityMacros.h in Headers */,
+				584233A4CEC7C9AA382A1A43C26B87EE /* AFHTTPSessionManager.h in Headers */,
+				E8372DA8FDA0830EF5FF160493C0B37A /* AFImageDownloader.h in Headers */,
+				ED0B81FF1DEC0B138947EA93D22E5A4E /* AFNetworkActivityIndicatorManager.h in Headers */,
+				52E68E9AFF4A9C20F05A07F3E55EAF59 /* AFNetworking.h in Headers */,
+				6DB244706298D81730C5537279B7B635 /* AFNetworking-umbrella.h in Headers */,
+				27AB52C7962046BC8963B2CD626F22BD /* AFNetworkReachabilityManager.h in Headers */,
+				0FC2C7300D3DE350BD73741888D9A1A8 /* AFSecurityPolicy.h in Headers */,
+				918AD88A49B79CD1B13BAD5415FE5621 /* AFURLRequestSerialization.h in Headers */,
+				81C76941D750B3F226E07AE600A67FC6 /* AFURLResponseSerialization.h in Headers */,
+				22AD28E260EF21FECAAEF40B04E8E020 /* AFURLSessionManager.h in Headers */,
+				B8AD58C4501F99461CB07AC05DCB8705 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				9F5D472E0B58C95613C76C43148FC8B5 /* UIButton+AFNetworking.h in Headers */,
+				27A1AA22D234973BA30D8493C546884C /* UIImageView+AFNetworking.h in Headers */,
+				3E7A25BCE5BAC256FBBA56106C3192CD /* UIKit+AFNetworking.h in Headers */,
+				B8B4A245FEFA2CE20339CA8CA8BE68EC /* UIProgressView+AFNetworking.h in Headers */,
+				65163D7E6539C8A1D65F5FCBA0E6EFD2 /* UIRefreshControl+AFNetworking.h in Headers */,
+				57744CA757400E7183DFC0D37EFB5214 /* WKWebView+AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5565231F8E97D87E79DBAB128C6C6B4C /* Pods-Farmacy-FarmacyUITests */ = {
+		0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FE37685F8F10E03C211B74E09C0AAF8 /* Build configuration list for PBXNativeTarget "Pods-Farmacy-FarmacyUITests" */;
+			buildConfigurationList = D5480C5D42AA8B0CF0C71E4D89BF03BF /* Build configuration list for PBXNativeTarget "AFNetworking" */;
 			buildPhases = (
-				D50B497728F19E45648A8D5D4876FFDC /* Headers */,
-				89012F1E6E55AD0EAEFF1FDF7158BF7E /* Sources */,
-				1E2C40320E36EA7252B972880078AD02 /* Frameworks */,
-				2671D195CAFB1283307E56E70EA09EB1 /* Resources */,
+				611427CBC37B16A455BA30DDD0F9104D /* Headers */,
+				CAE03210FAC4855FA1090E525AB10480 /* Sources */,
+				CBA59567B13F3EDBCCA091DDD3E51DD3 /* Frameworks */,
+				8A190A17F289F99ECE07124E97ED74B2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8123D8CC2E5C2F39A52744DCEA2E9C0B /* PBXTargetDependency */,
-				8FFDFB2047E785E4BA9D739A51E7A5A7 /* PBXTargetDependency */,
-				09585BDF46794891E3C7AA101450158C /* PBXTargetDependency */,
-				0585044AF7BC8B972923DB5407237351 /* PBXTargetDependency */,
+			);
+			name = AFNetworking;
+			productName = AFNetworking;
+			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */;
+			productType = "com.apple.product-type.framework";
+		};
+		5565231F8E97D87E79DBAB128C6C6B4C /* Pods-Farmacy-FarmacyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E71710FDE2B8CC362F7477A0D6B12B95 /* Build configuration list for PBXNativeTarget "Pods-Farmacy-FarmacyUITests" */;
+			buildPhases = (
+				475D472FB4C983170A07F11C12B3B187 /* Headers */,
+				EA7BC6413EA506802E19774D0BF927E3 /* Sources */,
+				F49F884A6B066399A4F61351F2012D8C /* Frameworks */,
+				07D3249C10E8C37E75AD614ED27181F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB5650A7AACF6A408831AFA047F7E76 /* PBXTargetDependency */,
+				8F4CC5482A850C4CE42EFA4C4DF86AC7 /* PBXTargetDependency */,
+				C3530BD4B3BDB4B5DF63B8A1B00167D5 /* PBXTargetDependency */,
+				CFF622940700291E1A01EEEA619B4508 /* PBXTargetDependency */,
+				91D9C4ADC244CCD11ECC2FAE0E17F94C /* PBXTargetDependency */,
 			);
 			name = "Pods-Farmacy-FarmacyUITests";
 			productName = Pods_Farmacy_FarmacyUITests;
@@ -525,7 +768,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				795F1B77699FB54125D09496198C7504 /* PBXTargetDependency */,
+				A5D23BBD7E0577F980A2231257CA7286 /* PBXTargetDependency */,
 			);
 			name = "Pods-FarmacyTests";
 			productName = Pods_FarmacyTests;
@@ -534,20 +777,21 @@
 		};
 		D28F7206FEFD4C14BB8719CF219F5ECF /* Pods-Farmacy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47C6FD916B8C3F4CDF933CD139BA61DD /* Build configuration list for PBXNativeTarget "Pods-Farmacy" */;
+			buildConfigurationList = 767F426D51D2C6BD0D439786435CEBE0 /* Build configuration list for PBXNativeTarget "Pods-Farmacy" */;
 			buildPhases = (
-				D54795F71B2B4926A843C7018CDA8699 /* Headers */,
-				D93A641E012DB9CDCE6A6E6848E8CD4F /* Sources */,
-				B8CD27BFC65F737CD09424A1B70EB926 /* Frameworks */,
-				B87F7C09F34A68726D06CA449576D056 /* Resources */,
+				32EBD870F0E9E29CBA26A9C703BFA790 /* Headers */,
+				E24029057DEF7F2EB05DFB510867B1F1 /* Sources */,
+				3ACE788036A1C20CAE1B3EB160908114 /* Frameworks */,
+				2E760537A0800E8AC1E523197FAC7928 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A8698FAEA383B54326D256F2FBD6C4AD /* PBXTargetDependency */,
-				9B1B3674EFC1274F5A124265688368BC /* PBXTargetDependency */,
-				414F83EE60493A93F25B3934C8E8228D /* PBXTargetDependency */,
-				6BE75180FC8C31623A5B3FECA658F30B /* PBXTargetDependency */,
+				C2C5D07F4D12BC061615F875E6E3178E /* PBXTargetDependency */,
+				7F5FBFC2A02B0E7368055F77EF2ABFC8 /* PBXTargetDependency */,
+				A566F8C86FC111825D48128929ED41FF /* PBXTargetDependency */,
+				5260B0EE67822B96037F8B481F56C889 /* PBXTargetDependency */,
+				CDE9786CC7CC1B5F23A6FD092AB713D6 /* PBXTargetDependency */,
 			);
 			name = "Pods-Farmacy";
 			productName = Pods_Farmacy;
@@ -572,10 +816,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 11E2D339A8BA269DFDF1CB63DA8CAA97 /* Products */;
+			productRefGroup = 3D498E83119393A58E5E96CFA94559E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */,
 				479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */,
 				28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */,
 				8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */,
@@ -588,7 +833,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2671D195CAFB1283307E56E70EA09EB1 /* Resources */ = {
+		07D3249C10E8C37E75AD614ED27181F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -602,7 +847,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B87F7C09F34A68726D06CA449576D056 /* Resources */ = {
+		2E760537A0800E8AC1E523197FAC7928 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A190A17F289F99ECE07124E97ED74B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -629,23 +881,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/FBSDKLoginKit/FBSDKLoginKit-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71CD0B926100C36B517BE2052E600140 /* [CP] Copy XCFrameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-input-files.xcfilelist",
-			);
-			name = "[CP] Copy XCFrameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A261CEA870C48433C3575F1CCC2BB166 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -661,6 +896,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/FBAEMKit/FBAEMKit-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5BDABCDEBB6FAE62083B819948B18B /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C05801FB1115AB56CF9E73BB6786A73A /* [CP] Copy XCFrameworks */ = {
@@ -683,11 +935,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		89012F1E6E55AD0EAEFF1FDF7158BF7E /* Sources */ = {
+		CAE03210FAC4855FA1090E525AB10480 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F399BDAACB4C597485F5D90FA53D997A /* Pods-Farmacy-FarmacyUITests-dummy.m in Sources */,
+				801724F329AA434F8BB6A11E96E5805A /* AFAutoPurgingImageCache.m in Sources */,
+				33B9A195FDB315F18465CB1BA24D74A9 /* AFHTTPSessionManager.m in Sources */,
+				FA57C7B9116769DBBCAEE173060683A3 /* AFImageDownloader.m in Sources */,
+				BAB08D6748C698A6AA6DC7D6A2BFFE49 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				4DCB59DE84A69063E9485E4D8BF8C637 /* AFNetworking-dummy.m in Sources */,
+				63419018E7222B414E161CD480398E20 /* AFNetworkReachabilityManager.m in Sources */,
+				5BE27AF46E2DE81F61752081EDB7E52B /* AFSecurityPolicy.m in Sources */,
+				CDEF12A353FEBC8FE4E2EA0D3FFAC615 /* AFURLRequestSerialization.m in Sources */,
+				97EB8976E78AA2C17544A6453BC1EF04 /* AFURLResponseSerialization.m in Sources */,
+				637243EE5807271030AE4D9741392852 /* AFURLSessionManager.m in Sources */,
+				AD6158AF5746E99C7136F3ECA9423C63 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				B7DA5AE2EE8808176A31F845A204C190 /* UIButton+AFNetworking.m in Sources */,
+				18AEFCE986FB74A0B6B092B3BA2267C6 /* UIImageView+AFNetworking.m in Sources */,
+				6C239323DE74D9551EB571A31A24EC1E /* UIProgressView+AFNetworking.m in Sources */,
+				AC29EE5318026D0BAF479C904536378F /* UIRefreshControl+AFNetworking.m in Sources */,
+				657D596F7ED1260403D4E064E6BF8CD1 /* WKWebView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,135 +966,118 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D93A641E012DB9CDCE6A6E6848E8CD4F /* Sources */ = {
+		E24029057DEF7F2EB05DFB510867B1F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F617042BBBED3F063F9B74FFD846F25A /* Pods-Farmacy-dummy.m in Sources */,
+				75D3AC51D1D5A7E3254EDD661AC8D901 /* Pods-Farmacy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7BC6413EA506802E19774D0BF927E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D2177669F00D21B87F1C3AA6EEA373 /* Pods-Farmacy-FarmacyUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0585044AF7BC8B972923DB5407237351 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKLoginKit;
-			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
-			targetProxy = 8771D5B5E0633C4B7698AF033573B165 /* PBXContainerItemProxy */;
-		};
-		09585BDF46794891E3C7AA101450158C /* PBXTargetDependency */ = {
+		43F837F19DDE7A88C75B991C3F79D3D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit_Basics;
 			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = 68246FC3197E59510DAD343F82754EEC /* PBXContainerItemProxy */;
+			targetProxy = BEBEFDC35B339C09FBD3CEFADE6483C9 /* PBXContainerItemProxy */;
 		};
-		414F83EE60493A93F25B3934C8E8228D /* PBXTargetDependency */ = {
+		521E91E1B8A1F8BA1844D354E83B99C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
+			targetProxy = 8FD6E31BCF9377B0D575DA8B0B5CB8AF /* PBXContainerItemProxy */;
+		};
+		5260B0EE67822B96037F8B481F56C889 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit_Basics;
 			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = 455177C95E6246AA992048A75180C235 /* PBXContainerItemProxy */;
+			targetProxy = 9C24EAFE3DD8C05C08C83EBDCE3EBDF3 /* PBXContainerItemProxy */;
 		};
-		6BE75180FC8C31623A5B3FECA658F30B /* PBXTargetDependency */ = {
+		6F8443144988F30DC1118991E2C63C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit_Basics;
+			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
+			targetProxy = BD3539011A59E264E47D4156B2610216 /* PBXContainerItemProxy */;
+		};
+		7F5FBFC2A02B0E7368055F77EF2ABFC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = 2631541CC98F597C75DE45C6857179B3 /* PBXContainerItemProxy */;
+		};
+		8F4CC5482A850C4CE42EFA4C4DF86AC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = 7650A1132986F64703843DECD3660819 /* PBXContainerItemProxy */;
+		};
+		91D9C4ADC244CCD11ECC2FAE0E17F94C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKLoginKit;
 			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
-			targetProxy = 210DB81B55581C544B4813A98A7DEBAB /* PBXContainerItemProxy */;
+			targetProxy = D9FB616DEE3C253990CED67C68CC68FE /* PBXContainerItemProxy */;
 		};
-		795F1B77699FB54125D09496198C7504 /* PBXTargetDependency */ = {
+		9AB5650A7AACF6A408831AFA047F7E76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 42D665347E44440928CD268C61A37B3A /* PBXContainerItemProxy */;
+		};
+		9AFB4CDF53C3E38E6FC7A425D133FA34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = 23B657D3169AC8AE4B9C71D075142631 /* PBXContainerItemProxy */;
+		};
+		A566F8C86FC111825D48128929ED41FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
+			targetProxy = D99F296EBFC6CCFDA383DD152E4543A2 /* PBXContainerItemProxy */;
+		};
+		A5D23BBD7E0577F980A2231257CA7286 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Farmacy";
 			target = D28F7206FEFD4C14BB8719CF219F5ECF /* Pods-Farmacy */;
-			targetProxy = 61154F5DB11EC1D0B76ABB887B42E1E8 /* PBXContainerItemProxy */;
+			targetProxy = 714564E0BEB3DCA3B83DF3C31D8DF5F2 /* PBXContainerItemProxy */;
 		};
-		8017335E7BE5E4F2AA7C704D34F729C7 /* PBXTargetDependency */ = {
+		C2C5D07F4D12BC061615F875E6E3178E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 87D93EC497302A503F3DA77DBD890F04 /* PBXContainerItemProxy */;
+		};
+		C3530BD4B3BDB4B5DF63B8A1B00167D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKCoreKit;
+			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
+			targetProxy = B7BADB2404659EBCB3425F8E075DA7B5 /* PBXContainerItemProxy */;
+		};
+		CDE9786CC7CC1B5F23A6FD092AB713D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSDKLoginKit;
+			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
+			targetProxy = 966B179227DA20AC41B7DD64C3058B36 /* PBXContainerItemProxy */;
+		};
+		CFF622940700291E1A01EEEA619B4508 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit_Basics;
 			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = 02A4BE5D668F3B5CEA0FBEEE1CF2E5CD /* PBXContainerItemProxy */;
-		};
-		8123D8CC2E5C2F39A52744DCEA2E9C0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = 6A8B4B3F4035DA9AE1EC72505527D31E /* PBXContainerItemProxy */;
-		};
-		847FDCB19BF8828CA239B562DEC3B644 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit_Basics;
-			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = C59C6E8B3308D042FC87FF994BFD41F9 /* PBXContainerItemProxy */;
-		};
-		8FFDFB2047E785E4BA9D739A51E7A5A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit;
-			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
-			targetProxy = 57E36C505D9FC9D26D3B1CBB8A4C588D /* PBXContainerItemProxy */;
-		};
-		9B1B3674EFC1274F5A124265688368BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit;
-			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
-			targetProxy = 0DCA4AA76EC0F317B70DF947EA759CC5 /* PBXContainerItemProxy */;
-		};
-		A8698FAEA383B54326D256F2FBD6C4AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = DACF7C5B811CAA003FAD162B4B202ED8 /* PBXContainerItemProxy */;
-		};
-		A9EE837649E2B6FE214F990788596C62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSDKCoreKit;
-			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
-			targetProxy = FCABB065035E5FAF2E3A00046BDEFF1F /* PBXContainerItemProxy */;
-		};
-		B0CD437C0BBA8546E54637443F048F6A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = B4B596AFAD6406CBFBD4F7B5E4E0B35E /* PBXContainerItemProxy */;
+			targetProxy = 4F37D831B9AEC94850EF4B1DD4CE89C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		09021EE11A9EC6AE51859B4122A7A914 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 634CE559C857C25CD11F8CFC1275D6E3 /* Pods-Farmacy-FarmacyUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -894,6 +1144,23 @@
 			};
 			name = Debug;
 		};
+		17922D2FDB57D19BCD0EC2069CC4747F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58B987D9C5D8C82EEF90D0058C5163CD /* FBSDKCoreKit_Basics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		20F12DCB994BF591703AD65323D9048B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 03DC3806D6D51648DEDE970DB6ADC0C8 /* Pods-FarmacyTests.release.xcconfig */;
@@ -934,7 +1201,7 @@
 		};
 		273A8B8CC56714E67783FB76650B523A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD89167A35A6A57EA6B1B9B9F3F26032 /* FBSDKLoginKit.debug.xcconfig */;
+			baseConfigurationReference = 396BB0447ADA593C0D2D8DBCCD257B6D /* FBSDKLoginKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -951,7 +1218,7 @@
 		};
 		276B1CBE600B90E6F08B7A75A97FE393 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC70EC629D3D1E824E5D47E7961853C0 /* FBAEMKit.debug.xcconfig */;
+			baseConfigurationReference = BF61AD8087F95831275580A97E01719F /* FBAEMKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1065,46 +1332,9 @@
 			};
 			name = Debug;
 		};
-		3BF888A64D1B8FB8A87A24294C820899 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		3DDCC5BBB07FCA81DFF52C7704279A20 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8C6F8D9A91E61295CE1F306C7255804 /* FBSDKCoreKit.release.xcconfig */;
+			baseConfigurationReference = 2212717ECEA1CFDEEC7FDAD600213E96 /* FBSDKCoreKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1120,9 +1350,9 @@
 			};
 			name = Release;
 		};
-		3E07DC5AA81D5CB20D5A5E77E0918C3A /* Debug */ = {
+		4A07C3DFA8392D97C451987440CAF01B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24072D45ECBFFF10571F8DE7E0A29780 /* FBSDKCoreKit_Basics.debug.xcconfig */;
+			baseConfigurationReference = 91C23E421C383074A0F632D5F0EC55AC /* FBSDKCoreKit_Basics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1134,12 +1364,13 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		535A0BFA2AA5677B8970E78B89D340F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC271F4651EE6ECD3590EC600A95B9A9 /* FBAEMKit.release.xcconfig */;
+			baseConfigurationReference = A2DC49DA90065666423E1101714567A2 /* FBAEMKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1157,7 +1388,7 @@
 		};
 		57821C348C39408A19EC4E6A700A33E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56EF0EFC931B00CC98D40430A90194AE /* FBSDKCoreKit.debug.xcconfig */;
+			baseConfigurationReference = BDB7B27506DC97306218B72FA8707043 /* FBSDKCoreKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1172,7 +1403,7 @@
 			};
 			name = Debug;
 		};
-		99B004F832923E4438F3051E28E4DCE3 /* Release */ = {
+		65A15827F97146B4907516754C2A7E3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 426C22699EF9E897AEBECB2D22AA61B9 /* Pods-Farmacy-FarmacyUITests.release.xcconfig */;
 			buildSettings = {
@@ -1210,9 +1441,117 @@
 			};
 			name = Release;
 		};
+		77046D2F783D34A0C3D9D8A57AC29393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80344A194E5B0B3EC11B1DFCF0360690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC2AFC8A1D87EC889F12AC9198A4F69A /* AFNetworking.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/AFNetworking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
+				PRODUCT_MODULE_NAME = AFNetworking;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8BB6AD4058B35D79FDA0506A2BC56F50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 634CE559C857C25CD11F8CFC1275D6E3 /* Pods-Farmacy-FarmacyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Farmacy-FarmacyUITests/Pods-Farmacy-FarmacyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		AC4B3FE6EE9F82FE425FEC1F15C6FCFE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 055F35A855A46DE8568050DBDA4F3215 /* FBSDKLoginKit.release.xcconfig */;
+			baseConfigurationReference = 507E14F1826C8796599396F0F0000D2D /* FBSDKLoginKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1228,7 +1567,40 @@
 			};
 			name = Release;
 		};
-		EDAF99577D3427421146B659C1F33A35 /* Release */ = {
+		CE82259E8755F62223B25EE70D0CEAB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50D7AB1D616223F878601F42F147F06 /* AFNetworking.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/AFNetworking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
+				PRODUCT_MODULE_NAME = AFNetworking;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D465B11BAA1D923948BBBAFDB58FDD9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F425DA829755E64862A61B60172CC37 /* Pods-Farmacy.release.xcconfig */;
 			buildSettings = {
@@ -1266,50 +1638,14 @@
 			};
 			name = Release;
 		};
-		EF16FB4CD95BE7E289581AA42F469DE4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E8E69D7C40373EB7C9AAA8C31C6561E /* FBSDKCoreKit_Basics.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035656960A067353649EA423EF370480 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E07DC5AA81D5CB20D5A5E77E0918C3A /* Debug */,
-				EF16FB4CD95BE7E289581AA42F469DE4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		442545805DAF10650DBA7C00DEAAD47B /* Build configuration list for PBXAggregateTarget "FBAEMKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				276B1CBE600B90E6F08B7A75A97FE393 /* Debug */,
 				535A0BFA2AA5677B8970E78B89D340F5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		47C6FD916B8C3F4CDF933CD139BA61DD /* Build configuration list for PBXNativeTarget "Pods-Farmacy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3BF888A64D1B8FB8A87A24294C820899 /* Debug */,
-				EDAF99577D3427421146B659C1F33A35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1323,11 +1659,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FE37685F8F10E03C211B74E09C0AAF8 /* Build configuration list for PBXNativeTarget "Pods-Farmacy-FarmacyUITests" */ = {
+		767F426D51D2C6BD0D439786435CEBE0 /* Build configuration list for PBXNativeTarget "Pods-Farmacy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				09021EE11A9EC6AE51859B4122A7A914 /* Debug */,
-				99B004F832923E4438F3051E28E4DCE3 /* Release */,
+				77046D2F783D34A0C3D9D8A57AC29393 /* Debug */,
+				D465B11BAA1D923948BBBAFDB58FDD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A49D673DB8C57F3B1145C4F4424B73DE /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17922D2FDB57D19BCD0EC2069CC4747F /* Debug */,
+				4A07C3DFA8392D97C451987440CAF01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1346,6 +1691,24 @@
 			buildConfigurations = (
 				57821C348C39408A19EC4E6A700A33E8 /* Debug */,
 				3DDCC5BBB07FCA81DFF52C7704279A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5480C5D42AA8B0CF0C71E4D89BF03BF /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE82259E8755F62223B25EE70D0CEAB5 /* Debug */,
+				80344A194E5B0B3EC11B1DFCF0360690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E71710FDE2B8CC362F7477A0D6B12B95 /* Build configuration list for PBXNativeTarget "Pods-Farmacy-FarmacyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB6AD4058B35D79FDA0506A2BC56F50 /* Debug */,
+				65A15827F97146B4907516754C2A7E3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

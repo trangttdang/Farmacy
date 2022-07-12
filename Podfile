@@ -7,6 +7,7 @@ target 'Farmacy' do
 
   # Pods for Farmacy
   pod "FBSDKLoginKit"
+  pod 'AFNetworking'
 
   target 'FarmacyTests' do
     inherit! :search_paths

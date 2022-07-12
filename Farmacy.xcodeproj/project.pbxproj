@@ -10,7 +10,6 @@
 		795AB1A3A9E50E04464D3763 /* Pods_FarmacyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2AE4CE25B2074F8B0358E0E /* Pods_FarmacyTests.framework */; };
 		942C616D2877968100775B55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C616C2877968100775B55 /* AppDelegate.m */; };
 		942C61702877968100775B55 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C616F2877968100775B55 /* SceneDelegate.m */; };
-		942C61732877968100775B55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61722877968100775B55 /* ViewController.m */; };
 		942C61762877968100775B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942C61742877968100775B55 /* Main.storyboard */; };
 		942C61782877968100775B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942C61772877968100775B55 /* Assets.xcassets */; };
 		942C617B2877968100775B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942C61792877968100775B55 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,11 @@
 		942C61942877968200775B55 /* FarmacyUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61932877968200775B55 /* FarmacyUITestsLaunchTests.m */; };
 		942C61AC2877AE0A00775B55 /* MyCropsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61AA2877AE0A00775B55 /* MyCropsViewController.m */; };
 		942C61B42877F53100775B55 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61B12877B0FD00775B55 /* LoginViewController.m */; };
+		942C61BA287C5E1000775B55 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61B9287C5E1000775B55 /* WeatherViewController.m */; };
+		942C61C3287C96A800775B55 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 942C61C2287C96A800775B55 /* Keys.plist */; };
+		942C61C6287CA4D600775B55 /* APIManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61C5287CA4D600775B55 /* APIManagers.m */; };
+		942C61CA287CD4F400775B55 /* WeatherCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61C9287CD4F400775B55 /* WeatherCard.m */; };
+		942C61CF287CE7AF00775B55 /* WeatherCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61CE287CE7AF00775B55 /* WeatherCardCell.m */; };
 		A309F0BCDF4A5AF5D42B7854 /* Pods_Farmacy_FarmacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */; };
 		D9AD725E1FE2FC725B876447 /* Pods_Farmacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561932451C0356E9E1EBD2BC /* Pods_Farmacy.framework */; };
 /* End PBXBuildFile section */
@@ -52,8 +56,6 @@
 		942C616C2877968100775B55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		942C616E2877968100775B55 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		942C616F2877968100775B55 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		942C61712877968100775B55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		942C61722877968100775B55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		942C61752877968100775B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		942C61772877968100775B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		942C617A2877968100775B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 		942C61AA2877AE0A00775B55 /* MyCropsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCropsViewController.m; sourceTree = "<group>"; };
 		942C61B02877B0FD00775B55 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		942C61B12877B0FD00775B55 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		942C61B8287C5E1000775B55 /* WeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		942C61B9287C5E1000775B55 /* WeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		942C61C2287C96A800775B55 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		942C61C4287CA4D600775B55 /* APIManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManagers.h; sourceTree = "<group>"; };
+		942C61C5287CA4D600775B55 /* APIManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManagers.m; sourceTree = "<group>"; };
+		942C61C8287CD4F400775B55 /* WeatherCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCard.h; sourceTree = "<group>"; };
+		942C61C9287CD4F400775B55 /* WeatherCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherCard.m; sourceTree = "<group>"; };
+		942C61CD287CE7AF00775B55 /* WeatherCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCardCell.h; sourceTree = "<group>"; };
+		942C61CE287CE7AF00775B55 /* WeatherCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherCardCell.m; sourceTree = "<group>"; };
 		9623B94D8268D4A155A5E98A /* Pods-FarmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmacyTests.release.xcconfig"; path = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2AE4CE25B2074F8B0358E0E /* Pods_FarmacyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmacyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacy_FarmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,21 +162,20 @@
 		942C616A2877968100775B55 /* Farmacy */ = {
 			isa = PBXGroup;
 			children = (
+				942C61CC287CE78000775B55 /* Views */,
+				942C61C7287CD4D700775B55 /* Models */,
+				942C61BB287C940800775B55 /* API */,
 				942C61A028779A5800775B55 /* Farmacy.entitlements */,
 				942C616B2877968100775B55 /* AppDelegate.h */,
 				942C616C2877968100775B55 /* AppDelegate.m */,
 				942C616E2877968100775B55 /* SceneDelegate.h */,
 				942C616F2877968100775B55 /* SceneDelegate.m */,
-				942C61712877968100775B55 /* ViewController.h */,
-				942C61722877968100775B55 /* ViewController.m */,
 				942C61742877968100775B55 /* Main.storyboard */,
-				942C61B02877B0FD00775B55 /* LoginViewController.h */,
-				942C61B12877B0FD00775B55 /* LoginViewController.m */,
-				942C61A92877AE0A00775B55 /* MyCropsViewController.h */,
-				942C61AA2877AE0A00775B55 /* MyCropsViewController.m */,
+				942C61D0287DF74B00775B55 /* View Controller */,
 				942C61772877968100775B55 /* Assets.xcassets */,
 				942C61792877968100775B55 /* LaunchScreen.storyboard */,
 				942C617C2877968100775B55 /* Info.plist */,
+				942C61C2287C96A800775B55 /* Keys.plist */,
 				942C617D2877968100775B55 /* main.m */,
 			);
 			path = Farmacy;
@@ -186,6 +196,46 @@
 				942C61932877968200775B55 /* FarmacyUITestsLaunchTests.m */,
 			);
 			path = FarmacyUITests;
+			sourceTree = "<group>";
+		};
+		942C61BB287C940800775B55 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				942C61C4287CA4D600775B55 /* APIManagers.h */,
+				942C61C5287CA4D600775B55 /* APIManagers.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		942C61C7287CD4D700775B55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				942C61C8287CD4F400775B55 /* WeatherCard.h */,
+				942C61C9287CD4F400775B55 /* WeatherCard.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		942C61CC287CE78000775B55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				942C61CD287CE7AF00775B55 /* WeatherCardCell.h */,
+				942C61CE287CE7AF00775B55 /* WeatherCardCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		942C61D0287DF74B00775B55 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				942C61B02877B0FD00775B55 /* LoginViewController.h */,
+				942C61B12877B0FD00775B55 /* LoginViewController.m */,
+				942C61A92877AE0A00775B55 /* MyCropsViewController.h */,
+				942C61AA2877AE0A00775B55 /* MyCropsViewController.m */,
+				942C61B8287C5E1000775B55 /* WeatherViewController.h */,
+				942C61B9287C5E1000775B55 /* WeatherViewController.m */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942C61C3287C96A800775B55 /* Keys.plist in Resources */,
 				942C617B2877968100775B55 /* LaunchScreen.storyboard in Resources */,
 				942C61782877968100775B55 /* Assets.xcassets in Resources */,
 				942C61762877968100775B55 /* Main.storyboard in Resources */,
@@ -426,11 +477,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				942C61732877968100775B55 /* ViewController.m in Sources */,
 				942C616D2877968100775B55 /* AppDelegate.m in Sources */,
+				942C61BA287C5E1000775B55 /* WeatherViewController.m in Sources */,
+				942C61CA287CD4F400775B55 /* WeatherCard.m in Sources */,
 				942C61B42877F53100775B55 /* LoginViewController.m in Sources */,
 				942C61AC2877AE0A00775B55 /* MyCropsViewController.m in Sources */,
 				942C617E2877968100775B55 /* main.m in Sources */,
+				942C61C6287CA4D600775B55 /* APIManagers.m in Sources */,
+				942C61CF287CE7AF00775B55 /* WeatherCardCell.m in Sources */,
 				942C61702877968100775B55 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
