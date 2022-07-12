@@ -8,7 +8,10 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "MyCropsViewController.h"
+
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
+#import "Parse/Parse.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,6 +23,16 @@
     // Override point for customization after application launch
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    //Parse configuration
+    ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+
+        configuration.applicationId = @"parse_app_id";
+        configuration.clientKey = @"parse_client_key";
+        configuration.server = @"https://parseapi.back4app.com";
+    }];
+
+    [Parse initializeWithConfiguration:config];
     
     return YES;
 }

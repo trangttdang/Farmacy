@@ -166,10 +166,7 @@
 				942C61C7287CD4D700775B55 /* Models */,
 				942C61BB287C940800775B55 /* API */,
 				942C61D1287E20AC00775B55 /* ViewController */,
-				942C616E2877968100775B55 /* SceneDelegate.h */,
-				942C616F2877968100775B55 /* SceneDelegate.m */,
-				942C616B2877968100775B55 /* AppDelegate.h */,
-				942C616C2877968100775B55 /* AppDelegate.m */,
+				942C61D5287E26CA00775B55 /* Delegate */,
 				942C61A028779A5800775B55 /* Farmacy.entitlements */,
 				942C61742877968100775B55 /* Main.storyboard */,
 				942C61772877968100775B55 /* Assets.xcassets */,
@@ -236,6 +233,17 @@
 				942C61D3287E228F00775B55 /* WeatherViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		942C61D5287E26CA00775B55 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				942C616E2877968100775B55 /* SceneDelegate.h */,
+				942C616F2877968100775B55 /* SceneDelegate.m */,
+				942C616B2877968100775B55 /* AppDelegate.h */,
+				942C616C2877968100775B55 /* AppDelegate.m */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
