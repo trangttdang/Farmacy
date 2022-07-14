@@ -13,7 +13,9 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
 
 @end
 
+
 @implementation APIManagers
+@dynamic baseURL;
 + (instancetype)shared {
     static APIManagers *sharedManager = nil;
     static dispatch_once_t onceToken;
@@ -22,6 +24,7 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
     });
     return sharedManager;
 }
+
 - (instancetype)init {
     self.baseURL = [NSURL URLWithString:baseURLString];
     
@@ -34,7 +37,7 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
 
 
 - (void)getForecastWeatherData:(NSString *)location completion:(void(^)(NSMutableArray *weatherData, NSError *error))completion{
-
+    
     NSDictionary *parameters = @{@"key": self.APIkey,@"q": location,@"days":@10};
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:self.baseURL];
@@ -43,8 +46,8 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
     [manager GET:@"v1/forecast.json" parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable weatherDictionaries) {
         // Success
         NSMutableArray *weatherData = [WeatherCard weatherCardsWithArray:weatherDictionaries[@"forecast"][@"forecastday"]];
-                NSLog(@"%@",@"Successfully get forecast weather");
-                   completion(weatherData, nil);
+        NSLog(@"%@",@"Successfully get forecast weather");
+        completion(weatherData, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         completion(nil, error);
     }];
