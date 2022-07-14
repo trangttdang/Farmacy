@@ -27,6 +27,7 @@
 		942C61DB287E91D500775B55 /* Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61DA287E91D500775B55 /* Crop.m */; };
 		942C61DE287F29C500775B55 /* CropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61DD287F29C500775B55 /* CropCell.m */; };
 		942C61E1287F646300775B55 /* CropsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61E0287F646300775B55 /* CropsViewController.m */; };
+		942C61E42880A4D200775B55 /* CropDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61E32880A4D200775B55 /* CropDetailViewController.m */; };
 		A309F0BCDF4A5AF5D42B7854 /* Pods_Farmacy_FarmacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */; };
 		D9AD725E1FE2FC725B876447 /* Pods_Farmacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561932451C0356E9E1EBD2BC /* Pods_Farmacy.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,8 @@
 		942C61DD287F29C500775B55 /* CropCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropCell.m; sourceTree = "<group>"; };
 		942C61DF287F646300775B55 /* CropsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropsViewController.h; sourceTree = "<group>"; };
 		942C61E0287F646300775B55 /* CropsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropsViewController.m; sourceTree = "<group>"; };
+		942C61E22880A4D200775B55 /* CropDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropDetailViewController.h; sourceTree = "<group>"; };
+		942C61E32880A4D200775B55 /* CropDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropDetailViewController.m; sourceTree = "<group>"; };
 		9623B94D8268D4A155A5E98A /* Pods-FarmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmacyTests.release.xcconfig"; path = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2AE4CE25B2074F8B0358E0E /* Pods_FarmacyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmacyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacy_FarmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,12 +241,14 @@
 		942C61D1287E20AC00775B55 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				942C61DF287F646300775B55 /* CropsViewController.h */,
-				942C61E0287F646300775B55 /* CropsViewController.m */,
 				942C61B02877B0FD00775B55 /* LoginViewController.h */,
 				942C61B12877B0FD00775B55 /* LoginViewController.m */,
+				942C61DF287F646300775B55 /* CropsViewController.h */,
+				942C61E0287F646300775B55 /* CropsViewController.m */,
 				942C61A92877AE0A00775B55 /* MyCropsViewController.h */,
 				942C61AA2877AE0A00775B55 /* MyCropsViewController.m */,
+				942C61E22880A4D200775B55 /* CropDetailViewController.h */,
+				942C61E32880A4D200775B55 /* CropDetailViewController.m */,
 				942C61D2287E228F00775B55 /* WeatherViewController.h */,
 				942C61D3287E228F00775B55 /* WeatherViewController.m */,
 			);
@@ -511,6 +516,7 @@
 				942C617E2877968100775B55 /* main.m in Sources */,
 				942C61C6287CA4D600775B55 /* APIManagers.m in Sources */,
 				942C61CF287CE7AF00775B55 /* WeatherCardCell.m in Sources */,
+				942C61E42880A4D200775B55 /* CropDetailViewController.m in Sources */,
 				942C61702877968100775B55 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

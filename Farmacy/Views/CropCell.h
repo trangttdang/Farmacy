@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Crop.h"
+#import "Parse/PFImageView.h"
+
 NS_ASSUME_NONNULL_BEGIN
 @protocol CropCellDelegate
 - (void)didAddCrop: (Crop *) crop;
@@ -16,8 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CropCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *cropNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cropTypeByUseLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *cropImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *cropImageView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *addOrRemoveCropIconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *progressPercentageLabel;
 
 @property (nonatomic,weak) id<CropCellDelegate> delegate;
 @property (nonatomic, strong) Crop *crop;

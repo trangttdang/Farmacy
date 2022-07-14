@@ -240,7 +240,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheat" translatesAutoresizingMaskIntoConstraints="NO" id="wnn-FS-ZLx">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheat" translatesAutoresizingMaskIntoConstraints="NO" id="wnn-FS-ZLx" customClass="PFImageView">
                                                     <rect key="frame" x="20" y="11" width="160" height="160"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="RhS-dv-ngy"/>
@@ -295,8 +295,8 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="addOrRemoveCropIconImageView" destination="uRI-TR-MM0" id="X9n-2F-l9l"/>
-                                            <outlet property="cropImageView" destination="wnn-FS-ZLx" id="YHl-DJ-wdQ"/>
+                                            <outlet property="addOrRemoveCropIconImageView" destination="uRI-TR-MM0" id="s8U-cB-pPg"/>
+                                            <outlet property="cropImageView" destination="wnn-FS-ZLx" id="zfb-BB-U5H"/>
                                             <outlet property="cropNameLabel" destination="3GB-75-Lzd" id="7cD-hi-0qc"/>
                                             <outlet property="cropTypeByUseLabel" destination="Lsp-73-LwU" id="Dup-of-UYx"/>
                                         </connections>
@@ -421,7 +421,7 @@
                                                         <constraint firstAttribute="width" constant="25" id="saJ-Yh-zWe"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wheat" translatesAutoresizingMaskIntoConstraints="NO" id="DT7-Z6-bsi">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wheat" translatesAutoresizingMaskIntoConstraints="NO" id="DT7-Z6-bsi" customClass="PFImageView">
                                                     <rect key="frame" x="29" y="45" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="aMG-i5-8fQ"/>
@@ -472,8 +472,10 @@
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="addOrRemoveCropIconImageView" destination="T5z-Uk-qbs" id="DUh-1N-MOQ"/>
+                                            <outlet property="cropImageView" destination="DT7-Z6-bsi" id="fwh-hI-hQ6"/>
                                             <outlet property="cropNameLabel" destination="492-cZ-JqX" id="otv-r4-62n"/>
                                             <outlet property="cropTypeByUseLabel" destination="xiE-LX-rdO" id="JYd-dj-rWV"/>
+                                            <outlet property="progressPercentageLabel" destination="1Ej-Mj-u7O" id="tJB-hc-Rje"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -501,6 +503,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wep-9M-Ylt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2626.0869565217395" y="-531.02678571428567"/>
+        </scene>
+        <!--Crop Detail View Controller-->
+        <scene sceneID="zfg-YW-N74">
+            <objects>
+                <viewController storyboardIdentifier="CropDetailViewController" id="aiA-sg-ZZT" customClass="CropDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ZH-yL-4bI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wheat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvd-8T-ozP">
+                                <rect key="frame" x="170" y="108" width="74" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.1278295894" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1Z-fI-BZX">
+                                <rect key="frame" x="180" y="160" width="54" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.1278295894" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type by use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzY-Ph-i1i">
+                                <rect key="frame" x="161" y="220" width="92" height="21.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="wheat" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-p1-Dei" customClass="PFImageView">
+                                <rect key="frame" x="55" y="139" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="7Pa-Bw-Q3g"/>
+                                    <constraint firstAttribute="height" constant="70" id="Ne7-cI-qp7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eIW-0a-EwM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="cropImageView" destination="6Nk-p1-Dei" id="rkV-mt-1Lc"/>
+                        <outlet property="cropNameLabel" destination="Zvd-8T-ozP" id="E41-jW-08K"/>
+                        <outlet property="cropProgressPercentageLabel" destination="x1Z-fI-BZX" id="kyQ-9X-RAI"/>
+                        <outlet property="cropTypeByUseLabel" destination="WzY-Ph-i1i" id="YlZ-7R-VRf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gD3-Zu-fan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3515.9420289855075" y="-528.34821428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9bt-Sa-tYV">

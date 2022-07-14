@@ -8,6 +8,7 @@
 #import "MyCropsViewController.h"
 #import "LoginViewController.h"
 #import "CropsViewController.h"
+#import "CropDetailViewController.h"
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import "Crop.h"
@@ -75,6 +76,7 @@
     
     cell.cropNameLabel.text = crop.name;
     cell.cropTypeByUseLabel.text = crop.typeByUse;
+    cell.progressPercentageLabel.text = [[NSString stringWithFormat:@"%d", crop.progressPercentage]stringByAppendingString: @"%"];
     cell.crop = crop;
     
     //TODO: Add information on when to plant, fertilize, irrigate
@@ -115,6 +117,13 @@
         }
     }];
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
+    Crop *crop = self.arrayOfMyCrops[indexPath.row];
+    viewController.crop = crop;
+    [self.navigationController pushViewController: viewController animated:YES];
 }
 
 @end
