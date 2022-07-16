@@ -22,7 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *myCropProgressPercentageLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *removeCropIconImageView;
 @property (weak, nonatomic) id<MyCropCellDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *nextFertilizeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nextIrrigateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *plantedAtLabel;
 @property (nonatomic) MyCrop *myCrop;
+
 @end
 
 NS_ASSUME_NONNULL_END

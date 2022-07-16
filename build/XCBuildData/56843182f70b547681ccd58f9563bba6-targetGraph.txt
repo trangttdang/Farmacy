@@ -1,0 +1,37 @@
+Target dependency graph (12 targets)
+AFNetworking in Pods, no dependencies
+Bolts in Pods, no dependencies
+FBSDKCoreKit_Basics in Pods, no dependencies
+FBAEMKit in Pods, depends on:
+FBSDKCoreKit_Basics in Pods (explicit)
+FBSDKCoreKit in Pods, depends on:
+FBAEMKit in Pods (explicit)
+FBSDKCoreKit_Basics in Pods (explicit)
+FBSDKLoginKit in Pods, depends on:
+FBSDKCoreKit in Pods (explicit)
+Parse-Parse in Pods, depends on:
+Bolts in Pods (implicit dependency via options '-framework Bolts' in build setting 'OTHER_LDFLAGS')
+Parse-ParseUI in Pods, depends on:
+Bolts in Pods (implicit dependency via options '-framework Bolts' in build setting 'OTHER_LDFLAGS')
+Parse in Pods, depends on:
+Bolts in Pods (explicit)
+Parse-Parse in Pods (explicit)
+Parse-ParseUI in Pods (explicit)
+Pods-Farmacy in Pods, depends on:
+AFNetworking in Pods (explicit)
+Bolts in Pods (explicit)
+FBAEMKit in Pods (explicit)
+FBSDKCoreKit in Pods (explicit)
+FBSDKCoreKit_Basics in Pods (explicit)
+FBSDKLoginKit in Pods (explicit)
+Parse in Pods (explicit)
+Pods-Farmacy-FarmacyUITests in Pods, depends on:
+AFNetworking in Pods (explicit)
+Bolts in Pods (explicit)
+FBAEMKit in Pods (explicit)
+FBSDKCoreKit in Pods (explicit)
+FBSDKCoreKit_Basics in Pods (explicit)
+FBSDKLoginKit in Pods (explicit)
+Parse in Pods (explicit)
+Pods-FarmacyTests in Pods, depends on:
+Pods-Farmacy in Pods (explicit)

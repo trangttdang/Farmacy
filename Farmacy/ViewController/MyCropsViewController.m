@@ -75,7 +75,7 @@
     MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
     MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
     Crop *crop = myCrop[@"crop"];
-    
+
     [crop fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error: %@", error.description);
@@ -85,12 +85,39 @@
             cell.myCropTypeByUseLabel.text = crop[@"typeByUse"];
             cell.myCropImageView.file = crop[@"image"];
             [cell.myCropImageView loadInBackground];
-
         }
     }];
+    
+    Schedule *fertilizeSchedule = myCrop[@"fertilizeSchedule"];
+    Schedule *irrigateSchedule = myCrop[@"irrigateSchedule"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    // Configure the input format to parse the date string
+    [formatter setDateFormat: @"E MMM d HH:mm:ss Z y"];
+    //Configure output format
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterShortStyle;
+    
+    [fertilizeSchedule fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            NSLog(@"%@", @"Fetch fertilize schedule sucessfully");
+            cell.nextFertilizeLabel.text = [formatter stringFromDate:fertilizeSchedule[@"time"]];
+        }
+    }];
+    [irrigateSchedule fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            NSLog(@"%@", @"Fetch irrigate schedule sucessfully");
+            cell.nextIrrigateLabel.text = [formatter stringFromDate:irrigateSchedule[@"time"]];
+        }
+    }];
+    
     cell.myCrop = myCrop;
     cell.myCropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
-    
+    cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
     //TODO: Add information on when to plant, fertilize, irrigate

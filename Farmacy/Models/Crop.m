@@ -39,11 +39,13 @@
     // Retrieve the object by id
     [query whereKey:@"crop" equalTo:crop];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        //"No results matched the query" error
         if(error.code == 101){
             NSLog(@"Crop is not added yet");
             MyCrop *myCrop = [MyCrop new];
             myCrop[@"crop"] = crop;
             myCrop[@"progressPercentage"] = @(0);
+            
             [myCrop saveInBackgroundWithBlock: completion];
         } else if (error == nil){
             NSLog(@"Crop is already added");
