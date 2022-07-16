@@ -12,9 +12,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    UITapGestureRecognizer *addCropTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapAddOrRemoveCrop:)];
-    [self.addOrRemoveCropIconImageView addGestureRecognizer:addCropTapGestureRecognizer];
-    [self.addOrRemoveCropIconImageView setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *addCropTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapAddCrop:)];
+    [self.addCropIconImageView addGestureRecognizer:addCropTapGestureRecognizer];
+    [self.addCropIconImageView setUserInteractionEnabled:YES];
     
 }
 
@@ -23,13 +23,8 @@
     
     // Configure the view for the selected state
 }
-- (void)didTapAddOrRemoveCrop:(UITapGestureRecognizer *)sender {
-    Crop *crop = self.crop;
-    if(crop.isMyCrop == 1){
-        [self.delegate didRemoveCrop:self.crop];
-    } else{
-        [self.delegate didAddCrop:self.crop];
-    }
+- (void)didTapAddCrop:(UITapGestureRecognizer *)sender {
+    [self.delegate didAddCrop:self.crop];
 }
 
 @end

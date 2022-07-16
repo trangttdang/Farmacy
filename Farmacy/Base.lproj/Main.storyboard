@@ -295,7 +295,7 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="addOrRemoveCropIconImageView" destination="uRI-TR-MM0" id="s8U-cB-pPg"/>
+                                            <outlet property="addCropIconImageView" destination="uRI-TR-MM0" id="NfD-4A-clM"/>
                                             <outlet property="cropImageView" destination="wnn-FS-ZLx" id="zfb-BB-U5H"/>
                                             <outlet property="cropNameLabel" destination="3GB-75-Lzd" id="7cD-hi-0qc"/>
                                             <outlet property="cropTypeByUseLabel" destination="Lsp-73-LwU" id="Dup-of-UYx"/>
@@ -329,7 +329,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CropCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CropCell" rowHeight="170" id="o8u-dv-Avy" customClass="CropCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCropCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CropCell" rowHeight="170" id="o8u-dv-Avy" customClass="MyCropCell">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8u-dv-Avy" id="4do-kw-UyI">
@@ -428,8 +428,8 @@
                                                         <constraint firstAttribute="height" constant="70" id="v7I-yo-nCt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="T5z-Uk-qbs">
-                                                    <rect key="frame" x="180" y="69.5" width="56" height="49"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="minus" translatesAutoresizingMaskIntoConstraints="NO" id="aae-zB-Q71">
+                                                    <rect key="frame" x="170" y="80" width="40" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -471,11 +471,11 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="addOrRemoveCropIconImageView" destination="T5z-Uk-qbs" id="DUh-1N-MOQ"/>
-                                            <outlet property="cropImageView" destination="DT7-Z6-bsi" id="fwh-hI-hQ6"/>
-                                            <outlet property="cropNameLabel" destination="492-cZ-JqX" id="otv-r4-62n"/>
-                                            <outlet property="cropTypeByUseLabel" destination="xiE-LX-rdO" id="JYd-dj-rWV"/>
-                                            <outlet property="progressPercentageLabel" destination="1Ej-Mj-u7O" id="tJB-hc-Rje"/>
+                                            <outlet property="myCropImageView" destination="DT7-Z6-bsi" id="Izh-g8-c4r"/>
+                                            <outlet property="myCropNameLabel" destination="492-cZ-JqX" id="QS7-4f-o8m"/>
+                                            <outlet property="myCropProgressPercentageLabel" destination="1Ej-Mj-u7O" id="uAw-3p-Oz1"/>
+                                            <outlet property="myCropTypeByUseLabel" destination="xiE-LX-rdO" id="kpf-f1-Qbp"/>
+                                            <outlet property="removeCropIconImageView" destination="aae-zB-Q71" id="NkR-VH-HXn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -682,6 +682,7 @@
         <image name="cloud.sun.rain.fill" catalog="system" width="128" height="128"/>
         <image name="fertilizer" width="128" height="128"/>
         <image name="humidity" catalog="system" width="128" height="98"/>
+        <image name="minus" width="128" height="128"/>
         <image name="plus-button" width="42.666667938232422" height="42.666667938232422"/>
         <image name="trowel" width="128" height="128"/>
         <image name="watering-can (1)" width="128" height="128"/>

@@ -71,8 +71,8 @@
 - (void)reloadData: (NSInteger)count{
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
-    [query whereKey:@"isMyCrop" equalTo:@NO];
     query.limit = count;
+    
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *crops, NSError *error) {
         if (crops != nil) {
@@ -82,6 +82,7 @@
         }
         [self.cropsTableView reloadData];
     }];
+    
 }
 
 
