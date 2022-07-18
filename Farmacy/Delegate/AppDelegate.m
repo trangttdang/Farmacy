@@ -26,12 +26,15 @@
     
     //Parse configuration
     ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
-
-        configuration.applicationId = @"parse_app_id";
-        configuration.clientKey = @"parse_client_key";
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource: @"Keys" ofType: @"plist"];
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile: path];
+        
+        configuration.applicationId = [dict objectForKey:@"parse_app_id"];
+        configuration.clientKey = [dict objectForKey:@"parse_client_key"];
         configuration.server = @"https://parseapi.back4app.com";
     }];
-
+    
     [Parse initializeWithConfiguration:config];
     
     return YES;
