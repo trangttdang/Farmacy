@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "CropsViewController.h"
 #import "CropDetailViewController.h"
+#import "ChatViewController.h"
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import "MyCrop.h"
@@ -85,6 +86,8 @@
             cell.myCropTypeByUseLabel.text = crop[@"typeByUse"];
             cell.myCropImageView.file = crop[@"image"];
             [cell.myCropImageView loadInBackground];
+            cell.myCropImageView.layer.cornerRadius = 10;
+
         }
     }];
     
@@ -162,6 +165,10 @@
     CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
     MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
     viewController.myCrop = myCrop;
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+- (IBAction)didTapChat:(id)sender {
+    ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
     [self.navigationController pushViewController: viewController animated:YES];
 }
 
