@@ -21,16 +21,21 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary{
     self = [super init];
     if(self){
+        
         self.avgTemperature = dictionary[@"day"][@"avgtemp_f"];
         self.avgHumidity = dictionary[@"day"][@"avghumidity"];
         self.totalPrecip = dictionary[@"day"][@"totalprecip_mm"];
         self.maxWind = dictionary[@"day"][@"maxwind_mph"];
         
-        self.dateString = dictionary[@"date"];
+        //convert string to date
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-        self.date = [dateFormatter dateFromString:self.dateString];
-        
+        NSDate *date = [dateFormatter dateFromString:dictionary[@"date"]];
+        //get weekday from date
+        NSDateFormatter *weekday = [[NSDateFormatter alloc] init];
+        [weekday setDateFormat: @"EE"];
+        self.dateString = [weekday stringFromDate:date];
+        self.conditionIconStr = dictionary[@"day"][@"condition"][@"icon"];
         
     }
     return self;
