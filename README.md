@@ -16,7 +16,11 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - **Story:** Given insightful data, personalized plans on when to plant, fertilize, and irrigate, Farmacy can help increase the farmer’s yield
 - **Market:** Farmacy targets on farmers who need help with their crop plan
 - **Habit:** Farmers use Farmacy on a daily basis to check on the weather API along with reminders on when to plant, fertilize, and irrigate
-- **Scope:** Technical Challenge is to implement an analytics algorithm using data mining techniques to suggest farmer when to plant, fertilize, and irrigate. To accomplish it, I will utilize weather, soil and other data specific to the area.
+- **Scope:** See technical challenge bellow
+
+## Technical Challenge
+- Implement an analytics algorithm using data mining techniques to suggest farmer when to plant, fertilize, and irrigate. To accomplish it, I will utilize weather, soil and other data specific to the area.
+
 
 ## Product Spec
 
