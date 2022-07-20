@@ -34,6 +34,7 @@
         //get weekday from date
         NSDateFormatter *weekday = [[NSDateFormatter alloc] init];
         [weekday setDateFormat: @"EE"];
+        
         self.dateString = [weekday stringFromDate:date];
         self.conditionIconStr = dictionary[@"day"][@"condition"][@"icon"];
         
