@@ -8,7 +8,7 @@
 
 ## Overview
 ### Description
-Farmacy provides farmers with personalized plans on when to plant, fertilize, and irrigate based on weather and trend data
+Farmacy provides farmers with personalized plans on when to plant, fertilize, and irrigate based on weather and trend data to optimal product yields
 
 ### App Evaluation
 - **Category:** Agriculture
@@ -16,7 +16,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - **Story:** Given insightful data, personalized plans on when to plant, fertilize, and irrigate, Farmacy can help increase the farmer’s yield
 - **Market:** Farmacy targets on farmers who need help with their crop plan
 - **Habit:** Farmers use Farmacy on a daily basis to check on the weather API along with reminders on when to plant, fertilize, and irrigate
-- **Scope:** Technical Challenge is to analyze and provide insightful data, and provide personalized plan to optimal product yields
+- **Scope:** Technical Challenge is to implement an analytics algorithm using data mining techniques to suggest farmer when to plant, fertilize, and irrigate. To accomplish it, I will utilize weather, soil and other data specific to the area.
 
 ## Product Spec
 
