@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "MyCropsViewController.h"
 
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "Parse/Parse.h"
 

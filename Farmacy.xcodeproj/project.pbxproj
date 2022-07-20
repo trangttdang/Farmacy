@@ -28,6 +28,9 @@
 		942C61DE287F29C500775B55 /* CropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61DD287F29C500775B55 /* CropCell.m */; };
 		942C61E1287F646300775B55 /* CropsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61E0287F646300775B55 /* CropsViewController.m */; };
 		942C61E42880A4D200775B55 /* CropDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61E32880A4D200775B55 /* CropDetailViewController.m */; };
+
+		942C61FE2881277A00775B55 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942C61FD2881277A00775B55 /* ParseFacebookUtilsV4.framework */; };
+
 		A309F0BCDF4A5AF5D42B7854 /* Pods_Farmacy_FarmacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */; };
 		D9AD725E1FE2FC725B876447 /* Pods_Farmacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561932451C0356E9E1EBD2BC /* Pods_Farmacy.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +95,9 @@
 		942C61E0287F646300775B55 /* CropsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropsViewController.m; sourceTree = "<group>"; };
 		942C61E22880A4D200775B55 /* CropDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropDetailViewController.h; sourceTree = "<group>"; };
 		942C61E32880A4D200775B55 /* CropDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropDetailViewController.m; sourceTree = "<group>"; };
+
+		942C61FD2881277A00775B55 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+
 		9623B94D8268D4A155A5E98A /* Pods-FarmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmacyTests.release.xcconfig"; path = "Target Support Files/Pods-FarmacyTests/Pods-FarmacyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2AE4CE25B2074F8B0358E0E /* Pods_FarmacyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmacyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacy_FarmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942C61FE2881277A00775B55 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				D9AD725E1FE2FC725B876447 /* Pods_Farmacy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +159,7 @@
 		942C615F2877968100775B55 = {
 			isa = PBXGroup;
 			children = (
+				942C61FD2881277A00775B55 /* ParseFacebookUtilsV4.framework */,
 				942C616A2877968100775B55 /* Farmacy */,
 				942C61862877968200775B55 /* FarmacyTests */,
 				942C61902877968200775B55 /* FarmacyUITests */,
@@ -609,6 +617,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -667,6 +676,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -693,6 +703,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B66G8U4UU4;
+				EXCLUDED_ARCHS = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Farmacy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -722,6 +737,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B66G8U4UU4;
+				EXCLUDED_ARCHS = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Farmacy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
