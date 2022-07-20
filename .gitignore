@@ -1,5 +1,6 @@
 Farmacy/Info.plist
 Farmacy/Keys.plist
 *.xcworkspace/xcuserdata/*
-Farmacy.xcworkspace
-Farmacy.xcodeproj
+*.xcworkspace
+*.xcodeproj
+build/*
