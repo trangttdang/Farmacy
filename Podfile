@@ -4,12 +4,15 @@
 target 'Farmacy' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'FSCalendar'
 
   # Pods for Farmacy
   pod "FBSDKLoginKit"
   pod 'AFNetworking'
   pod 'Parse'
   pod 'Parse/UI'
+ 
+  
 
 
   target 'FarmacyTests' do
