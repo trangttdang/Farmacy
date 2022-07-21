@@ -12,12 +12,17 @@
 #import "Schedule.h"
 #import "ScheduleCell.h"
 #import "MyCrop.h"
+#import "MyCropsViewController.h"
 
 @interface CalendarViewController ()<FSCalendarDelegate,FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic) NSArray *arrayOfSchedules;
 @property (weak , nonatomic) FSCalendar *calendar;
 @property (strong, nonatomic) NSMutableArray *arrayOfSchedulesOfSelectedDay;
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
+@property (nonatomic) NSArray *arrayOfMyCrops;
+@property (nonatomic) NSMutableArray *arrayOfFertilizeSchedules;
+@property (nonatomic) NSMutableArray *arrayOfIrrigateSchedules;
+@property (nonatomic,strong) NSCalendar *gregorian;
 
 
 @end
@@ -35,11 +40,14 @@
     calendar.delegate = self;
     [self.view addSubview:calendar];
     
+    self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+
+    
     self.scheduleTableView.delegate = self;
     self.scheduleTableView.dataSource = self;
     
 }
-
+// ---------- Reminder ----------
 - (IBAction)didTapAskPermission:(id)sender {
     //Asking Permission to Use Notifications
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -101,6 +109,8 @@
     
 }
 
+// ---------- Calendar ----------
+
 - (void) fetchSchedules{
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Schedule"];
@@ -120,32 +130,56 @@
 
 
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition{
-    self.arrayOfSchedulesOfSelectedDay = [self loadSchedule:date];
+    [self loadSchedulesOfSelectedDate:date];
     [self.scheduleTableView reloadData];
 }
 
-- (NSMutableArray *) loadSchedule: (NSDate *)date{
-    //TODO: Optimize search/filter
-    NSLog(@"%@", date);
-    NSDateComponents *selectedComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
-    NSMutableArray *arrayOfScheduleOfSpecificDate = [[NSMutableArray alloc] init];
-    
+- (void) loadSchedulesOfSelectedDate: (NSDate *)selectedDate{
+    self.arrayOfSchedulesOfSelectedDay = [[NSMutableArray alloc] init];
     [self.arrayOfSchedules enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSDateComponents *specificDateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:(NSDate *)obj[@"time"]];
-        if ([selectedComponents isEqual: specificDateComponents]){
-            [arrayOfScheduleOfSpecificDate addObject:obj];
+        NSDate *date = (NSDate *)obj[@"time"];
+        BOOL sameDay = [self.gregorian isDate:date inSameDayAsDate:selectedDate];
+        if (sameDay){
+            [self.arrayOfSchedulesOfSelectedDay addObject:obj];
         }
     }];
-    return arrayOfScheduleOfSpecificDate;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ScheduleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScheduleCell" forIndexPath:indexPath];
     Schedule *schedule = self.arrayOfSchedulesOfSelectedDay[indexPath.row];
-    //TODO: get weekday, time, and day format from date and change the labels
-    cell.timeLabel.text = [NSString stringWithFormat: @"%@", schedule[@"time"]];
-
-    //TODO: Get my crop that has this schedule
+    MyCrop *myCrop = [MyCrop getMyCropUsingSchedule:schedule];
+    
+    //Set time, weekday, and day Label
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"h:mm a"];
+    cell.timeLabel.text = [formatter stringFromDate:schedule[@"time"]];
+    [formatter setDateFormat:@"EE"];
+    cell.weekDayLabel.text = [formatter stringFromDate:schedule[@"time"]];
+    NSInteger day = [self.gregorian component:NSCalendarUnitDay fromDate:schedule[@"time"]];
+    cell.dayLabel.text = [NSString stringWithFormat:@"%ld", day];
+    
+    //Set action
+    Schedule *iSchedule =myCrop[@"irrigateSchedule"];
+    Schedule *fSchedule =myCrop[@"fertilizeSchedule"];
+    if([schedule.objectId isEqual: fSchedule.objectId]){
+        cell.actionLabel.text = @"Fertilize";
+    } else if ([schedule.objectId isEqual: iSchedule.objectId]){
+        cell.actionLabel.text = @"Irrigate";
+    } else{
+        NSLog(@"Error fetch crop action");
+    }
+    
+    //Set crop name
+    Crop *crop = myCrop[@"crop"];
+    [crop fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            NSLog(@"%@", @"Fetch crop sucessfully");
+            cell.cropLabel.text = [NSString stringWithFormat: @"%@", crop[@"name"]];
+        }
+    }];
     
 
     return cell;
@@ -154,9 +188,6 @@
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.arrayOfSchedulesOfSelectedDay.count;
 }
-
-
-
 
 
 @end

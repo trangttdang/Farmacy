@@ -28,4 +28,14 @@
         }];
 }
 
++ (MyCrop *)getMyCropUsingSchedule:(Schedule *)schedule{
+    PFQuery *iQuery = [PFQuery queryWithClassName:@"MyCrop"];
+    PFQuery *fQuery = [PFQuery queryWithClassName:@"MyCrop"];
+    [iQuery whereKey:@"irrigateSchedule" equalTo:schedule];
+    [fQuery whereKey:@"fertilizeSchedule" equalTo:schedule];
+    PFQuery *query = [PFQuery orQueryWithSubqueries:@[iQuery ,fQuery]];
+    return [query getFirstObject];
+}
+
+
 @end
