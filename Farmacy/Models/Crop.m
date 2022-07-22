@@ -7,18 +7,15 @@
 
 #import "Crop.h"
 
+#import "MyCrop.h"
+
 @implementation Crop
 
-@dynamic cropID;
 @dynamic name;
 @dynamic typeByUse;
 @dynamic image;
-@dynamic plantedAt;
-@dynamic harvestedAt;
-@dynamic progressPercentage;
-@dynamic nextIrrigate;
-@dynamic nextFertilize;
-@dynamic isMyCrop;
+
+
 
 + (nonnull NSString *)parseClassName {
     return @"Crop";
@@ -38,27 +35,31 @@
     return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
 
+
 + (void) addToMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion {
-    PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
-    NSString *cropObjectID = crop.objectId;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
     // Retrieve the object by id
-    [query getObjectInBackgroundWithId:cropObjectID
-                                 block:^(PFObject *crop, NSError *error) {
-        crop[@"isMyCrop"] = @YES;
-        [crop saveInBackground];
+    [query whereKey:@"crop" equalTo:crop];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        //"No results matched the query" error
+        if(error.code == 101){
+            NSLog(@"Crop is not added yet");
+            MyCrop *myCrop = [MyCrop new];
+            myCrop[@"crop"] = crop;
+            myCrop[@"progressPercentage"] = @(0);
+            
+            [myCrop saveInBackgroundWithBlock: completion];
+        } else if (error == nil){
+            NSLog(@"Crop is already added");
+        } else{
+            NSLog(@"Unknown error %@", error.localizedDescription);
+        }
+
     }];
     
 }
 
-+ (void) removeFromMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion {
-    PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
-    NSString *cropObjectID = crop.objectId;
-    // Retrieve the object by id
-    [query getObjectInBackgroundWithId:cropObjectID
-                                 block:^(PFObject *crop, NSError *error) {
-        crop[@"isMyCrop"] = @NO;
-        [crop saveInBackground];
-    }];
-}
+
 
 @end

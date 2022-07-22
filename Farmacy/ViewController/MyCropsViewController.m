@@ -9,16 +9,19 @@
 #import "LoginViewController.h"
 #import "CropsViewController.h"
 #import "CropDetailViewController.h"
+#import "ChatViewController.h"
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
-#import "Crop.h"
-#import "CropCell.h"
+#import "MyCrop.h"
+#import "MyCropCell.h"
+
 
 #import "FBSDKCoreKit/FBSDKProfile.h"
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "FBSDKLoginKit/FBSDKLoginKit.h"
 
-@interface MyCropsViewController () <CropCellDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MyCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfMyCrops;
 
@@ -34,6 +37,7 @@
     self.myCropsTableView.delegate = self;
     self.myCropsTableView.dataSource = self;
     [self reloadData];
+
 }
 
 /*
@@ -71,17 +75,59 @@
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    CropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
-    Crop *crop = self.arrayOfMyCrops[indexPath.row];
+
+    MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
+    MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
+    Crop *crop = myCrop[@"crop"];
+
+    [crop fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            NSLog(@"%@", @"Fetch crop sucessfully");
+            cell.myCropNameLabel.text = crop[@"name"];
+            cell.myCropTypeByUseLabel.text = crop[@"typeByUse"];
+            cell.myCropImageView.file = crop[@"image"];
+            [cell.myCropImageView loadInBackground];
+            cell.myCropImageView.layer.cornerRadius = 10;
+
+        }
+    }];
     
-    cell.cropNameLabel.text = crop.name;
-    cell.cropTypeByUseLabel.text = crop.typeByUse;
-    cell.progressPercentageLabel.text = [[NSString stringWithFormat:@"%d", crop.progressPercentage]stringByAppendingString: @"%"];
-    cell.crop = crop;
+    Schedule *fertilizeSchedule = myCrop[@"fertilizeSchedule"];
+    Schedule *irrigateSchedule = myCrop[@"irrigateSchedule"];
     
-    //TODO: Add information on when to plant, fertilize, irrigate
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    // Configure the input format to parse the date string
+    [formatter setDateFormat: @"E MMM d HH:mm:ss Z y"];
+    //Configure output format
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterShortStyle;
+    
+    [fertilizeSchedule fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            NSLog(@"%@", @"Fetch fertilize schedule sucessfully");
+            cell.nextFertilizeLabel.text = [formatter stringFromDate:fertilizeSchedule[@"time"]];
+        }
+    }];
+    [irrigateSchedule fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.description);
+        } else {
+            NSLog(@"%@", @"Fetch irrigate schedule sucessfully");
+            cell.nextIrrigateLabel.text = [formatter stringFromDate:irrigateSchedule[@"time"]];
+        }
+    }];
+    
+    cell.myCrop = myCrop;
+    cell.myCropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
+    cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt];
     cell.delegate = self;
-    cell.addOrRemoveCropIconImageView.image = [UIImage imageNamed:@"minus"];
+    cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
+    //TODO: Add information on when to plant, fertilize, irrigate
+
     return cell;
 }
 
@@ -90,13 +136,12 @@
 }
 
 - (void)reloadData{
-    // construct query
-    PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
-    [query whereKey:@"isMyCrop" equalTo:@YES];
+   //  construct query
+    PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
     // fetch data asynchronously
-    [query findObjectsInBackgroundWithBlock:^(NSArray *crops, NSError *error) {
-        if (crops != nil) {
-            self.arrayOfMyCrops = crops;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *myCrops, NSError *error) {
+        if (myCrops != nil) {
+            self.arrayOfMyCrops = myCrops;
         } else{
             NSLog(@"%@", error.localizedDescription);
         }
@@ -104,9 +149,9 @@
     }];
 }
 
-- (void)didRemoveCrop:(Crop *)crop {
+- (void)didRemoveCrop:(MyCrop *)myCrop {
     CropsViewController *cropViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropsViewController"];
-    [Crop removeFromMyCrops:crop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+    [MyCrop removeFromMyCrops:myCrop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
             NSLog(@"Error removing Crop: %@", error.localizedDescription);
         }
@@ -117,6 +162,17 @@
         }
     }];
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
+    MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
+    viewController.myCrop = myCrop;
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+- (IBAction)didTapChat:(id)sender {
+    ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    [self.navigationController pushViewController: viewController animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

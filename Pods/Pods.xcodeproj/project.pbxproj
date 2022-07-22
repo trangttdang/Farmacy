@@ -676,6 +676,7 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
 			remoteInfo = FBSDKCoreKit_Basics;
+
 		};
 		9B03BC65DA2FE12236FB3C9001614EE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -684,6 +685,7 @@
 			remoteGlobalIDString = EAFFB8E885E2EDFD55062DE694143593;
 			remoteInfo = "Parse-Parse";
 		};
+
 		C2A565A451FBC3E2B8FF41747A55EA42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -753,7 +755,6 @@
 		0280BD976F56E9C71A4E2ECD69676EB3 /* PFDismissButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFDismissButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFDismissButton.h; sourceTree = "<group>"; };
 		02DAE856EF65A30B306E8D24ABAD359C /* PFPropertyInfo_Runtime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPropertyInfo_Runtime.h; path = Parse/Parse/Internal/PropertyInfo/PFPropertyInfo_Runtime.h; sourceTree = "<group>"; };
 		035EC7A943C8D85AC03AFB89E399C858 /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = he.lproj; path = ParseUI/Resources/Localization/he.lproj; sourceTree = "<group>"; };
-
 		03DC3806D6D51648DEDE970DB6ADC0C8 /* Pods-FarmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FarmacyTests.release.xcconfig"; sourceTree = "<group>"; };
 		03F03162137C5FBFA20C7DCA8B1F0A89 /* PFAppleAuthenticationProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAppleAuthenticationProvider.h; path = "ParseUI/Sign In With Apple/PFAppleAuthenticationProvider.h"; sourceTree = "<group>"; };
 		03F88A57263A762E072EEBE6995C7C44 /* PFAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAlertView.h; path = Parse/Parse/Internal/PFAlertView.h; sourceTree = "<group>"; };
@@ -846,7 +847,6 @@
 		2420BCB7540A780B6AF0ADCB3ADC92AE /* Pods-Farmacy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Farmacy-frameworks.sh"; sourceTree = "<group>"; };
 
 		24656333DDCC46556B5A30D88394D9EC /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = ParseUI/Resources/Localization/sv.lproj; sourceTree = "<group>"; };
-
 		246F54D3EEB36C2B1BF5FA0A895CA4D1 /* PFKeychainStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFKeychainStore.m; path = Parse/Parse/Internal/PFKeychainStore.m; sourceTree = "<group>"; };
 		25A8E40023B59DF75381C02706EC12AD /* PFSQLiteDatabase_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSQLiteDatabase_Private.h; path = Parse/Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabase_Private.h; sourceTree = "<group>"; };
 		26327CC2B9622EF7F8D774BEA1611E02 /* PFRESTAnalyticsCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTAnalyticsCommand.m; path = Parse/Parse/Internal/Commands/PFRESTAnalyticsCommand.m; sourceTree = "<group>"; };
@@ -1038,7 +1038,6 @@
 		76C30DBBCB28216F7DB15E19951DEF1E /* ParseInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseInternal.h; path = Parse/Parse/Internal/ParseInternal.h; sourceTree = "<group>"; };
 		771E48165862B1C4C2C60E0126F7D7AB /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse/Parse/PFObject.h; sourceTree = "<group>"; };
 		7834390791C94F36124B79A86BEA0142 /* PFFileDataStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFileDataStream.h; path = Parse/Parse/Internal/File/FileDataStream/PFFileDataStream.h; sourceTree = "<group>"; };
-
 		78384532472F6844F23193103E3877E3 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 
 		78FD287DBC5A0D50187C4ED22AD81C26 /* PFRESTPushCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTPushCommand.m; path = Parse/Parse/Internal/Commands/PFRESTPushCommand.m; sourceTree = "<group>"; };
@@ -1410,7 +1409,6 @@
 
 /* Begin PBXGroup section */
 		019E21A272D3B4988BA773EC5BE5E316 /* Bolts */ = {
-
 			isa = PBXGroup;
 			children = (
 				38476050A020818D7B675DD9786B7E80 /* Support Files */,
@@ -1422,7 +1420,6 @@
 		099D4AE89B879BE8A7ACF4083E9A1FF8 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-
 				FE7B8A11FD4407867087C940BC6F8A87 /* Core */,
 				CAA13E19C51DA5F5052F2A884D540F5B /* Support Files */,
 				0E4C41D9EA80AE9EA10802DABBB460B0 /* UI */,
@@ -1654,6 +1651,7 @@
 				489374F862047E8FE9943C5529561D45 /* Support Files */,
 			);
 			path = FBSDKCoreKit;
+
 			sourceTree = "<group>";
 		};
 		535E0972931C977FBB715714604DF700 /* Tasks */ = {
@@ -1690,6 +1688,7 @@
 		672C7AEFC66261B5303AB77AFA9FCEA6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+
 				10E6D5D992E9F572257F6BAA976B0D48 /* AudioToolbox.framework */,
 				F0507615C778961EAED2C52330D0136A /* CFNetwork.framework */,
 				E5E1E8B373763E17691C5B73E9CF39BB /* CoreGraphics.framework */,
@@ -1721,7 +1720,6 @@
 		72D9C28FFCABD3C80138CEFB30F28133 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-
 				83ABA49069BEC6F58EA8C5FCD128FB56 /* AFNetworking.modulemap */,
 				0AAF0267892E55762C568B64FB53A7D4 /* AFNetworking-dummy.m */,
 				00FC770838968DC73AC2160978E19D97 /* AFNetworking-Info.plist */,
@@ -1816,7 +1814,6 @@
 				7B9E9E73135B6345298F3352851C8C02 /* Frameworks */,
 				CBA7E9EA9B16BF16127FC1BA6F2F7698 /* Support Files */,
 			);
-
 			path = FBSDKLoginKit;
 			sourceTree = "<group>";
 		};
@@ -3182,7 +3179,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9C056C7AEBA13BF7B5505A074A9993C5 /* Sources */ = {
-
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3309,7 +3305,6 @@
 			name = Bolts;
 			target = 42465A188431886AB035275F049824D3 /* Bolts */;
 			targetProxy = 4CC8EA06F6A3EBCEBB6518CB618663D7 /* PBXContainerItemProxy */;
-
 		};
 		7733112EA8E23667A15BE51AE5B44179 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3323,6 +3318,7 @@
 			name = FBSDKLoginKit;
 			target = 10C5885FCB0908EF785774EE52473DAB /* FBSDKLoginKit */;
 			targetProxy = 37AFDFBCD72AB9E4B35080745110068D /* PBXContainerItemProxy */;
+
 		};
 		B8ED72F07BCF6D1D542A82BC6B460A3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3336,6 +3332,7 @@
 			target = 6EB94A13BDB7FE31B40B6C1B448F8381 /* Parse-ParseUI */;
 			targetProxy = 7AED3D3A28F704D7A592D1564E8F3409 /* PBXContainerItemProxy */;
 		};
+
 		CE3BA357BCB024AF7B42E3B06D66326F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBAEMKit;
@@ -3822,7 +3819,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EB712C90C0955ECE44A91572DE20C4B /* Parse.release.xcconfig */;
 			buildSettings = {
-
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Parse";
 				IBSC_MODULE = Parse;
 				INFOPLIST_FILE = "Target Support Files/Parse/ResourceBundle-ParseUI-Parse-Info.plist";
@@ -3839,6 +3835,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B231CAAC9C5908F3B9A298146C61E549 /* Pods-Farmacy.debug.xcconfig */;
 			buildSettings = {
+
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3849,7 +3846,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-
 				EXCLUDED_ARCHS = arm64;
 
 				INFOPLIST_FILE = "Target Support Files/Pods-Farmacy/Pods-Farmacy-Info.plist";

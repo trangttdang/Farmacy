@@ -6,12 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Crop.h"
+
+#import "MyCrop.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CropDetailViewController : UIViewController
-@property (nonatomic, strong) Crop *crop;
+
+@property (nonatomic, strong) MyCrop *myCrop;
+
 @end
 
 NS_ASSUME_NONNULL_END
