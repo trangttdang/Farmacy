@@ -987,6 +987,20 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HB9-ET-8uk" customClass="FSCalendar">
+                                        <rect key="frame" x="8" y="84" width="388" height="342"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                                <color key="value" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="iDb-ei-LV1" id="qQf-LI-Hyv"/>
+                                            <outlet property="delegate" destination="iDb-ei-LV1" id="fkb-JB-4YI"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="wNq-tT-qnJ"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -999,6 +1013,7 @@
                         <imageReference key="image" image="calendar" catalog="system" renderingMode="original"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="calendarView" destination="HB9-ET-8uk" id="v25-TI-tLO"/>
                         <outlet property="scheduleTableView" destination="YXV-e9-6Ei" id="DLB-ZF-LA6"/>
                     </connections>
                 </viewController>
