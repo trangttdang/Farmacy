@@ -25,6 +25,8 @@
         [query getObjectInBackgroundWithId:myCrop.objectId
                                      block:^(PFObject *crop, NSError *error) {
             [myCrop deleteInBackgroundWithBlock: completion];
+            [myCrop[@"fertilizeSchedule"] deleteInBackground];
+            [myCrop[@"irrigateSchedule"] deleteInBackground];
         }];
 }
 

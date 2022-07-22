@@ -34,7 +34,7 @@
     // Do any additional setup after loading the view.
     [self fetchSchedules];
     //Integrate FSCalendar
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(20, 100, 320, 300)];
     self.calendar = calendar;
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -70,6 +70,7 @@
 }
 
 - (void) setReminder: (UNUserNotificationCenter *) center{
+    NSLog(@"%@", [NSDate date]);
     [self.arrayOfSchedules enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:(NSDate *)obj[@"time"]];
@@ -82,7 +83,7 @@
         UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:uuidString                                                                        content:[self getNotificationContent:dateComponents] trigger:trigger];
         [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
             if (!error) {
-                NSLog(@"Local Notification succeeded");
+                NSLog(@"Local Notification succeeded with %@", (NSDate *)obj[@"time"]);
             }
             else {
                 NSLog(@"Local Notification failed");
