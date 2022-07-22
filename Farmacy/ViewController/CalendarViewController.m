@@ -16,13 +16,13 @@
 
 @interface CalendarViewController ()<FSCalendarDelegate,FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic) NSArray *arrayOfSchedules;
-@property (weak , nonatomic) FSCalendar *calendar;
 @property (strong, nonatomic) NSMutableArray *arrayOfSchedulesOfSelectedDay;
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 @property (nonatomic) NSArray *arrayOfMyCrops;
 @property (nonatomic) NSMutableArray *arrayOfFertilizeSchedules;
 @property (nonatomic) NSMutableArray *arrayOfIrrigateSchedules;
 @property (nonatomic,strong) NSCalendar *gregorian;
+@property (weak, nonatomic) IBOutlet FSCalendar *calendarView;
 
 
 @end
@@ -34,11 +34,9 @@
     // Do any additional setup after loading the view.
     [self fetchSchedules];
     //Integrate FSCalendar
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(20, 100, 320, 300)];
-    self.calendar = calendar;
-    calendar.dataSource = self;
-    calendar.delegate = self;
-    [self.view addSubview:calendar];
+    self.calendarView.dataSource = self;
+    self.calendarView.delegate = self;
+    [self.view addSubview:self.calendarView];
     
     self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
 

@@ -45,7 +45,13 @@
             MyCrop *myCrop = [MyCrop new];
             myCrop[@"crop"] = crop;
             myCrop[@"progressPercentage"] = @(0);
-            
+            Schedule *fSchedule = [Schedule new];
+            Schedule *iSchedule = [Schedule new];
+            //TODO: change to suggested time after implementing algorithm
+            fSchedule[@"time"] = [NSDate date]; //temporarily
+            iSchedule[@"time"] = [NSDate date];
+            myCrop[@"fertilizeSchedule"] = fSchedule;
+            myCrop[@"irrigateSchedule"] = iSchedule;
             [myCrop saveInBackgroundWithBlock: completion];
         } else if (error == nil){
             NSLog(@"Crop is already added");
