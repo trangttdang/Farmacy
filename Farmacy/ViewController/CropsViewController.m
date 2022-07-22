@@ -24,15 +24,6 @@
     [self reloadData:10];
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (void)didAddCrop:(Crop *)crop {
     MyCropsViewController *myCropViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
@@ -71,8 +62,10 @@
 - (void)reloadData: (NSInteger)count{
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
+
     query.limit = count;
     
+
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *crops, NSError *error) {
         if (crops != nil) {
@@ -82,7 +75,7 @@
         }
         [self.cropsTableView reloadData];
     }];
-    
+
 }
 
 

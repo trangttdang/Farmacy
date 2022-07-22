@@ -15,11 +15,13 @@
 #import "MyCrop.h"
 #import "MyCropCell.h"
 
+
 #import "FBSDKCoreKit/FBSDKProfile.h"
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "FBSDKLoginKit/FBSDKLoginKit.h"
 
 @interface MyCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfMyCrops;
 
@@ -35,7 +37,7 @@
     self.myCropsTableView.delegate = self;
     self.myCropsTableView.dataSource = self;
     [self reloadData];
-    
+
 }
 
 /*
@@ -73,6 +75,7 @@
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+
     MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
     MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
     Crop *crop = myCrop[@"crop"];
@@ -169,6 +172,13 @@
 }
 - (IBAction)didTapChat:(id)sender {
     ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
+    Crop *crop = self.arrayOfMyCrops[indexPath.row];
+    viewController.crop = crop;
     [self.navigationController pushViewController: viewController animated:YES];
 }
 

@@ -338,11 +338,13 @@
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="204.91071428571428"/>
         </scene>
+
         <!--Chat View Controller-->
         <scene sceneID="f4Y-vG-xjO">
             <objects>
                 <viewController storyboardIdentifier="ChatViewController" id="8dA-rR-Q7k" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Roq-Nk-tlT">
+
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -357,6 +359,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
+
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="z5N-Nu-jVO" customClass="ChatCell">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -425,10 +428,12 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgF-wd-ZEs">
                                                     <rect key="frame" x="20" y="5" width="374" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -521,17 +526,21 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type by use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-73-LwU">
                                                     <rect key="frame" x="196" y="69" width="92" height="17"/>
+
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npg-6b-S9f">
                                                     <rect key="frame" x="196" y="94" width="130" height="21"/>
+
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="uRI-TR-MM0">
+
                                                     <rect key="frame" x="331.5" y="32" width="42.5" height="28"/>
                                                 </imageView>
                                             </subviews>
@@ -550,11 +559,14 @@
                                                 <constraint firstItem="wnn-FS-ZLx" firstAttribute="top" secondItem="vDy-oG-QbG" secondAttribute="top" constant="32" id="lFR-ZX-56M"/>
                                                 <constraint firstItem="uRI-TR-MM0" firstAttribute="top" secondItem="3GB-75-Lzd" secondAttribute="top" id="nJQ-Mo-0rU"/>
                                                 <constraint firstItem="Lsp-73-LwU" firstAttribute="leading" secondItem="3GB-75-Lzd" secondAttribute="leading" id="tW2-IL-s4M"/>
+
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
+
                                             <outlet property="addCropIconImageView" destination="uRI-TR-MM0" id="NfD-4A-clM"/>
+
                                             <outlet property="cropImageView" destination="wnn-FS-ZLx" id="zfb-BB-U5H"/>
                                             <outlet property="cropNameLabel" destination="3GB-75-Lzd" id="7cD-hi-0qc"/>
                                             <outlet property="cropTypeByUseLabel" destination="Lsp-73-LwU" id="Dup-of-UYx"/>
@@ -588,13 +600,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
+
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCropCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CropCell" rowHeight="222" id="o8u-dv-Avy" customClass="MyCropCell">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="222"/>
+
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8u-dv-Avy" id="4do-kw-UyI">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ej-Mj-u7O">
                                                     <rect key="frame" x="188" y="16" width="58.5" height="31.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
@@ -603,11 +618,13 @@
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-7s-8u1">
                                                     <rect key="frame" x="188" y="55.5" width="147" height="4"/>
+
                                                     <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.20000000000000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="147" id="ewg-sL-fO2"/>
                                                     </constraints>
                                                 </progressView>
+
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-c9-wfl">
                                                     <rect key="frame" x="188" y="67" width="182" height="107"/>
                                                     <subviews>
@@ -735,10 +752,12 @@
                                                 <constraint firstItem="1Ej-Mj-u7O" firstAttribute="leading" secondItem="DT7-Z6-bsi" secondAttribute="trailing" constant="32" id="q90-1R-YvV"/>
                                                 <constraint firstItem="J7a-lz-4Eh" firstAttribute="trailing" secondItem="aae-zB-Q71" secondAttribute="trailing" id="s8T-vU-lcO"/>
                                                 <constraint firstItem="u7g-7s-8u1" firstAttribute="leading" secondItem="1Ej-Mj-u7O" secondAttribute="leading" id="zZ4-i9-3EG"/>
+
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
+
                                             <outlet property="myCropImageView" destination="DT7-Z6-bsi" id="Izh-g8-c4r"/>
                                             <outlet property="myCropNameLabel" destination="492-cZ-JqX" id="QS7-4f-o8m"/>
                                             <outlet property="myCropProgressPercentageLabel" destination="1Ej-Mj-u7O" id="uAw-3p-Oz1"/>
@@ -747,6 +766,7 @@
                                             <outlet property="nextIrrigateLabel" destination="Umb-aA-MCa" id="h9V-re-SNN"/>
                                             <outlet property="plantedAtLabel" destination="J7q-mx-6Hl" id="Vcg-On-y0L"/>
                                             <outlet property="removeCropIconImageView" destination="aae-zB-Q71" id="NkR-VH-HXn"/>
+
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -786,12 +806,14 @@
         </scene>
         <!--Crop Detail View Controller-->
         <scene sceneID="zfg-YW-N74">
+
             <objects>
                 <viewController storyboardIdentifier="CropDetailViewController" id="aiA-sg-ZZT" customClass="CropDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ZH-yL-4bI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wheat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvd-8T-ozP">
                                 <rect key="frame" x="170" y="292" width="74" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -817,6 +839,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.1278295894" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eIW-0a-EwM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -840,7 +863,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gD3-Zu-fan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+
             <point key="canvasLocation" x="3515.9420289855075" y="-528.34821428571422"/>
+
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="O4e-2p-0OM">
@@ -852,11 +877,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+
                         <segue destination="2eE-ff-Kvf" kind="relationship" relationship="viewControllers" id="7FA-aj-dCZ"/>
                         <segue destination="iDb-ei-LV1" kind="relationship" relationship="viewControllers" id="SZS-GC-NGN"/>
                         <segue destination="mbx-oQ-ZVZ" kind="relationship" relationship="viewControllers" id="hLZ-VT-q7S"/>
                         <segue destination="E5h-0y-IvQ" kind="relationship" relationship="viewControllers" id="Evt-2m-0Aj"/>
                         <segue destination="gZo-l5-ZVf" kind="relationship" relationship="viewControllers" id="RfB-ny-q3U"/>
+
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzb-Pp-18R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -976,6 +1003,7 @@
                     <tabBarItem key="tabBarItem" title="" id="DIm-dq-t5Z">
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                     </tabBarItem>
+
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9dZ-qn-uZo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -990,6 +1018,7 @@
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="-1221.4285714285713"/>
         </scene>
+
         <!--Navigation Controller-->
         <scene sceneID="Pzt-Lx-PMA">
             <objects>
@@ -1011,6 +1040,7 @@
             </objects>
             <point key="canvasLocation" x="2598.5507246376815" y="204.91071428571428"/>
         </scene>
+
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
@@ -1021,12 +1051,14 @@
         <image name="fertilizer" width="128" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="humidity" catalog="system" width="128" height="98"/>
+
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="minus" width="128" height="128"/>
         <image name="plus-button" width="42.666667938232422" height="42.666667938232422"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+
         <image name="trowel" width="128" height="128"/>
         <image name="watering-can (1)" width="128" height="128"/>
         <image name="wheat" width="350" height="399"/>
