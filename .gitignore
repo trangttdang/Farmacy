@@ -10,6 +10,9 @@ Farmacy.xcworkspace/*
 Farmacy.xcodeproj/*
 Farmacy.xcworkspace
 Farmacy.xcodeproj
+Farmacy.xcworkspace/
+Farmacy.xcodeproj/
+
 
 #build products
 build/*
