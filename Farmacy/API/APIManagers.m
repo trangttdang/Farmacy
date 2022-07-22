@@ -38,8 +38,8 @@ static NSString * const baseURLString = @"https://api.weatherapi.com";
 
 - (void)getForecastWeatherData:(NSString *)location completion:(void(^)(NSMutableArray *weatherData, NSError *error))completion{
     
+
     NSDictionary *parameters = @{@"key": self.APIkey,@"q": location,@"days":@14};
-    
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:self.baseURL];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     

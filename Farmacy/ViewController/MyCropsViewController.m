@@ -15,11 +15,13 @@
 #import "MyCrop.h"
 #import "MyCropCell.h"
 
+
 #import "FBSDKCoreKit/FBSDKProfile.h"
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "FBSDKLoginKit/FBSDKLoginKit.h"
 
 @interface MyCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfMyCrops;
 
@@ -35,18 +37,9 @@
     self.myCropsTableView.delegate = self;
     self.myCropsTableView.dataSource = self;
     [self reloadData];
-    
+
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (void) checkProfile{
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -73,6 +66,7 @@
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+
     MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
     MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
     Crop *crop = myCrop[@"crop"];
@@ -169,6 +163,24 @@
 }
 - (IBAction)didTapChat:(id)sender {
     ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
+    MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
+    viewController.myCrop = myCrop;
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+- (IBAction)didTapChat:(id)sender {
+    ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
+    Crop *crop = self.arrayOfMyCrops[indexPath.row];
+    viewController.crop = crop;
     [self.navigationController pushViewController: viewController animated:YES];
 }
 

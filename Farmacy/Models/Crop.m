@@ -14,7 +14,6 @@
 @dynamic typeByUse;
 @dynamic image;
 
-
 + (nonnull NSString *)parseClassName {
     return @"Crop";
 }

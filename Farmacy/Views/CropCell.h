@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol CropCellDelegate
 - (void)didAddCrop: (Crop *) crop;
+
 @end
 
 @interface CropCell : UITableViewCell
@@ -20,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet PFImageView *cropImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *addCropIconImageView;
-
-
 @property (nonatomic,weak) id<CropCellDelegate> delegate;
 @property (nonatomic, strong) Crop *crop;
 
