@@ -8,7 +8,7 @@
 
 ## Overview
 ### Description
-Farmacy provides farmers with personalized plans on when to plant, fertilize, and irrigate based on weather and trend data
+Farmacy provides farmers with personalized plans on when to plant, fertilize, and irrigate based on weather and trend data to optimal product yields
 
 ### App Evaluation
 - **Category:** Agriculture
@@ -16,7 +16,15 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - **Story:** Given insightful data, personalized plans on when to plant, fertilize, and irrigate, Farmacy can help increase the farmer’s yield
 - **Market:** Farmacy targets on farmers who need help with their crop plan
 - **Habit:** Farmers use Farmacy on a daily basis to check on the weather API along with reminders on when to plant, fertilize, and irrigate
-- **Scope:** Technical Challenge is to analyze and provide insightful data, and provide personalized plan to optimal product yields
+- **Scope:** See technical challenge bellow
+
+## Technical Challenge
+- Implement an analytics algorithm using data mining techniques to suggest farmer when to plant, fertilize, and irrigate. To accomplish it, I will utilize weather, soil and other data specific to the area.
+- Implement calendar on when to plant/fertilize/irrigate and allow farmers to view schedule on the specific day. This calendar will be modified synchronously per change of crops addition/removal
+- Implement and push reminder notifications on when to plant/fertilize/irrigate based on calendar and tips of a day!
+- Implement chat feature allowing farmers to connect with experts in the real time
+- Poslish User interface
+
 
 ## Product Spec
 
@@ -24,7 +32,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 
 **Required Must-have Stories**
 
-* Farmer can log in/sign up and log out 
+* Farmer can log in/sign up and log out using Facebook SDK for iOS
 * Farmer can add/delete crops to/from grow to My Crops list
 * Farmer can view calendar to know when to plant, fertilize, and irrigate
 * Farmer can view their crops' progress 
@@ -101,12 +109,14 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 ### Models: Crops
 | Property | Type | Description |
 | --- | --- | --- |
-| objectId | DateTime | unique id for the crop |
-| plantedAt | String | date when crop is planted |
+| objectId | String | unique id for the crop |
+| plantedAt | DateTime | date when crop is planted |
 | image | Image | image of the crop |
 | name | String | string name of the crop | 
  | schedule | File | file schedule on when to plant, fertilize, and irrigate |
  | progress | Number | percentage shows progress until it is harvested |
+ 
+(Updating)
 
 ### Networking
 * Weather Forecast Screen
