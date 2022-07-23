@@ -36,6 +36,7 @@
 }
 
 - (void) fetchForecastWeather{
+    //TODO: Allow farmers to input their location
     [[APIManagers shared] getForecastWeatherData:@"98007" completion:^(NSMutableArray * _Nonnull weatherData, NSError * _Nonnull error) {
         if(weatherData){
             NSLog(@"😎😎😎 Successfully loaded forecast weather API");
@@ -48,14 +49,15 @@
 }
 
 - (void) fetchCurrentWeather{
+    //TODO: Allow farmers to input their location
     [[APIManagers shared] getCurrentWeatherData:@"98007" completion:^(NSDictionary * _Nonnull weatherData, NSError * _Nonnull error) {
         if(weatherData){
             NSLog(@"😎😎😎 Successfully loaded current weather API");
             float temperature = [weatherData[@"temp_f"] floatValue];
             self.currentTemperatureLabel.text = [[NSString stringWithFormat:@"%.f",temperature] stringByAppendingString: @"°F"];
-            self.currentWindLabel.text = [NSString stringWithFormat:@"%@",weatherData[@"wind_mph"]];
-            self.currentHumidityLabel.text = [NSString stringWithFormat:@"%@",weatherData[@"humidity"]];
-            self.currentPrecipLabel.text = [NSString stringWithFormat:@"%@",weatherData[@"precip_mm"]];
+            self.currentWindLabel.text = [NSString stringWithFormat:@"%.1f",[weatherData[@"wind_mph"] floatValue]];
+            self.currentHumidityLabel.text = [NSString stringWithFormat:@"%.1f",[weatherData[@"humidity"] floatValue]];
+            self.currentPrecipLabel.text = [NSString stringWithFormat:@"%.1f",[weatherData[@"precip_mm"] floatValue]];
             
             //Set condition icon
             NSString *URLString = weatherData[@"condition"][@"icon"];
@@ -81,12 +83,11 @@
     WeatherCard *weatherCard = self.arrayOfWeatherCards[indexPath.row];
     
     cell.weatherCard = weatherCard;
-    float temperature = [weatherCard.avgTemperature floatValue];
-    cell.avgTemperatureLabel.text = [[NSString stringWithFormat:@"%.f",temperature] stringByAppendingString: @"°F"];
-    cell.avgHumidityLabel.text = [NSString stringWithFormat:@"%@", weatherCard.avgHumidity];
-    cell.maxWindLabel.text = [NSString stringWithFormat:@"%@", weatherCard.maxWind];
-    cell.totalPrecipLabel.text = [NSString stringWithFormat:@"%@", weatherCard.totalPrecip];
-    cell.dateLabel.text = [NSString stringWithFormat:@"%@", weatherCard.dateString];
+    cell.avgTemperatureLabel.text = weatherCard.avgTemperature;
+    cell.avgHumidityLabel.text = weatherCard.avgHumidity;
+    cell.maxWindLabel.text = weatherCard.maxWind;
+    cell.totalPrecipLabel.text = weatherCard.totalPrecip;
+    cell.dateLabel.text = weatherCard.dateString;
     
     NSURL *url = [NSURL URLWithString: [@"https:" stringByAppendingFormat: @"%@", weatherCard.conditionIconStr]];
     NSData *urlData = [NSData dataWithContentsOfURL:url];

@@ -28,7 +28,7 @@
 - (void)didAddCrop:(Crop *)crop {
     MyCropsViewController *myCropViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
     [Crop addToMyCrops:crop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
-        if(error){
+        if(succeeded == false || error){
             NSLog(@"Error adding Crop: %@", error.localizedDescription);
         }
         else{

@@ -67,24 +67,11 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
     MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
-    Crop *crop = myCrop[@"crop"];
-
-    [crop fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error: %@", error.description);
-        } else {
-            NSLog(@"%@", @"Fetch crop sucessfully");
-            cell.myCropNameLabel.text = crop[@"name"];
-            cell.myCropTypeByUseLabel.text = crop[@"typeByUse"];
-            cell.myCropImageView.file = crop[@"image"];
-            [cell.myCropImageView loadInBackground];
-            cell.myCropImageView.layer.cornerRadius = 10;
-
-        }
-    }];
-    
-    Schedule *fertilizeSchedule = myCrop[@"fertilizeSchedule"];
-    Schedule *irrigateSchedule = myCrop[@"irrigateSchedule"];
+    cell.myCropNameLabel.text = myCrop.crop.name;
+    cell.myCropTypeByUseLabel.text = myCrop.crop.typeByUse;
+    cell.myCropImageView.file = myCrop.crop.image;
+    [cell.myCropImageView loadInBackground];
+    cell.myCropImageView.layer.cornerRadius = 10;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // Configure the input format to parse the date string
@@ -92,31 +79,15 @@
     //Configure output format
     formatter.dateStyle = NSDateFormatterShortStyle;
     formatter.timeStyle = NSDateFormatterShortStyle;
-    
-    [fertilizeSchedule fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error: %@", error.description);
-        } else {
-            NSLog(@"%@", @"Fetch fertilize schedule sucessfully");
-            cell.nextFertilizeLabel.text = [formatter stringFromDate:fertilizeSchedule[@"time"]];
-        }
-    }];
-    [irrigateSchedule fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error: %@", error.description);
-        } else {
-            NSLog(@"%@", @"Fetch irrigate schedule sucessfully");
-            cell.nextIrrigateLabel.text = [formatter stringFromDate:irrigateSchedule[@"time"]];
-        }
-    }];
+    cell.nextFertilizeLabel.text = [formatter stringFromDate:myCrop.fertilizeSchedule.time];
+    cell.nextIrrigateLabel.text = [formatter stringFromDate:myCrop.irrigateSchedule.time];
     
     cell.myCrop = myCrop;
     cell.myCropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
     cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
-    //TODO: Add information on when to plant, fertilize, irrigate
-
+    
     return cell;
 }
 
@@ -127,6 +98,9 @@
 - (void)reloadData{
    //  construct query
     PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
+    [query includeKey:@"crop"];
+    [query includeKey:@"fertilizeSchedule"];
+    [query includeKey:@"irrigateSchedule"];
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *myCrops, NSError *error) {
         if (myCrops != nil) {

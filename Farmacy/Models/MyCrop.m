@@ -24,9 +24,11 @@
         // Retrieve the object by id
         [query getObjectInBackgroundWithId:myCrop.objectId
                                      block:^(PFObject *crop, NSError *error) {
-            [myCrop deleteInBackgroundWithBlock: completion];
-            [myCrop[@"fertilizeSchedule"] deleteInBackground];
-            [myCrop[@"irrigateSchedule"] deleteInBackground];
+            [myCrop deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable newError) {
+                [myCrop[@"fertilizeSchedule"] deleteInBackground];
+                [myCrop[@"irrigateSchedule"] deleteInBackground];
+                completion(succeeded, newError);
+            }];
         }];
 }
 
@@ -36,6 +38,8 @@
     [iQuery whereKey:@"irrigateSchedule" equalTo:schedule];
     [fQuery whereKey:@"fertilizeSchedule" equalTo:schedule];
     PFQuery *query = [PFQuery orQueryWithSubqueries:@[iQuery ,fQuery]];
+    [query includeKey:@"crop"];
+    
     return [query getFirstObject];
 }
 
