@@ -7,11 +7,10 @@ target 'Farmacy' do
   pod 'FSCalendar'
 
   # Pods for Farmacy
-  pod 'FBSDKLoginKit'
-  pod 'FBSDKCoreKit'
   pod 'AFNetworking'
   pod 'Parse'
   pod 'Parse/UI'
+  pod 'Parse/FacebookUtils'
  
   
 

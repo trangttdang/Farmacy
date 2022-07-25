@@ -28,7 +28,6 @@
 		942C61DE287F29C500775B55 /* CropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61DD287F29C500775B55 /* CropCell.m */; };
 		942C61E1287F646300775B55 /* CropsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61E0287F646300775B55 /* CropsViewController.m */; };
 		942C61E42880A4D200775B55 /* CropDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C61E32880A4D200775B55 /* CropDetailViewController.m */; };
-		942C61FE2881277A00775B55 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942C61FD2881277A00775B55 /* ParseFacebookUtilsV4.framework */; };
 		94C05B2228821D080041AA5C /* MyCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C05B2128821D080041AA5C /* MyCrop.m */; };
 		94C05B2528821D350041AA5C /* MyCropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C05B2428821D350041AA5C /* MyCropCell.m */; };
 		94C05B2828821DCF0041AA5C /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C05B2728821DCF0041AA5C /* Schedule.m */; };
@@ -37,6 +36,7 @@
 		94E548E7288A1CCA002A00AE /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E548E6288A1CCA002A00AE /* ChatViewController.m */; };
 		94E548EA288A1D4C002A00AE /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E548E9288A1D4C002A00AE /* ChatCell.m */; };
 		A309F0BCDF4A5AF5D42B7854 /* Pods_Farmacy_FarmacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA949471955D192FD3DFF208 /* Pods_Farmacy_FarmacyUITests.framework */; };
+		D68A852A4449CAA18E396BB5 /* Pods_Farmacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561932451C0356E9E1EBD2BC /* Pods_Farmacy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,6 @@
 		942C61E0287F646300775B55 /* CropsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropsViewController.m; sourceTree = "<group>"; };
 		942C61E22880A4D200775B55 /* CropDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropDetailViewController.h; sourceTree = "<group>"; };
 		942C61E32880A4D200775B55 /* CropDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropDetailViewController.m; sourceTree = "<group>"; };
-		942C61FD2881277A00775B55 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		94C05B2028821D080041AA5C /* MyCrop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCrop.h; sourceTree = "<group>"; };
 		94C05B2128821D080041AA5C /* MyCrop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCrop.m; sourceTree = "<group>"; };
 		94C05B2328821D350041AA5C /* MyCropCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCropCell.h; sourceTree = "<group>"; };
@@ -125,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				942C61FE2881277A00775B55 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				D68A852A4449CAA18E396BB5 /* Pods_Farmacy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +173,6 @@
 		942C615F2877968100775B55 = {
 			isa = PBXGroup;
 			children = (
-				942C61FD2881277A00775B55 /* ParseFacebookUtilsV4.framework */,
 				942C616A2877968100775B55 /* Farmacy */,
 				942C61862877968200775B55 /* FarmacyTests */,
 				942C61902877968200775B55 /* FarmacyUITests */,

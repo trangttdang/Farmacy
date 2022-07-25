@@ -15,35 +15,41 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Bolts/Tasks (1.9.1)
-  - FBAEMKit (14.1.0):
-    - FBSDKCoreKit_Basics (= 14.1.0)
-  - FBSDKCoreKit (14.1.0):
-    - FBAEMKit (= 14.1.0)
-    - FBSDKCoreKit_Basics (= 14.1.0)
-  - FBSDKCoreKit_Basics (14.1.0)
-  - FBSDKLoginKit (14.1.0):
-    - FBSDKCoreKit (= 14.1.0)
+  - FBSDKCoreKit (11.0.1):
+    - FBSDKCoreKit/Core (= 11.0.1)
+  - FBSDKCoreKit/Core (11.0.1):
+    - FBSDKCoreKit_Basics (~> 11.0.1)
+  - FBSDKCoreKit_Basics (11.0.1):
+    - FBSDKCoreKit_Basics/Basics (= 11.0.1)
+  - FBSDKCoreKit_Basics/Basics (11.0.1)
+  - FBSDKLoginKit (11.0.1):
+    - FBSDKLoginKit/Login (= 11.0.1)
+  - FBSDKLoginKit/Login (11.0.1):
+    - FBSDKCoreKit (~> 11.0.1)
+    - FBSDKCoreKit_Basics (~> 11.0.1)
   - FSCalendar (2.8.4)
   - Parse (1.19.3):
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
     - Bolts/Tasks (= 1.9.1)
+  - Parse/FacebookUtils (1.19.3):
+    - Bolts/Tasks (~> 1.9.1)
+    - FBSDKLoginKit (= 11.0.1)
+    - Parse/Core
   - Parse/UI (1.19.3):
     - Parse/Core
 
 DEPENDENCIES:
   - AFNetworking
-  - FBSDKCoreKit
-  - FBSDKLoginKit
   - FSCalendar
   - Parse
+  - Parse/FacebookUtils
   - Parse/UI
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - Bolts
-    - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
@@ -53,13 +59,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
-  FBAEMKit: a899515e45476027f73aef377b5cffadcd56ca3a
-  FBSDKCoreKit: 24f8bc8d3b5b2a8c5c656a1329492a12e8efa792
-  FBSDKCoreKit_Basics: 6e578c9bdc7aa1365dbbbde633c9ebb536bcaa98
-  FBSDKLoginKit: 787de205d524c3a4b17d527916f1d066e4361660
+  FBSDKCoreKit: 38c9e29a3f1436362acacff6486d3a28628c288f
+  FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
+  FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
 
-PODFILE CHECKSUM: a2c15e12e84f34c0e0cea83470c737420373e007
+PODFILE CHECKSUM: 8f8106133e00d1d4bacc66c28953a98f45b3dc70
 
 COCOAPODS: 1.11.3

@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "MyCropsViewController.h"
 
-#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <PFFacebookUtils.h>
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "Parse/Parse.h"
 
@@ -23,8 +23,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch
     
-    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    
     //Parse configuration
     ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         
@@ -37,6 +35,7 @@
     }];
     
     [Parse initializeWithConfiguration:config];
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
     return YES;
 }
