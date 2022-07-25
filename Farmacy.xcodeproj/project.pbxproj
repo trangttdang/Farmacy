@@ -238,12 +238,10 @@
 				942C61C9287CD4F400775B55 /* WeatherCard.m */,
 				942C61D9287E91D500775B55 /* Crop.h */,
 				942C61DA287E91D500775B55 /* Crop.m */,
-
 				94C05B2028821D080041AA5C /* MyCrop.h */,
 				94C05B2128821D080041AA5C /* MyCrop.m */,
 				94C05B2628821DCF0041AA5C /* Schedule.h */,
 				94C05B2728821DCF0041AA5C /* Schedule.m */,
-
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -532,8 +530,6 @@
 				942C616D2877968100775B55 /* AppDelegate.m in Sources */,
 				942C61CA287CD4F400775B55 /* WeatherCard.m in Sources */,
 
-				94C05B2828821DCF0041AA5C /* Schedule.m in Sources */,
-
 				942C61E1287F646300775B55 /* CropsViewController.m in Sources */,
 				942C61DE287F29C500775B55 /* CropCell.m in Sources */,
 				942C61B42877F53100775B55 /* LoginViewController.m in Sources */,
@@ -546,8 +542,6 @@
 				942C617E2877968100775B55 /* main.m in Sources */,
 				942C61C6287CA4D600775B55 /* APIManagers.m in Sources */,
 				942C61CF287CE7AF00775B55 /* WeatherCardCell.m in Sources */,
-
-				94C05B2228821D080041AA5C /* MyCrop.m in Sources */,
 
 				942C61E42880A4D200775B55 /* CropDetailViewController.m in Sources */,
 				942C61702877968100775B55 /* SceneDelegate.m in Sources */,

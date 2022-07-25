@@ -676,6 +676,7 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
 			remoteInfo = FBSDKCoreKit_Basics;
+
 		};
 		9B03BC65DA2FE12236FB3C9001614EE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -684,6 +685,7 @@
 			remoteGlobalIDString = EAFFB8E885E2EDFD55062DE694143593;
 			remoteInfo = "Parse-Parse";
 		};
+
 		C2A565A451FBC3E2B8FF41747A55EA42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -1638,6 +1640,7 @@
 				489374F862047E8FE9943C5529561D45 /* Support Files */,
 			);
 			path = FBSDKCoreKit;
+
 			sourceTree = "<group>";
 		};
 		535E0972931C977FBB715714604DF700 /* Tasks */ = {
