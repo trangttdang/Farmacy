@@ -15,6 +15,7 @@
     UITapGestureRecognizer *addCropTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapAddCrop:)];
     [self.addCropIconImageView addGestureRecognizer:addCropTapGestureRecognizer];
     [self.addCropIconImageView setUserInteractionEnabled:YES];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -22,6 +23,7 @@
     
     // Configure the view for the selected state
 }
+
 - (void)didTapAddCrop:(UITapGestureRecognizer *)sender {
     [self.delegate didAddCrop:self.crop];
 }

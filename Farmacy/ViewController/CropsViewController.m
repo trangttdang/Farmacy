@@ -24,6 +24,7 @@
     [self reloadData:10];
 }
 
+
 - (void)didAddCrop:(Crop *)crop {
     MyCropsViewController *myCropViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
     [Crop addToMyCrops:crop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
@@ -62,7 +63,7 @@
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
     query.limit = count;
-
+    
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *crops, NSError *error) {
         if (crops != nil) {

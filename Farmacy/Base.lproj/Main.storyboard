@@ -338,13 +338,11 @@
             </objects>
             <point key="canvasLocation" x="1715.9420289855075" y="204.91071428571428"/>
         </scene>
-
         <!--Chat View Controller-->
         <scene sceneID="f4Y-vG-xjO">
             <objects>
                 <viewController storyboardIdentifier="ChatViewController" id="8dA-rR-Q7k" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Roq-Nk-tlT">
-
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -359,7 +357,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="z5N-Nu-jVO" customClass="ChatCell">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -525,7 +522,6 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type by use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsp-73-LwU">
                                                     <rect key="frame" x="196" y="69" width="92" height="17"/>
-
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -558,12 +554,10 @@
                                                 <constraint firstItem="wnn-FS-ZLx" firstAttribute="top" secondItem="vDy-oG-QbG" secondAttribute="top" constant="32" id="lFR-ZX-56M"/>
                                                 <constraint firstItem="uRI-TR-MM0" firstAttribute="top" secondItem="3GB-75-Lzd" secondAttribute="top" id="nJQ-Mo-0rU"/>
                                                 <constraint firstItem="Lsp-73-LwU" firstAttribute="leading" secondItem="3GB-75-Lzd" secondAttribute="leading" id="tW2-IL-s4M"/>
-
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
-
                                             <outlet property="addCropIconImageView" destination="uRI-TR-MM0" id="NfD-4A-clM"/>
 
                                             <outlet property="cropImageView" destination="wnn-FS-ZLx" id="zfb-BB-U5H"/>
@@ -812,7 +806,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-]
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wheat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvd-8T-ozP">
                                 <rect key="frame" x="170" y="292" width="74" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -876,12 +870,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-
                         <segue destination="2eE-ff-Kvf" kind="relationship" relationship="viewControllers" id="7FA-aj-dCZ"/>
                         <segue destination="iDb-ei-LV1" kind="relationship" relationship="viewControllers" id="SZS-GC-NGN"/>
                         <segue destination="mbx-oQ-ZVZ" kind="relationship" relationship="viewControllers" id="hLZ-VT-q7S"/>
                         <segue destination="E5h-0y-IvQ" kind="relationship" relationship="viewControllers" id="Evt-2m-0Aj"/>
-                        <segue destination="gZo-l5-ZVf" kind="relationship" relationship="viewControllers" id="RfB-ny-q3U"/>
+
+                        <segue destination="gZo-l5-ZVf" kind="relationship" relationship="viewControllers" id="YIp-I7-xq3"/>
 
                     </connections>
                 </tabBarController>
@@ -979,6 +973,17 @@
                                             <action selector="didTapSetReminder:" destination="iDb-ei-LV1" eventType="touchUpInside" id="0Gl-oU-WOp"/>
                                         </connections>
                                     </button>
+
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TC-dm-p2B">
+                                        <rect key="frame" x="20" y="45" width="44" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="alarm.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="didTapAskPermission:" destination="iDb-ei-LV1" eventType="touchUpInside" id="V6F-ob-ICt"/>
+                                        </connections>
+                                    </button>
+
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="wNq-tT-qnJ"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1042,6 +1047,7 @@
 
     </scenes>
     <resources>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
@@ -1057,7 +1063,6 @@
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
-
         <image name="trowel" width="128" height="128"/>
         <image name="watering-can (1)" width="128" height="128"/>
         <image name="wheat" width="350" height="399"/>
