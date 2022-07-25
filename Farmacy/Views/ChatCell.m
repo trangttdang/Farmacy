@@ -2,7 +2,7 @@
 //  ChatCell.m
 //  Farmacy
 //
-//  Created by Trang Dang on 7/16/22.
+//  Created by Trang Dang on 7/21/22.
 //
 
 #import "ChatCell.h"

@@ -38,6 +38,7 @@
 }
 
 
+
 - (void) checkProfile{
     dispatch_async(dispatch_get_main_queue(), ^{
         [FBSDKProfile loadCurrentProfileWithCompletion:^(FBSDKProfile *profile, NSError *error) {

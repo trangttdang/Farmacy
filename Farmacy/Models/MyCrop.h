@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) Crop *crop;
 
 + (void) removeFromMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion;
-
++ (MyCrop *)getMyCropUsingSchedule:(Schedule *)schedule;
 @end
 
 NS_ASSUME_NONNULL_END
