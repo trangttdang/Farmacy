@@ -31,7 +31,6 @@
     [self.cropImageView loadInBackground];
     
     self.cropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
-    
 }
 
 

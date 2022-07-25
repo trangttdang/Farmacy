@@ -73,7 +73,6 @@
         }
         [self.cropsTableView reloadData];
     }];
-    
 }
 
 
