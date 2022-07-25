@@ -51,6 +51,7 @@
         FBSDKAccessToken *accessToken = [FBSDKAccessToken currentAccessToken]; // Use existing access token.
 
         // Log In (create/update currentUser) with FBSDKAccessToken
+        NSLog(@"Demo git amend");
         [PFFacebookUtils logInInBackgroundWithAccessToken:accessToken
                                                     block:^(PFUser *user, NSError *error) {
           if (!user) {
