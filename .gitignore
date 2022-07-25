@@ -12,7 +12,7 @@ Farmacy.xcworkspace
 Farmacy.xcodeproj
 Farmacy.xcworkspace/
 Farmacy.xcodeproj/
-
+Farmacy.xcodeproj/project.pbxproj
 
 #build products
 build/*

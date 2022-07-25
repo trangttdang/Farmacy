@@ -8,7 +8,7 @@
 #import "Schedule.h"
 
 @implementation Schedule
-@dynamic date;
+@dynamic time;
 
 + (nonnull NSString *)parseClassName {
     return @"Schedule";

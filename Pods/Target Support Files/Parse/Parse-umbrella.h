@@ -53,6 +53,7 @@
 #import "PFUser+Synchronous.h"
 #import "PFUser.h"
 #import "PFUserAuthenticationDelegate.h"
+#import "PFFacebookUtils.h"
 #import "PFLogInView.h"
 #import "PFLogInViewController.h"
 #import "PFLogInView_Private.h"

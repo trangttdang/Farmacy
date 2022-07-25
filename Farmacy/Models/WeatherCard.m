@@ -22,10 +22,10 @@
     self = [super init];
     if(self){
         
-        self.avgTemperature = dictionary[@"day"][@"avgtemp_f"];
-        self.avgHumidity = dictionary[@"day"][@"avghumidity"];
-        self.totalPrecip = dictionary[@"day"][@"totalprecip_mm"];
-        self.maxWind = dictionary[@"day"][@"maxwind_mph"];
+        self.avgTemperature = [[NSString stringWithFormat:@"%.f",[dictionary[@"day"][@"avgtemp_f"] floatValue]] stringByAppendingString: @"°F"];
+        self.avgHumidity = [NSString stringWithFormat:@"%.1f", [dictionary[@"day"][@"avghumidity"] floatValue]];
+        self.totalPrecip = [NSString stringWithFormat:@"%.1f", [dictionary[@"day"][@"totalprecip_mm"] floatValue]];
+        self.maxWind = [NSString stringWithFormat:@"%.1f", [dictionary[@"day"][@"maxwind_mph"] floatValue]];
         
         //convert string to date
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

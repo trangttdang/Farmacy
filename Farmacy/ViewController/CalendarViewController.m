@@ -19,8 +19,6 @@
 @property (strong, nonatomic) NSMutableArray *arrayOfSchedulesOfSelectedDay;
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 @property (nonatomic) NSArray *arrayOfMyCrops;
-@property (nonatomic) NSMutableArray *arrayOfFertilizeSchedules;
-@property (nonatomic) NSMutableArray *arrayOfIrrigateSchedules;
 @property (nonatomic,strong) NSCalendar *gregorian;
 @property (weak, nonatomic) IBOutlet FSCalendar *calendarView;
 
@@ -41,7 +39,6 @@
     
     self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
 
-    
     self.scheduleTableView.delegate = self;
     self.scheduleTableView.dataSource = self;
     
@@ -70,19 +67,18 @@
 
 - (void) setReminder: (UNUserNotificationCenter *) center{
     NSLog(@"%@", [NSDate date]);
-    [self.arrayOfSchedules enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:(NSDate *)obj[@"time"]];
+    [self.arrayOfSchedules enumerateObjectsUsingBlock:^(Schedule *schedule, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:(NSDate *)schedule.time];
         
         // Create the trigger
         UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateComponents repeats:NO];
         
         //Create and Register a Notification Request
         NSString *uuidString = [[NSUUID UUID] UUIDString];
-        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:uuidString                                                                        content:[self getNotificationContent:dateComponents] trigger:trigger];
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:uuidString                                                                        content:[self getNotificationContent:dateComponents withSchedule:schedule] trigger:trigger];
         [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
             if (!error) {
-                NSLog(@"Local Notification succeeded with %@", (NSDate *)obj[@"time"]);
+                NSLog(@"Local Notification succeeded with %@", (NSDate *)schedule.time);
             }
             else {
                 NSLog(@"Local Notification failed");
@@ -91,7 +87,7 @@
     }];
 }
 
-- (UNMutableNotificationContent *) getNotificationContent: (NSDateComponents *)dateComponents{
+- (UNMutableNotificationContent *) getNotificationContent: (NSDateComponents *)dateComponents withSchedule: (Schedule *)schedule {
     //Specify the Conditions for Delivery
     //Create the Notification's Content
     UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
@@ -101,8 +97,20 @@
     NSString *bodyHour = [NSString stringWithFormat:@"%ld", [dateComponents hour]];
     NSString *bodyMinute = [NSString stringWithFormat:@"%ld", [dateComponents minute]];
     
-    //TODO: fetch crop name and action (fertilize/irrigate) and add to content.body
-    content.body = [NSString localizedUserNotificationStringForKey:[@"Wheat needs to be fertilizered at "stringByAppendingFormat: @"%@", [bodyHour stringByAppendingFormat:@"%@", bodyMinute]]                                                                  arguments:nil];
+    MyCrop *myCrop = [MyCrop getMyCropUsingSchedule:schedule];
+    Schedule *iSchedule =myCrop.irrigateSchedule;
+    Schedule *fSchedule =myCrop.fertilizeSchedule;
+    NSString *action = @"";
+    if([schedule.objectId isEqual: fSchedule.objectId]){
+        action = @" needs to fertilized at ";
+    } else if ([schedule.objectId isEqual: iSchedule.objectId]){
+        action = @" needs to irrigated at ";
+    } else{
+        NSLog(@"Error fetch crop action");
+    }
+    
+    NSString *body = [myCrop.crop.name stringByAppendingString:[action stringByAppendingFormat:@"%@", [bodyHour stringByAppendingFormat:@":%@", bodyMinute]]];
+    content.body = [NSString localizedUserNotificationStringForKey:body arguments:nil];
     content.sound = [UNNotificationSound defaultSound];
     content.badge = @([[UIApplication sharedApplication] applicationIconBadgeNumber] + 1);
     return content;
@@ -119,9 +127,6 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *schedules, NSError *error) {
         if (schedules != nil) {
             self.arrayOfSchedules = schedules;
-            for (Schedule *schedule in schedules){
-                NSLog(@"%@",schedule);
-            }
         } else{
             NSLog(@"%@", error.localizedDescription);
         }
@@ -136,11 +141,11 @@
 
 - (void) loadSchedulesOfSelectedDate: (NSDate *)selectedDate{
     self.arrayOfSchedulesOfSelectedDay = [[NSMutableArray alloc] init];
-    [self.arrayOfSchedules enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSDate *date = (NSDate *)obj[@"time"];
+    [self.arrayOfSchedules enumerateObjectsUsingBlock:^(Schedule *schedule, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSDate *date = schedule.time;
         BOOL sameDay = [self.gregorian isDate:date inSameDayAsDate:selectedDate];
         if (sameDay){
-            [self.arrayOfSchedulesOfSelectedDay addObject:obj];
+            [self.arrayOfSchedulesOfSelectedDay addObject:schedule];
         }
     }];
 }
@@ -153,34 +158,23 @@
     //Set time, weekday, and day Label
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"h:mm a"];
-    cell.timeLabel.text = [formatter stringFromDate:schedule[@"time"]];
+    cell.timeLabel.text = [formatter stringFromDate:schedule.time];
     [formatter setDateFormat:@"EE"];
-    cell.weekDayLabel.text = [formatter stringFromDate:schedule[@"time"]];
-    NSInteger day = [self.gregorian component:NSCalendarUnitDay fromDate:schedule[@"time"]];
+    cell.weekDayLabel.text = [formatter stringFromDate:schedule.time];
+    NSInteger day = [self.gregorian component:NSCalendarUnitDay fromDate:schedule.time];
     cell.dayLabel.text = [NSString stringWithFormat:@"%ld", day];
     
     //Set action
-    Schedule *iSchedule =myCrop[@"irrigateSchedule"];
-    Schedule *fSchedule =myCrop[@"fertilizeSchedule"];
-    if([schedule.objectId isEqual: fSchedule.objectId]){
+    if([schedule.objectId isEqual: myCrop.fertilizeSchedule.objectId]){
         cell.actionLabel.text = @"Fertilize";
-    } else if ([schedule.objectId isEqual: iSchedule.objectId]){
+    } else if ([schedule.objectId isEqual: myCrop.irrigateSchedule.objectId]){
         cell.actionLabel.text = @"Irrigate";
     } else{
         NSLog(@"Error fetch crop action");
     }
     
     //Set crop name
-    Crop *crop = myCrop[@"crop"];
-    [crop fetchInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error: %@", error.description);
-        } else {
-            NSLog(@"%@", @"Fetch crop sucessfully");
-            cell.cropLabel.text = [NSString stringWithFormat: @"%@", crop[@"name"]];
-        }
-    }];
-    
+    cell.cropLabel.text = [NSString stringWithFormat: @"%@", myCrop.crop.name];
 
     return cell;
 }
