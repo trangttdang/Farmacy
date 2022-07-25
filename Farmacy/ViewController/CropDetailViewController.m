@@ -40,7 +40,6 @@
     }];
     
     self.cropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
-    
 }
 
 

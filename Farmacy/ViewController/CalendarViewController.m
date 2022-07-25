@@ -32,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     [self fetchSchedules];
     //Integrate FSCalendar
     self.calendarView.dataSource = self;

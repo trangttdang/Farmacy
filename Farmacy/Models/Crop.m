@@ -6,6 +6,7 @@
 //
 
 #import "Crop.h"
+
 #import "MyCrop.h"
 
 @implementation Crop
@@ -13,7 +14,6 @@
 @dynamic name;
 @dynamic typeByUse;
 @dynamic image;
-
 
 + (nonnull NSString *)parseClassName {
     return @"Crop";
