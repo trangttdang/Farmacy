@@ -9,11 +9,9 @@
 
 #import "MyCrop.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CropDetailViewController : UIViewController
-
 @property (nonatomic, strong) MyCrop *myCrop;
 
 @end

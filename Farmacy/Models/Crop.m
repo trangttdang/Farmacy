@@ -6,7 +6,6 @@
 //
 
 #import "Crop.h"
-
 #import "MyCrop.h"
 
 @implementation Crop
@@ -14,8 +13,6 @@
 @dynamic name;
 @dynamic typeByUse;
 @dynamic image;
-
-
 
 + (nonnull NSString *)parseClassName {
     return @"Crop";
@@ -34,7 +31,6 @@
     }
     return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
-
 
 + (void) addToMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion {
     
@@ -55,7 +51,6 @@
         } else{
             NSLog(@"Unknown error %@", error.localizedDescription);
         }
-
     }];
     
 }

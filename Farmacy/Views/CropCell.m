@@ -22,7 +22,6 @@
     
     // Configure the view for the selected state
 }
-
 - (void)didTapAddCrop:(UITapGestureRecognizer *)sender {
     [self.delegate didAddCrop:self.crop];
 }

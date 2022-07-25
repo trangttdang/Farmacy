@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     
     MyCrop *myCrop = self.myCrop;
     Crop *crop = myCrop[@"crop"];
@@ -41,9 +40,5 @@
     }];
     
     self.cropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
-
-    
-}
-
 
 @end

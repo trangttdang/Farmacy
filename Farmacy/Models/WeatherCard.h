@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *totalPrecip;
 @property (nonatomic, strong) NSString *maxWind;
 @property (nonatomic, strong) NSString *avgHumidity;
-@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSString *conditionIconStr;
 @property (nonatomic, strong) NSString *dateString;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

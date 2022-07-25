@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WeatherCardCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *avgTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *maxWindLabel;
-@property (weak, nonatomic) IBOutlet UILabel *avgHuminityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *avgHumidityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalPrecipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionIconImageView;
