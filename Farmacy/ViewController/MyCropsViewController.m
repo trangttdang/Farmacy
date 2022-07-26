@@ -137,22 +137,4 @@
     [self.navigationController pushViewController: viewController animated:YES];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
-    MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
-    viewController.myCrop = myCrop;
-    [self.navigationController pushViewController: viewController animated:YES];
-}
-- (IBAction)didTapChat:(id)sender {
-    ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
-    [self.navigationController pushViewController: viewController animated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
-    Crop *crop = self.arrayOfMyCrops[indexPath.row];
-    viewController.crop = crop;
-    [self.navigationController pushViewController: viewController animated:YES];
-}
-
 @end
