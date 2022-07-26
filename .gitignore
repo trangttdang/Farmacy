@@ -13,6 +13,8 @@ Farmacy.xcodeproj
 Farmacy.xcworkspace/
 Farmacy.xcodeproj/
 Farmacy.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/*
+Pods/Pods.xcodeproj
 
 #build products
 build/*
