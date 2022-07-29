@@ -12,6 +12,8 @@
 #import "FBSDKLoginKit/FBSDKLoginKit.h"
 #import <PFFacebookUtils.h>
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -28,6 +30,49 @@
     loginButton.permissions = @[@"public_profile", @"email"];
     [self.view addSubview:loginButton];
     
+}
+
+//For who don't want to login with Facebook account
+- (IBAction)loginUserWithParse:(id)sender {
+    NSString *username = self.usernameTextField.text;
+    NSString *password = self.passwordTextField.text;
+    
+    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
+        if (error != nil) {
+            NSLog(@"User log in failed: %@", error.localizedDescription);
+        } else {
+            NSLog(@"User logged in successfully");
+            
+            // display view controller that needs to shown after successful login
+            SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
+            mySceneDelegate.window.rootViewController = loginViewController;
+        }
+    }];
+}
+//For who don't want to register with Facebook account
+- (IBAction)registerUserWithParse:(id)sender {
+    // initialize a user object
+    PFUser *newUser = [PFUser user];
+    
+    if([self.usernameTextField.text isEqual:@""] || [self.passwordTextField.text isEqual:@""]){
+        NSLog(@"User needs enter valid username and password");
+    }
+    else{
+        // set user properties
+        newUser.username = self.usernameTextField.text;
+        newUser.password = self.passwordTextField.text;
+        
+        // call sign up function on the object
+        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+            if (error != nil) {
+                NSLog(@"Error: %@", error.localizedDescription);
+            } else {
+                NSLog(@"User registered successfully");
+            }
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

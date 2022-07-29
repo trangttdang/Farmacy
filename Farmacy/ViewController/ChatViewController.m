@@ -14,6 +14,9 @@
 @property (nonatomic) NSArray *arrayOfMessages;
 @property (weak, nonatomic) IBOutlet UITableView *chatBoxTableView;
 
+
+
+
 @end
 
 @implementation ChatViewController
@@ -30,6 +33,7 @@
     PFObject *chatMessage = [PFObject objectWithClassName:@"Message"];
     NSString *text = self.chatMessageField.text;
     chatMessage[@"text"] = text;
+    chatMessage[@"User"] = [PFUser currentUser];
     [chatMessage saveInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (succeeded) {
             NSLog(@"The message was saved!");
@@ -49,6 +53,7 @@
 - (void) fetchMessages{
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Message"];
+    [query includeKey:@"User"];
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error) {
         if (messages != nil) {
@@ -63,8 +68,9 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
     NSString *message = self.arrayOfMessages[indexPath.row][@"text"];
+    PFUser *sender = self.arrayOfMessages[indexPath.row][@"User"];
     cell.messageLabel.text = message;
-    
+    cell.usernameLabel.text = sender.username;
     return cell;
 }
 
