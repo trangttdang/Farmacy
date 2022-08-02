@@ -11,6 +11,7 @@ target 'Farmacy' do
   pod 'Parse'
   pod 'Parse/UI'
   pod 'Parse/FacebookUtils'
+  pod 'ParseLiveQuery'
  
   
 
