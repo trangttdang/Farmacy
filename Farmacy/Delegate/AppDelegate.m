@@ -31,7 +31,7 @@
         
         configuration.applicationId = [dict objectForKey:@"parse_app_id"];
         configuration.clientKey = [dict objectForKey:@"parse_client_key"];
-        configuration.server = @"https://parseapi.back4app.com";
+        configuration.server = @"wss://farmacy.b4a.io";
     }];
     
     [Parse initializeWithConfiguration:config];

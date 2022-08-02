@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - Bolts-Swift (1.5.0)
   - Bolts/Tasks (1.9.1)
   - FBSDKCoreKit (11.0.1):
     - FBSDKCoreKit/Core (= 11.0.1)
@@ -38,6 +39,11 @@ PODS:
     - Parse/Core
   - Parse/UI (1.19.3):
     - Parse/Core
+  - ParseLiveQuery (2.8.1):
+    - Bolts-Swift (~> 1.5.0)
+    - Parse (~> 1.19.0)
+    - Starscream (~> 4.0.4)
+  - Starscream (4.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -45,26 +51,33 @@ DEPENDENCIES:
   - Parse
   - Parse/FacebookUtils
   - Parse/UI
+  - ParseLiveQuery
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - Bolts
+    - Bolts-Swift
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - FSCalendar
     - Parse
+    - ParseLiveQuery
+    - Starscream
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  Bolts-Swift: afbbaf8c8186e7f769be4afa656949c14087ba44
   FBSDKCoreKit: 38c9e29a3f1436362acacff6486d3a28628c288f
   FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
   FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
+  ParseLiveQuery: 7bc437c3b986880ffe5f241a9921e37f45df0677
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: 8f8106133e00d1d4bacc66c28953a98f45b3dc70
+PODFILE CHECKSUM: 911c435b5b17e22dd2b6cac652b4ee5ab4bb6945
 
 COCOAPODS: 1.11.3
