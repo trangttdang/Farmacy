@@ -91,6 +91,7 @@
     Message *message = self.arrayOfMessages[indexPath.row];
     SenderChatCell *senderChatCell = [tableView dequeueReusableCellWithIdentifier:@"SenderChatCell" forIndexPath:indexPath];
     RecipientChatCell *recipientChatCell = [tableView dequeueReusableCellWithIdentifier:@"RecipientChatCell" forIndexPath:indexPath];
+    //Remove separator line between chat cells
     self.chatBoxTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"h:mm a"];

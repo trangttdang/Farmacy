@@ -40,6 +40,7 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
+            [self logInAleartMessage];
         } else {
             NSLog(@"User logged in successfully");
             
@@ -74,6 +75,32 @@
         }];
     }
 }
+- (void) logInAleartMessage{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incorrect username or password"
+                                                                   message:@"Please check your username or password to log in again"
+                                                            preferredStyle:(UIAlertControllerStyleAlert)];
+    // create a cancel action
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+        // Doing nothing will dismiss the view.
+    }];
+    // add the cancel action to the alertController
+    [alert addAction:cancelAction];
+    
+    // create an OK action
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+        self.usernameTextField.text = @"";
+        self.passwordTextField.text = @"";
+    }];
+    // add the OK action to the alert controller
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -94,20 +121,20 @@
         NSLog(@"User successfully log in");
         
         FBSDKAccessToken *accessToken = [FBSDKAccessToken currentAccessToken]; // Use existing access token.
-
+        
         // Log In (create/update currentUser) with FBSDKAccessToken
         NSLog(@"Demo git amend");
         [PFFacebookUtils logInInBackgroundWithAccessToken:accessToken
                                                     block:^(PFUser *user, NSError *error) {
-          if (!user) {
-            NSLog(@"Uh oh. There was an error logging in.");
-          } else {
-            NSLog(@"User logged in through Facebook!");
-              SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
-              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-              LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
-              mySceneDelegate.window.rootViewController = loginViewController;
-          }
+            if (!user) {
+                NSLog(@"Uh oh. There was an error logging in.");
+            } else {
+                NSLog(@"User logged in through Facebook!");
+                SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
+                mySceneDelegate.window.rootViewController = loginViewController;
+            }
         }];
         
     }
