@@ -14,6 +14,7 @@
 #import "SceneDelegate.h"
 #import "MyCrop.h"
 #import "MyCropCell.h"
+#import "ConversationViewController.h"
 
 #import "FBSDKCoreKit/FBSDKProfile.h"
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
@@ -133,7 +134,7 @@
     [self.navigationController pushViewController: viewController animated:YES];
 }
 - (IBAction)didTapChat:(id)sender {
-    ChatViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    ConversationViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ConversationViewController"];
     [self.navigationController pushViewController: viewController animated:YES];
 }
 

@@ -7,10 +7,11 @@
 
 #import "ChatViewController.h"
 #import <Parse/Parse.h>
-#import "ChatCell.h"
+#import "SenderChatCell.h"
 #import "ParseLiveQuery/ParseLiveQuery-Swift.h"
 #import "Conversation.h"
 #import "Message.h"
+#import "RecipientChatCell.h"
 
 @interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *chatMessageField;
@@ -20,7 +21,7 @@
 @property (nonatomic, strong) PFLiveQueryClient *liveQueryClient;
 @property (nonatomic, strong) PFQuery *messageQuery;
 @property (nonatomic, strong) PFLiveQuerySubscription *subscription;
-
+@property (nonatomic, strong) PFUser *currentUser;
 
 @end
 
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.currentUser = [PFUser currentUser];
     [self fetchMessages];
     self.chatBoxTableView.delegate = self;
     self.chatBoxTableView.dataSource = self;
@@ -53,7 +55,7 @@
 - (IBAction)didTapSend:(id)sender {
     Message *message = [Message new];
     message.text = self.chatMessageField.text;
-    message.sender = [PFUser currentUser];
+    message.sender = self.currentUser;
     message.conversation = self.conversation;
     [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (succeeded) {
@@ -86,13 +88,28 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
     Message *message = self.arrayOfMessages[indexPath.row];
-    NSString *text = message.text;
-    PFUser *sender = message.sender;
-    cell.messageLabel.text = text;
-    cell.usernameLabel.text = sender.username;
-    return cell;
+    SenderChatCell *senderChatCell = [tableView dequeueReusableCellWithIdentifier:@"SenderChatCell" forIndexPath:indexPath];
+    RecipientChatCell *recipientChatCell = [tableView dequeueReusableCellWithIdentifier:@"RecipientChatCell" forIndexPath:indexPath];
+    self.chatBoxTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"h:mm a"];
+    if ([message.sender.objectId isEqual:self.currentUser.objectId]){
+        NSString *text = message.text;
+        PFUser *sender = message.sender;
+        senderChatCell.usernameLabel.text = sender.username;
+        senderChatCell.messageTextView.text = text;
+        senderChatCell.sentAtLabel.text = [formatter stringFromDate:message.createdAt];
+        return senderChatCell;
+    } else{
+        NSString *text = message.text;
+        PFUser *sender = message.sender;
+        recipientChatCell.usernameLabel.text = sender.username;
+        recipientChatCell.messageTextView.text = text;
+        recipientChatCell.sentAtLabel.text = [formatter stringFromDate:message.createdAt];;
+        return recipientChatCell;
+    }
+
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

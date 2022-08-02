@@ -1,13 +1,13 @@
 //
-//  ChatCell.m
+//  SenderChatCell.m
 //  Farmacy
 //
-//  Created by Trang Dang on 7/21/22.
+//  Created by Trang Dang on 8/2/22.
 //
 
-#import "ChatCell.h"
+#import "SenderChatCell.h"
 
-@implementation ChatCell
+@implementation SenderChatCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
