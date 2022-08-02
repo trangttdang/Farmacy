@@ -75,6 +75,7 @@
         }];
     }
 }
+
 - (void) logInAleartMessage{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incorrect username or password"
                                                                    message:@"Please check your username or password to log in again"
