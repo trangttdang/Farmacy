@@ -138,4 +138,16 @@
     [self.navigationController pushViewController: viewController animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    cell.transform = CGAffineTransformMakeTranslation(0, cell.frame.size.height*1.4);
+    [UIView animateWithDuration:0.85 delay:0.03*indexPath.row options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+        cell.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+        if(finished){
+            NSLog(@"Animated My Crop Table View");
+        }
+    }];
+}
+
 @end
