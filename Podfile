@@ -12,7 +12,7 @@ target 'Farmacy' do
   pod 'Parse/UI'
   pod 'Parse/FacebookUtils'
   pod 'ParseLiveQuery'
- 
+  pod 'JHUD'
   
 
 

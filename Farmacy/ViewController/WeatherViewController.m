@@ -10,6 +10,7 @@
 #import "APIManagers.h"
 #import "WeatherCardCell.h"
 #import "WeatherCard.h"
+#import "JHUD.h"
 
 @interface WeatherViewController () <UITableViewDelegate, UITableViewDataSource, WeatherCardCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *forecastWeatherTableView;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentWindLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentHumidityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentPrecipLabel;
+@property (strong, nonatomic) JHUD *hudView;
 
 
 @end
@@ -28,6 +30,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.hudView = [[JHUD alloc]initWithFrame:self.view.bounds];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"growing-plant" ofType:@"gif"];
+    self.hudView.gifImageData = [NSData dataWithContentsOfFile:path];
+    self.hudView.indicatorViewSize = CGSizeMake(200, 200);
+    self.hudView.messageLabel.text = @"Planting..";
+    [self.hudView showAtView:self.view hudType:JHUDLoadingTypeGifImage];
+    [self.hudView hideAfterDelay:2.5];
+    
     [self fetchForecastWeather];
     [self fetchCurrentWeather];
     self.forecastWeatherTableView.delegate = self;

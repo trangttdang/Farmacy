@@ -29,6 +29,7 @@ PODS:
     - FBSDKCoreKit (~> 11.0.1)
     - FBSDKCoreKit_Basics (~> 11.0.1)
   - FSCalendar (2.8.4)
+  - JHUD (0.3.0)
   - Parse (1.19.3):
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
@@ -48,6 +49,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - FSCalendar
+  - JHUD
   - Parse
   - Parse/FacebookUtils
   - Parse/UI
@@ -62,6 +64,7 @@ SPEC REPOS:
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - FSCalendar
+    - JHUD
     - Parse
     - ParseLiveQuery
     - Starscream
@@ -74,10 +77,11 @@ SPEC CHECKSUMS:
   FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
   FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  JHUD: 17650f65045d9843a7ad19f6a0b1eac6c78a45d2
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
   ParseLiveQuery: 7bc437c3b986880ffe5f241a9921e37f45df0677
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: 911c435b5b17e22dd2b6cac652b4ee5ab4bb6945
+PODFILE CHECKSUM: 8b63a7654680443c054c4eb08985e97a82335d26
 
 COCOAPODS: 1.11.3
