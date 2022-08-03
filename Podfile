@@ -13,6 +13,7 @@ target 'Farmacy' do
   pod 'Parse/FacebookUtils'
   pod 'ParseLiveQuery'
   pod 'JHUD'
+  pod 'SwipeableTabBarController'
   
 
 

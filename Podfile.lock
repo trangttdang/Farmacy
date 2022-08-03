@@ -45,6 +45,7 @@ PODS:
     - Parse (~> 1.19.0)
     - Starscream (~> 4.0.4)
   - Starscream (4.0.4)
+  - SwipeableTabBarController (3.4.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - Parse/FacebookUtils
   - Parse/UI
   - ParseLiveQuery
+  - SwipeableTabBarController
 
 SPEC REPOS:
   trunk:
@@ -68,6 +70,7 @@ SPEC REPOS:
     - Parse
     - ParseLiveQuery
     - Starscream
+    - SwipeableTabBarController
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -81,7 +84,8 @@ SPEC CHECKSUMS:
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
   ParseLiveQuery: 7bc437c3b986880ffe5f241a9921e37f45df0677
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  SwipeableTabBarController: 9a218bdee9426d1bfe36d7962f852024bb08d61b
 
-PODFILE CHECKSUM: 8b63a7654680443c054c4eb08985e97a82335d26
+PODFILE CHECKSUM: 7ee2cfeb75ffa713c80d52a33160e56fa42cda67
 
 COCOAPODS: 1.11.3

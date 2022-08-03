@@ -887,10 +887,10 @@
             </objects>
             <point key="canvasLocation" x="3515.9420289855075" y="-528.34821428571422"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Swipeable Tab Bar Controller-->
         <scene sceneID="O4e-2p-0OM">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabBarController" id="2Yt-cR-tBk" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="2Yt-cR-tBk" customClass="SwipeableTabBarController" customModule="SwipeableTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GXS-Cv-Yz6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

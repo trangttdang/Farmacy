@@ -23,6 +23,7 @@
 @interface MyCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfMyCrops;
+@property (strong, nonatomic) NSMutableArray *arrayOfSeenIndexes;
 
 @end
 
@@ -35,10 +36,12 @@
     [self checkProfile];
     self.myCropsTableView.delegate = self;
     self.myCropsTableView.dataSource = self;
-    [self reloadData];
+    self.arrayOfSeenIndexes = [[NSMutableArray alloc] init];
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+   [self reloadData];
+}
 
 - (void) checkProfile{
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -139,15 +142,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    cell.transform = CGAffineTransformMakeTranslation(0, cell.frame.size.height*1.4);
-    [UIView animateWithDuration:0.85 delay:0.03*indexPath.row options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-        cell.transform = CGAffineTransformMakeTranslation(0, 0);
-    } completion:^(BOOL finished) {
-        if(finished){
-            NSLog(@"Animated My Crop Table View");
-        }
-    }];
+    if (![self.arrayOfSeenIndexes containsObject:indexPath]){
+        [self.arrayOfSeenIndexes addObject:indexPath];
+        cell.transform = CGAffineTransformMakeTranslation(0, cell.frame.size.height*1.4);
+        [UIView animateWithDuration:0.85 delay:0.03*indexPath.row options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+            cell.transform = CGAffineTransformMakeTranslation(0, 0);
+        } completion:^(BOOL finished) {
+            if(finished){
+                NSLog(@"Animated My Crop Table View");
+            }
+        }];
+    }
 }
 
 @end
