@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void) removeFromMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 + (MyCrop *)getMyCropUsingSchedule:(Schedule *)schedule;
++ (void)irrigateIntervalDays;
 @end
 
 NS_ASSUME_NONNULL_END
