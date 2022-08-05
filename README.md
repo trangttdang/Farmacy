@@ -23,7 +23,6 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implement calendar on when to plant/fertilize/irrigate and allow farmers to view schedule on the specific day. This calendar will be modified synchronously per change of crops addition/removal
 - Implement and push reminder notifications on when to plant/fertilize/irrigate based on calendar and tips of a day!
 - Implement chat feature allowing farmers to connect with experts in the real time
-- Poslish User interface
 
 
 ## Product Spec
@@ -38,8 +37,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 * Farmer can view their crops' progress 
 * Farmer can chat with agriculture experts 
 * Farmer can view weather forecast
-* Farmer can be notified the schedule by chat bot and via notifications
-* Farmer can be advised with some tips of the day via notifications
+* Farmer can be notified the schedule via notifications
 
 **Optional Nice-to-have Stories**
 * Farmer can view Farmacy's recommendations on the best crops to grow based on their market, geographic, and environmental patterns 

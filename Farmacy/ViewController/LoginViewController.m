@@ -94,20 +94,20 @@
         NSLog(@"User successfully log in");
         
         FBSDKAccessToken *accessToken = [FBSDKAccessToken currentAccessToken]; // Use existing access token.
-
+        
         // Log In (create/update currentUser) with FBSDKAccessToken
         NSLog(@"Demo git amend");
         [PFFacebookUtils logInInBackgroundWithAccessToken:accessToken
                                                     block:^(PFUser *user, NSError *error) {
-          if (!user) {
-            NSLog(@"Uh oh. There was an error logging in.");
-          } else {
-            NSLog(@"User logged in through Facebook!");
-              SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
-              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-              LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
-              mySceneDelegate.window.rootViewController = loginViewController;
-          }
+            if (!user) {
+                NSLog(@"Uh oh. There was an error logging in.");
+            } else {
+                NSLog(@"User logged in through Facebook!");
+                SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeTabBarController"];
+                mySceneDelegate.window.rootViewController = loginViewController;
+            }
         }];
         
     }
