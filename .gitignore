@@ -15,6 +15,7 @@ Farmacy.xcodeproj/
 Farmacy.xcodeproj/project.pbxproj
 Pods/Pods.xcodeproj/*
 Pods/Pods.xcodeproj
+Pods/Target Support Files/
 
 #build products
 build/*
