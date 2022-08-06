@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float cropCoefficient;
 @property (nonatomic) float rootingDepth;
 @property (nonatomic) float readilyAvailableSoilWater;
+@property (nonatomic, strong) NSDate *suggestedFertilizeSchedule;
 //@property (nonatomic, strong) NSArray *plantAndHarvestDates;
 + (void) addToMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 + (void) fetchCropDailyGrowingDegreeDays;

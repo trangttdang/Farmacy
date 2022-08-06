@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MyCrop : PFObject<PFSubclassing>
 @property (nonatomic) int progressPercentage;
 @property (nonatomic) int irrigateIntervalDays;
-@property (nonatomic) NSDate *plantedAt;
-@property (nonatomic) NSDate *harvestedAt;
+@property (nonatomic) Schedule *plantedAt;
+@property (nonatomic) Schedule *harvestedAt;
 @property (nonatomic) Schedule *fertilizeSchedule;
 @property (nonatomic) Schedule *irrigateSchedule;
 @property (nonatomic) Crop *crop;
