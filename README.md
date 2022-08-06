@@ -24,6 +24,24 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implement and push reminder notifications on when to plant/fertilize/irrigate based on calendar and tips of a day!
 - Implement chat feature allowing farmers to connect with experts in the real time
 
+## Features
+- Implemented user authentication/persistence and ask for data access with Facebook SDK for iOS; Linked PFUser (Parse User) with Facebook account
+- Integrated Weather API and Growing Degree Days (GDD) API (used to estimate the growth and development of plants and insects during the growing season)
+- Implemented APIs with APIManager (a subclass of AFHTTPSessionManager) to fetch API more efficiently and reusable
+- Implemented and managed database with Parse Server
+- Implemented farmers can add/remove from their favorite crops
+- Implemented a Calendar feature using the FSCalendar Library - a fully customizable iOS calendar library, allowing farmers to view the schedule on the specific day. This calendar is modified synchronously per change of crops addition/removal
+- Implemented register and push Reminder notifications feature to notify farmers when to plant, fertilize and irrigate based on calendar
+- Implemented real-time chat for farmers and experts using Parse Live Query,  increasing response time and high network and server usage rather than normal queries.
+- Implemented loading data animation with JHUD Library -  a full screen of the HUD when loading the data. 
+- Implemented move-up animation for UITableViewCell
+- Implemented Swipe gesture using SwipeTabController Library, polishing UI
+- Implemented pop-up screen using STPopup Library, polishing UI
+- Implemented infinite scrolling
+- Implemented Time Series Prediction with AR and ARIMA models to predict temperature used to identify crop schedules. Improved results by implementing prediction with Meta AI’s neuralprophet
+- Implemented an iterative dynamic programming algorithm to find the maximum sum of contiguous growing degree days, suggesting plant and harvest date
+- Implemented mathematical model to find irrigation interval days for each crop to suggest irrigation schedule 
+- Implemented recommendation system based on time-series data using Latent Dirichlet Allocation (LDA) in python to recommend fertilize schedule for each crop
 
 ## Product Spec
 
