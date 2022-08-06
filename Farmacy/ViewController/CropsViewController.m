@@ -50,6 +50,8 @@
     cell.cropNameLabel.text = crop.name;
     cell.cropTypeByUseLabel.text = crop.typeByUse;
     cell.cropImageView.file = crop.image;
+    cell.cropImageView.layer.cornerRadius = 10;
+    cell.cropImageView.clipsToBounds = YES;
     [cell.cropImageView loadInBackground];
     //TODO: Add more information about crop later with APIs
 
