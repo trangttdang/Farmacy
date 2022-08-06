@@ -93,6 +93,10 @@
             }
         }];
     }
+    //Infinite scrolling
+    if(indexPath.row + 1 == [self.arrayOfCrops count]){
+        [self reloadData:[self.arrayOfCrops count] + 20];
+    }
 }
 
 @end

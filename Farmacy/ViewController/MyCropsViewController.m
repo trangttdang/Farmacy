@@ -89,7 +89,7 @@
     
     cell.myCrop = myCrop;
     cell.myCropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
-    cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt];
+    cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt.time];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
     
@@ -106,6 +106,8 @@
     [query includeKey:@"crop"];
     [query includeKey:@"fertilizeSchedule"];
     [query includeKey:@"irrigateSchedule"];
+    [query includeKey:@"plantedAt"];
+    [query includeKey:@"harvestedAt"];
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *myCrops, NSError *error) {
         if (myCrops != nil) {

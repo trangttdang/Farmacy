@@ -62,7 +62,7 @@
                     NSCalendar *calendar = [NSCalendar currentCalendar];
                     //Implemented Recommendation System based on time series data using Latent Dirichlet Allocation (LDA) in Python
                     //Identified fertilize suggested time
-                    fSchedule.time = [NSDate date];
+                    fSchedule.time = crop.suggestedFertilizeSchedule;
                     iSchedule.time = [calendar dateByAddingComponents:irrigateDayComp toDate:[NSDate date] options:0];
                     plantSchedule.time = dates[0];
                     harvestSchedule.time = dates[1];
