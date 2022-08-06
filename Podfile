@@ -14,7 +14,7 @@ target 'Farmacy' do
   pod 'ParseLiveQuery'
   pod 'JHUD'
   pod 'SwipeableTabBarController'
-  
+  pod 'STPopup'
 
 
   target 'FarmacyTests' do

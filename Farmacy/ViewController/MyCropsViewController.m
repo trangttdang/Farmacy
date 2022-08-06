@@ -15,7 +15,7 @@
 #import "MyCrop.h"
 #import "MyCropCell.h"
 #import "ConversationViewController.h"
-
+#import <STPopup/STPopup.h>
 #import "FBSDKCoreKit/FBSDKProfile.h"
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "FBSDKLoginKit/FBSDKLoginKit.h"
@@ -37,6 +37,7 @@
     self.myCropsTableView.delegate = self;
     self.myCropsTableView.dataSource = self;
     self.arrayOfSeenIndexes = [[NSMutableArray alloc] init];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -75,6 +76,7 @@
     cell.myCropImageView.file = myCrop.crop.image;
     [cell.myCropImageView loadInBackground];
     cell.myCropImageView.layer.cornerRadius = 10;
+    cell.myCropImageView.clipsToBounds = YES;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // Configure the input format to parse the date string
@@ -134,7 +136,13 @@
     CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
     MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
     viewController.myCrop = myCrop;
-    [self.navigationController pushViewController: viewController animated:YES];
+//    [self.navigationController pushViewController: viewController animated:YES];
+    STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:viewController];
+    popupController.style = STPopupStyleBottomSheet;
+    viewController.contentSizeInPopup = CGSizeMake(400, 400);
+    viewController.landscapeContentSizeInPopup = CGSizeMake(400, 200);
+    [popupController presentInViewController:self];
+    
 }
 - (IBAction)didTapChat:(id)sender {
     ConversationViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ConversationViewController"];

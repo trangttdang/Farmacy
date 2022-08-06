@@ -45,6 +45,7 @@ PODS:
     - Parse (~> 1.19.0)
     - Starscream (~> 4.0.4)
   - Starscream (4.0.4)
+  - STPopup (1.8.7)
   - SwipeableTabBarController (3.4.2)
 
 DEPENDENCIES:
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - Parse/FacebookUtils
   - Parse/UI
   - ParseLiveQuery
+  - STPopup
   - SwipeableTabBarController
 
 SPEC REPOS:
@@ -70,6 +72,7 @@ SPEC REPOS:
     - Parse
     - ParseLiveQuery
     - Starscream
+    - STPopup
     - SwipeableTabBarController
 
 SPEC CHECKSUMS:
@@ -84,8 +87,9 @@ SPEC CHECKSUMS:
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
   ParseLiveQuery: 7bc437c3b986880ffe5f241a9921e37f45df0677
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
   SwipeableTabBarController: 9a218bdee9426d1bfe36d7962f852024bb08d61b
 
-PODFILE CHECKSUM: 7ee2cfeb75ffa713c80d52a33160e56fa42cda67
+PODFILE CHECKSUM: cedda15059d1bfca8cfd6851f40baed41f32125c
 
 COCOAPODS: 1.11.3
