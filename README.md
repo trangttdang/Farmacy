@@ -32,7 +32,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implemented farmers can add/remove from their favorite crops
 - Implemented a Calendar feature using the FSCalendar Library - a fully customizable iOS calendar library, allowing farmers to view the schedule on the specific day. This calendar is modified synchronously per change of crops addition/removal
 - Implemented register and push Reminder notifications feature to notify farmers when to plant, fertilize and irrigate based on calendar
-- Implemented real-time chat for farmers and experts using Parse Live Query,  increasing response time and high network and server usage rather than normal queries.
+- Implemented real-time chat for farmers and experts using Parse Live Query,  decreasing response time, high network and server usage rather than traditional queries.
 - Implemented loading data animation with JHUD Library -  a full screen of the HUD when loading the data. 
 - Implemented move-up animation for UITableViewCell
 - Implemented Swipe gesture using SwipeTabController Library, polishing UI
