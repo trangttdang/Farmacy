@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) Schedule *fertilizeSchedule;
 @property (nonatomic) Schedule *irrigateSchedule;
 @property (nonatomic) Crop *crop;
-
+@property (nonatomic) PFUser *farmer;
 + (void) removeFromMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 + (MyCrop *)getMyCropUsingSchedule:(Schedule *)schedule;
 @end

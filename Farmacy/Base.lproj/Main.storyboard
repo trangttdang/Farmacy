@@ -798,7 +798,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                                 <connections>
-                                    <action selector="logoutUserWithParse:" destination="AMg-o9-MJH" eventType="touchUpInside" id="kLh-F1-YPk"/>
+                                    <action selector="logoutUserWithParse:" destination="AMg-o9-MJH" eventType="touchUpInside" id="e7t-b9-p4V"/>
                                 </connections>
                             </button>
                         </subviews>

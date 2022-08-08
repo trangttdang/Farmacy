@@ -42,6 +42,7 @@
 + (void) addToMyCrops: (Crop * _Nullable )crop withCompletion: (PFBooleanResultBlock  _Nullable)completion {
     PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
     // Retrieve the object by id
+    [query whereKey:@"farmer" equalTo:[PFUser currentUser]];
     [query whereKey:@"crop" equalTo:crop];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
         //"No results matched the query" error
@@ -70,6 +71,7 @@
                     myCrop.irrigateSchedule = iSchedule;
                     myCrop.plantedAt = plantSchedule;
                     myCrop.harvestedAt = harvestSchedule;
+                    myCrop.farmer = [PFUser currentUser];
                     [myCrop saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable newError) {
                         completion(succeeded, newError);
                     }];
