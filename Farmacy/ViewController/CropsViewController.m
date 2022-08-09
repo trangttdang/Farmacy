@@ -8,6 +8,7 @@
 #import "CropsViewController.h"
 #import "CropCell.h"
 #import "MyCropsViewController.h"
+#import "CropRecommendation.h"
 
 @interface CropsViewController () <CropCellDelegate, UITableViewDelegate, UITableViewDataSource>;
 @property (weak, nonatomic) IBOutlet UITableView *cropsTableView;
@@ -46,15 +47,17 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     CropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
     Crop *crop = self.arrayOfCrops[indexPath.row];
-    
+    if (crop.recommendationRate > 0){
+        cell.recommendedImageView.hidden = false;
+    } else{
+        cell.recommendedImageView.hidden = true;
+    }
     cell.cropNameLabel.text = crop.name;
     cell.cropTypeByUseLabel.text = crop.typeByUse;
     cell.cropImageView.file = crop.image;
     cell.cropImageView.layer.cornerRadius = 10;
     cell.cropImageView.clipsToBounds = YES;
     [cell.cropImageView loadInBackground];
-    //TODO: Add more information about crop later with APIs
-
     cell.crop = crop;
     cell.delegate = self;
     return cell;
@@ -65,10 +68,11 @@
 }
 
 - (void)reloadData: (NSInteger)count{
+    [self fetchCropRecommendation];
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
+    [query orderByDescending:@"recommendationRate"];
     query.limit = count;
-    
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *crops, NSError *error) {
         if (crops != nil) {
@@ -76,8 +80,10 @@
         } else{
             NSLog(@"%@", error.localizedDescription);
         }
+//        [self fetchCropRecommendation];
         [self.cropsTableView reloadData];
     }];
+    
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -97,6 +103,27 @@
     if(indexPath.row + 1 == [self.arrayOfCrops count]){
         [self reloadData:[self.arrayOfCrops count] + 20];
     }
+}
+
+-(void)fetchCropRecommendation{
+    CropRecommendation *model = [[CropRecommendation alloc]init];
+    CropRecommendationOutput *cropRecommendationOutput = [model predictionFromN:50 P:35 K:60 temperature:14 humidity:30 ph:7.0 rainfall:60 error:nil];
+    NSDictionary<NSString *, NSNumber *> * results = cropRecommendationOutput.labelProbability;
+    NSArray *labelsRecommedation = [results keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2){
+        return [obj2 compare:obj1];
+    }];
+    NSArray *topRecommendation= [labelsRecommedation subarrayWithRange:NSMakeRange(0, 5)];
+    PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        for(Crop *crop in objects){
+            crop.recommendationRate = 0;
+            if ([topRecommendation containsObject:[crop.name lowercaseString]]){
+                crop.recommendationRate = (int)([topRecommendation indexOfObject:[crop.name lowercaseString]]+1);
+            }
+            [crop saveInBackground];
+        }
+    }];
 }
 
 @end

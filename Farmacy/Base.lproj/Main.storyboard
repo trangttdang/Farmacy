@@ -570,6 +570,10 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="uRI-TR-MM0">
                                                     <rect key="frame" x="331.5" y="32" width="42.5" height="28"/>
                                                 </imageView>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recommended" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-52-cEU">
+                                                    <rect key="frame" x="335" y="157" width="34" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="uRI-TR-MM0" secondAttribute="trailing" constant="40" id="0xY-cw-mYm"/>
@@ -594,6 +598,7 @@
                                             <outlet property="cropImageView" destination="wnn-FS-ZLx" id="zfb-BB-U5H"/>
                                             <outlet property="cropNameLabel" destination="3GB-75-Lzd" id="7cD-hi-0qc"/>
                                             <outlet property="cropTypeByUseLabel" destination="Lsp-73-LwU" id="Dup-of-UYx"/>
+                                            <outlet property="recommendedImageView" destination="mZQ-52-cEU" id="OFi-yA-EK0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1186,6 +1191,7 @@
         <image name="minus" width="128" height="128"/>
         <image name="plus-button" width="42.666667938232422" height="42.666667938232422"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="recommended" width="64" height="64"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <image name="trowel" width="128" height="128"/>

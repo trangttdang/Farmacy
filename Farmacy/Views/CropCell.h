@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *addCropIconImageView;
 @property (nonatomic,weak) id<CropCellDelegate> delegate;
 @property (nonatomic, strong) Crop *crop;
+@property (weak, nonatomic) IBOutlet UIImageView *recommendedImageView;
 
 
 @end
