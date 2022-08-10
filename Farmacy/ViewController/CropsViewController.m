@@ -11,10 +11,12 @@
 #import "CropRecommendation.h"
 #import "InputRecommendationFormViewController.h"
 #import <STPopup/STPopup.h>
+#import "JHUD.h"
 @interface CropsViewController () <CropCellDelegate, UITableViewDelegate, UITableViewDataSource,InputRecomMendationFormDelegate>;
 @property (weak, nonatomic) IBOutlet UITableView *cropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfCrops;
 @property (strong, nonatomic) NSMutableArray *arrayOfSeenIndexes;
+@property (strong, nonatomic) JHUD *hudView;
 @end
 
 @implementation CropsViewController
@@ -122,7 +124,7 @@
     NSArray *labelsRecommedation = [results keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2){
         return [obj2 compare:obj1];
     }];
-    NSArray *topRecommendation= [labelsRecommedation subarrayWithRange:NSMakeRange(0, 10)];
+    NSArray *topRecommendation= [labelsRecommedation subarrayWithRange:NSMakeRange(0, 5)];
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -133,9 +135,18 @@
             }
             [crop saveInBackground];
         }
+        [self loadingAnimation];
         [self reloadData:10];
-
     }];
 }
 
+- (void)loadingAnimation{
+    self.hudView = [[JHUD alloc]initWithFrame:self.view.bounds];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"growing-plant" ofType:@"gif"];
+    self.hudView.gifImageData = [NSData dataWithContentsOfFile:path];
+    self.hudView.indicatorViewSize = CGSizeMake(200, 200);
+    self.hudView.messageLabel.text = @"Planting..";
+    [self.hudView showAtView:self.view hudType:JHUDLoadingTypeGifImage];
+    [self.hudView hideAfterDelay:2.5];
+}
 @end
