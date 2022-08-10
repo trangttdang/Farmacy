@@ -27,6 +27,8 @@
             [myCrop deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable newError) {
                 [myCrop[@"fertilizeSchedule"] deleteInBackground];
                 [myCrop[@"irrigateSchedule"] deleteInBackground];
+                [myCrop[@"plantedAt"] deleteInBackground];
+                [myCrop[@"harvestedAt"] deleteInBackground];
                 completion(succeeded, newError);
             }];
         }];
@@ -35,9 +37,13 @@
 + (MyCrop *)getMyCropUsingSchedule:(Schedule *)schedule{
     PFQuery *iQuery = [PFQuery queryWithClassName:@"MyCrop"];
     PFQuery *fQuery = [PFQuery queryWithClassName:@"MyCrop"];
+    PFQuery *pQuery = [PFQuery queryWithClassName:@"MyCrop"];
+    PFQuery *hQuery = [PFQuery queryWithClassName:@"MyCrop"];
     [iQuery whereKey:@"irrigateSchedule" equalTo:schedule];
     [fQuery whereKey:@"fertilizeSchedule" equalTo:schedule];
-    PFQuery *query = [PFQuery orQueryWithSubqueries:@[iQuery ,fQuery]];
+    [pQuery whereKey:@"plantedAt" equalTo:schedule];
+    [hQuery whereKey:@"harvestedAt" equalTo:schedule];
+    PFQuery *query = [PFQuery orQueryWithSubqueries:@[iQuery ,fQuery, pQuery, hQuery]];
     [query includeKey:@"crop"];
     
     return [query getFirstObject];

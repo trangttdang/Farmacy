@@ -30,6 +30,7 @@ PODS:
     - FBSDKCoreKit_Basics (~> 11.0.1)
   - FSCalendar (2.8.4)
   - JHUD (0.3.0)
+  - MGSwipeTableCell (1.6.14)
   - Parse (1.19.3):
     - Parse/Core (= 1.19.3)
   - Parse/Core (1.19.3):
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - AFNetworking
   - FSCalendar
   - JHUD
+  - MGSwipeTableCell
   - Parse
   - Parse/FacebookUtils
   - Parse/UI
@@ -69,6 +71,7 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FSCalendar
     - JHUD
+    - MGSwipeTableCell
     - Parse
     - ParseLiveQuery
     - Starscream
@@ -84,12 +87,13 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   JHUD: 17650f65045d9843a7ad19f6a0b1eac6c78a45d2
+  MGSwipeTableCell: d99ed6466f393b71cd488c6f798ba112ff5d1d01
   Parse: 0abb63a0ff6fa34a3f64b81d595a294e2ece143a
   ParseLiveQuery: 7bc437c3b986880ffe5f241a9921e37f45df0677
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
   SwipeableTabBarController: 9a218bdee9426d1bfe36d7962f852024bb08d61b
 
-PODFILE CHECKSUM: cedda15059d1bfca8cfd6851f40baed41f32125c
+PODFILE CHECKSUM: 06405559775501347806a3e8f20d71c4cbf2d80d
 
 COCOAPODS: 1.11.3

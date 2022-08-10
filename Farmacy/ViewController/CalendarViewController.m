@@ -15,7 +15,7 @@
 #import "MyCropsViewController.h"
 
 @interface CalendarViewController ()<FSCalendarDelegate,FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic) NSArray *arrayOfSchedules;
+@property (nonatomic) NSMutableArray *arrayOfSchedules;
 @property (strong, nonatomic) NSMutableArray *arrayOfSchedulesOfSelectedDay;
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 @property (nonatomic) NSArray *arrayOfMyCrops;
@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    self.arrayOfSchedules = [[NSMutableArray alloc]init];
     [self fetchSchedules];
     //Integrate FSCalendar
     self.calendarView.dataSource = self;
@@ -38,7 +38,7 @@
     [self.view addSubview:self.calendarView];
     
     self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
-
+    
     self.scheduleTableView.delegate = self;
     self.scheduleTableView.dataSource = self;
     
@@ -119,20 +119,29 @@
 
 // ---------- Calendar ----------
 
+
 - (void) fetchSchedules{
     // construct query
-    PFQuery *query = [PFQuery queryWithClassName:@"Schedule"];
-    [query orderByAscending:@"time"];
-    // fetch data asynchronously
-    [query findObjectsInBackgroundWithBlock:^(NSArray *schedules, NSError *error) {
-        if (schedules != nil) {
-            self.arrayOfSchedules = schedules;
+    PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
+    [query whereKey:@"farmer" equalTo:[PFUser currentUser]];
+    [query includeKey:@"fertilizeSchedule"];
+    [query includeKey:@"irrigateSchedule"];
+    [query includeKey:@"harvestedAt"];
+    [query includeKey:@"plantedAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable myCrops, NSError * _Nullable error) {
+        if (myCrops != nil) {
+            self.arrayOfMyCrops = myCrops;
+            for(MyCrop *myCrop in self.arrayOfMyCrops){
+                [self.arrayOfSchedules addObject:myCrop.fertilizeSchedule];
+                [self.arrayOfSchedules addObject:myCrop.irrigateSchedule];
+                [self.arrayOfSchedules addObject:myCrop.plantedAt];
+                [self.arrayOfSchedules addObject:myCrop.harvestedAt];
+            }
         } else{
             NSLog(@"%@", error.localizedDescription);
         }
     }];
 }
-
 
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition{
     [self loadSchedulesOfSelectedDate:date];
@@ -152,6 +161,9 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     ScheduleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScheduleCell" forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[MGSwipeTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ScheduleCell"];
+    }
     Schedule *schedule = self.arrayOfSchedulesOfSelectedDay[indexPath.row];
     MyCrop *myCrop = [MyCrop getMyCropUsingSchedule:schedule];
     
@@ -172,10 +184,35 @@
     } else{
         NSLog(@"Error fetch crop action");
     }
-    
     //Set crop name
     cell.cropLabel.text = [NSString stringWithFormat: @"%@", myCrop.crop.name];
-
+    
+    MGSwipeButton *doneButton = [MGSwipeButton buttonWithTitle:@"Done" backgroundColor:[UIColor colorWithRed:(115/255.0) green:(211/255.0) blue:(197/255.0) alpha:1] padding:25 callback:^BOOL(MGSwipeTableCell *sender) {
+        cell.tickDoneImageView.hidden = false;
+        schedule.isDone = true;
+        [schedule saveInBackground];
+        myCrop.progressPercentage += 10;
+        [myCrop saveInBackground];
+        return YES;
+    }];
+    
+    MGSwipeButton *undoButton = [MGSwipeButton buttonWithTitle:@"Undo" backgroundColor:[UIColor colorWithRed:(100/255.0) green:(85/255.0) blue:(188/255.0) alpha:1] padding:25 callback:^BOOL(MGSwipeTableCell * _Nonnull sender) {
+        cell.tickDoneImageView.hidden = true;
+        schedule.isDone = false;
+        [schedule saveInBackground];
+        myCrop.progressPercentage -= 10;
+        [myCrop saveInBackground];
+        return YES;
+    }];
+    if(schedule.isDone){
+        cell.tickDoneImageView.hidden = false;
+        cell.rightButtons = @[undoButton];
+    } else{
+        cell.tickDoneImageView.hidden = true;
+        cell.rightButtons = @[doneButton];
+    }
+    cell.rightSwipeSettings.transition = MGSwipeTransitionStatic;
+    
     return cell;
 }
 

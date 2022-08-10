@@ -15,7 +15,7 @@ target 'Farmacy' do
   pod 'JHUD'
   pod 'SwipeableTabBarController'
   pod 'STPopup'
-
+  pod 'MGSwipeTableCell'
 
   target 'FarmacyTests' do
     inherit! :search_paths

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Schedule : PFObject<PFSubclassing>
 
 @property (nonatomic,strong) NSDate *time;
+@property (nonatomic) bool isDone;
 @end
 
 NS_ASSUME_NONNULL_END
