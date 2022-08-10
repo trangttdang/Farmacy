@@ -9,23 +9,34 @@
 #import "CropCell.h"
 #import "MyCropsViewController.h"
 #import "CropRecommendation.h"
-
-@interface CropsViewController () <CropCellDelegate, UITableViewDelegate, UITableViewDataSource>;
+#import "InputRecommendationFormViewController.h"
+#import <STPopup/STPopup.h>
+@interface CropsViewController () <CropCellDelegate, UITableViewDelegate, UITableViewDataSource,InputRecomMendationFormDelegate>;
 @property (weak, nonatomic) IBOutlet UITableView *cropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfCrops;
 @property (strong, nonatomic) NSMutableArray *arrayOfSeenIndexes;
-
 @end
 
 @implementation CropsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self activateInputForm];
     // Do any additional setup after loading the view.
     self.cropsTableView.dataSource = self;
     self.cropsTableView.delegate = self;
-    [self reloadData:10];
     self.arrayOfSeenIndexes = [[NSMutableArray alloc] init];
+}
+
+- (void)activateInputForm{
+    //Input Info for recommendation
+    InputRecommendationFormViewController *inputRecFormVC = [self.storyboard instantiateViewControllerWithIdentifier:@"InputRecommendationFormViewController"];
+    inputRecFormVC.delegate = self;
+    STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:inputRecFormVC];
+    popupController.style = STPopupStyleFormSheet;
+    inputRecFormVC.contentSizeInPopup = CGSizeMake(300, 400);
+    inputRecFormVC.landscapeContentSizeInPopup = CGSizeMake(400, 200);
+    [popupController presentInViewController:self];
 }
 
 
@@ -68,7 +79,6 @@
 }
 
 - (void)reloadData: (NSInteger)count{
-    [self fetchCropRecommendation];
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
     [query orderByDescending:@"recommendationRate"];
@@ -80,7 +90,6 @@
         } else{
             NSLog(@"%@", error.localizedDescription);
         }
-//        [self fetchCropRecommendation];
         [self.cropsTableView reloadData];
     }];
     
@@ -105,14 +114,15 @@
     }
 }
 
--(void)fetchCropRecommendation{
+
+- (void)didMakeCropRecommendation:(double)nitrogenRatio withPhosphorousRatio:(double)phosphorousRatio withPotassiumRatio:(double)potassiumRatio withPh:(double)ph withRainfallAmount:(double)rainFallAmount withTemperature:(double)avgTemp withHumidity:(double)avgHumidity{
     CropRecommendation *model = [[CropRecommendation alloc]init];
-    CropRecommendationOutput *cropRecommendationOutput = [model predictionFromN:50 P:35 K:60 temperature:14 humidity:30 ph:7.0 rainfall:60 error:nil];
+    CropRecommendationOutput *cropRecommendationOutput = [model predictionFromN:nitrogenRatio P:phosphorousRatio K:potassiumRatio temperature:avgTemp humidity:avgHumidity ph:ph rainfall:rainFallAmount error:nil];
     NSDictionary<NSString *, NSNumber *> * results = cropRecommendationOutput.labelProbability;
     NSArray *labelsRecommedation = [results keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2){
         return [obj2 compare:obj1];
     }];
-    NSArray *topRecommendation= [labelsRecommedation subarrayWithRange:NSMakeRange(0, 5)];
+    NSArray *topRecommendation= [labelsRecommedation subarrayWithRange:NSMakeRange(0, 10)];
     PFQuery *query = [PFQuery queryWithClassName:@"Crop"];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -123,6 +133,8 @@
             }
             [crop saveInBackground];
         }
+        [self reloadData:10];
+
     }];
 }
 
