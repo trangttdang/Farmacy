@@ -662,6 +662,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="OyH-tX-zx9">
                                 <rect key="frame" x="118" y="70" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="nitrogenValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="Y8g-fh-VSi"/>
                                 </connections>
@@ -669,6 +670,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="AQ8-0j-f7Z">
                                 <rect key="frame" x="118" y="114" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="phosphorousValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="8Am-Cq-txx"/>
                                 </connections>
@@ -676,6 +678,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="djV-RX-EDs">
                                 <rect key="frame" x="118" y="156" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="potassiumValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="eey-Ha-lIa"/>
                                 </connections>
@@ -683,6 +686,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-gn-y6F">
                                 <rect key="frame" x="118" y="202" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="phValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="bH4-w4-WM5"/>
                                 </connections>
@@ -690,6 +694,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-vN-Oej">
                                 <rect key="frame" x="118" y="244" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="rainfallValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="nlU-OP-7qh"/>
                                 </connections>
@@ -779,21 +784,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="60%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ej-Mj-u7O">
-                                                    <rect key="frame" x="188" y="16" width="128" height="32"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                                    <color key="textColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-7s-8u1">
-                                                    <rect key="frame" x="188" y="55.5" width="147" height="4"/>
-                                                    <color key="tintColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="147" id="ewg-sL-fO2"/>
-                                                    </constraints>
-                                                </progressView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-c9-wfl">
-                                                    <rect key="frame" x="188" y="67" width="182" height="107"/>
+                                                    <rect key="frame" x="188" y="66.5" width="182" height="107"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kgc-5i-bUD">
                                                             <rect key="frame" x="0.0" y="0.0" width="182" height="29"/>
@@ -841,7 +833,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oIJ-mG-vYh">
                                                             <rect key="frame" x="0.0" y="75" width="182" height="32"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="watering-can (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Gsc-y0-crC">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="watering-can" translatesAutoresizingMaskIntoConstraints="NO" id="Gsc-y0-crC">
                                                                     <rect key="frame" x="0.0" y="0.0" width="33" height="32"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="32" id="1zc-06-NRN"/>
@@ -899,37 +891,42 @@
                                                         <constraint firstAttribute="height" constant="25" id="b1Z-pz-kBQ"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvy-qM-2rW" customClass="MBCircularProgressBarView">
+                                                    <rect key="frame" x="188" y="6" width="56" height="52"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="EEl-Af-MI7"/>
+                                                        <constraint firstAttribute="width" constant="56" id="jov-zs-Ow1"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="eNh-c9-wfl" firstAttribute="leading" secondItem="DT7-Z6-bsi" secondAttribute="trailing" constant="32" id="2Ef-NN-AlG"/>
                                                 <constraint firstItem="aae-zB-Q71" firstAttribute="top" secondItem="DT7-Z6-bsi" secondAttribute="top" id="360-wz-DPy"/>
-                                                <constraint firstItem="aae-zB-Q71" firstAttribute="leading" secondItem="1Ej-Mj-u7O" secondAttribute="trailing" constant="89.5" id="EHh-xE-FCA"/>
-                                                <constraint firstItem="u7g-7s-8u1" firstAttribute="top" secondItem="1Ej-Mj-u7O" secondAttribute="bottom" constant="8" id="HSJ-UR-uwF"/>
                                                 <constraint firstItem="DT7-Z6-bsi" firstAttribute="leading" secondItem="4do-kw-UyI" secondAttribute="leading" constant="16" id="HZW-S7-PQU"/>
-                                                <constraint firstItem="eNh-c9-wfl" firstAttribute="top" secondItem="u7g-7s-8u1" secondAttribute="bottom" constant="7.5" id="Hc8-JV-h6l"/>
                                                 <constraint firstItem="DT7-Z6-bsi" firstAttribute="top" secondItem="4do-kw-UyI" secondAttribute="top" constant="16" id="Mb2-kI-4ij"/>
                                                 <constraint firstAttribute="trailing" secondItem="aae-zB-Q71" secondAttribute="trailing" constant="40" id="NVm-Mv-uXc"/>
-                                                <constraint firstItem="1Ej-Mj-u7O" firstAttribute="top" secondItem="DT7-Z6-bsi" secondAttribute="top" id="OrL-9x-JXN"/>
-                                                <constraint firstItem="eNh-c9-wfl" firstAttribute="leading" secondItem="u7g-7s-8u1" secondAttribute="leading" id="Szu-tm-wPe"/>
-                                                <constraint firstItem="eNh-c9-wfl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Ej-Mj-u7O" secondAttribute="leading" id="VgF-Im-Iam"/>
                                                 <constraint firstItem="J7a-lz-4Eh" firstAttribute="bottom" secondItem="Tpi-xj-2nL" secondAttribute="bottom" id="Z1R-t7-cE0"/>
+                                                <constraint firstItem="kvy-qM-2rW" firstAttribute="centerY" secondItem="aae-zB-Q71" secondAttribute="centerY" id="ZR8-z2-hsu"/>
+                                                <constraint firstItem="kvy-qM-2rW" firstAttribute="top" secondItem="4do-kw-UyI" secondAttribute="topMargin" constant="-5" id="a6I-Ec-XXr"/>
+                                                <constraint firstItem="eNh-c9-wfl" firstAttribute="leading" secondItem="kvy-qM-2rW" secondAttribute="leading" id="e2s-ag-LAa"/>
+                                                <constraint firstItem="kvy-qM-2rW" firstAttribute="leading" secondItem="DT7-Z6-bsi" secondAttribute="trailing" constant="32" id="eIc-5N-7fi"/>
                                                 <constraint firstItem="Tpi-xj-2nL" firstAttribute="leading" secondItem="DT7-Z6-bsi" secondAttribute="leading" id="h5v-Zz-Oan"/>
-                                                <constraint firstItem="kgc-5i-bUD" firstAttribute="top" secondItem="u7g-7s-8u1" secondAttribute="bottom" constant="7.5" id="hlu-FA-d92"/>
                                                 <constraint firstItem="Tpi-xj-2nL" firstAttribute="top" secondItem="DT7-Z6-bsi" secondAttribute="bottom" constant="16" id="ldO-v2-oiM"/>
                                                 <constraint firstAttribute="bottom" secondItem="J7a-lz-4Eh" secondAttribute="bottom" constant="16" id="pXk-c9-TWb"/>
-                                                <constraint firstItem="1Ej-Mj-u7O" firstAttribute="leading" secondItem="DT7-Z6-bsi" secondAttribute="trailing" constant="32" id="q90-1R-YvV"/>
                                                 <constraint firstItem="J7a-lz-4Eh" firstAttribute="trailing" secondItem="aae-zB-Q71" secondAttribute="trailing" id="s8T-vU-lcO"/>
-                                                <constraint firstItem="u7g-7s-8u1" firstAttribute="leading" secondItem="1Ej-Mj-u7O" secondAttribute="leading" id="zZ4-i9-3EG"/>
+                                                <constraint firstItem="eNh-c9-wfl" firstAttribute="top" secondItem="kvy-qM-2rW" secondAttribute="bottom" constant="8.5" id="yNB-E2-Svt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.2000346274" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="myCropImageView" destination="DT7-Z6-bsi" id="Izh-g8-c4r"/>
                                             <outlet property="myCropNameLabel" destination="492-cZ-JqX" id="QS7-4f-o8m"/>
-                                            <outlet property="myCropProgressPercentageLabel" destination="1Ej-Mj-u7O" id="uAw-3p-Oz1"/>
                                             <outlet property="myCropTypeByUseLabel" destination="xiE-LX-rdO" id="kpf-f1-Qbp"/>
                                             <outlet property="nextFertilizeLabel" destination="hxg-nH-gTe" id="IUD-mk-tII"/>
                                             <outlet property="nextIrrigateLabel" destination="Umb-aA-MCa" id="h9V-re-SNN"/>
                                             <outlet property="plantedAtLabel" destination="J7q-mx-6Hl" id="Vcg-On-y0L"/>
+                                            <outlet property="progressBar" destination="kvy-qM-2rW" id="LBO-ki-x8p"/>
                                             <outlet property="removeCropIconImageView" destination="aae-zB-Q71" id="NkR-VH-HXn"/>
                                         </connections>
                                     </tableViewCell>
@@ -1345,7 +1342,7 @@
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <image name="trowel" width="128" height="128"/>
-        <image name="watering-can (1)" width="128" height="128"/>
+        <image name="watering-can" width="128" height="128"/>
         <image name="wheat" width="350" height="399"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <systemColor name="labelColor">

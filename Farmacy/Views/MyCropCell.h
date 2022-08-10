@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "Parse/PFImageView.h"
 #import "MyCrop.h"
+#import "MBCircularProgressBar/MBCircularProgressBarView.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -25,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *nextFertilizeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nextIrrigateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *plantedAtLabel;
+@property (weak, nonatomic) IBOutlet MBCircularProgressBarView *progressBar;
 @property (nonatomic) MyCrop *myCrop;
 
 @end

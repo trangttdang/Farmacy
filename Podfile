@@ -16,6 +16,7 @@ target 'Farmacy' do
   pod 'SwipeableTabBarController'
   pod 'STPopup'
   pod 'MGSwipeTableCell'
+  pod "MBCircularProgressBar"
 
   target 'FarmacyTests' do
     inherit! :search_paths
