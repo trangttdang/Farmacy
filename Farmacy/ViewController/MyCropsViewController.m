@@ -67,6 +67,19 @@
     
 }
 
+- (IBAction)logoutUserWithParse:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"User log out failed: %@", error.localizedDescription);
+        } else {
+            NSLog(@"User loged out successfully");
+            SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            mySceneDelegate.window.rootViewController = loginViewController;
+        }
+    }];
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
@@ -103,6 +116,7 @@
 - (void)reloadData{
    //  construct query
     PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
+    [query whereKey:@"farmer" equalTo:[PFUser currentUser]];
     [query includeKey:@"crop"];
     [query includeKey:@"fertilizeSchedule"];
     [query includeKey:@"irrigateSchedule"];
