@@ -21,8 +21,8 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary{
     self = [super init];
     if(self){
-        
-        self.avgTemperature = [[NSString stringWithFormat:@"%.f",[dictionary[@"day"][@"avgtemp_f"] floatValue]] stringByAppendingString: @"°F"];
+        self.avgTemperature = [NSString stringWithFormat:@"%.f",[dictionary[@"day"][@"avgtemp_f"] floatValue]];
+        self.avgTemperatureStr = [self.avgTemperature stringByAppendingString: @"°F"];
         self.avgHumidity = [NSString stringWithFormat:@"%.1f", [dictionary[@"day"][@"avghumidity"] floatValue]];
         self.totalPrecip = [NSString stringWithFormat:@"%.1f", [dictionary[@"day"][@"totalprecip_mm"] floatValue]];
         self.maxWind = [NSString stringWithFormat:@"%.1f", [dictionary[@"day"][@"maxwind_mph"] floatValue]];

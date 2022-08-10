@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WeatherCard : NSObject
 
+@property (nonatomic, strong) NSString *avgTemperatureStr;
 @property (nonatomic, strong) NSString *avgTemperature;
 @property (nonatomic, strong) NSString *iconStr;
 @property (nonatomic, strong) NSString *totalPrecip;

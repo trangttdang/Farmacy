@@ -570,6 +570,10 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plus-button" translatesAutoresizingMaskIntoConstraints="NO" id="uRI-TR-MM0">
                                                     <rect key="frame" x="331.5" y="32" width="42.5" height="28"/>
                                                 </imageView>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recommended" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-52-cEU">
+                                                    <rect key="frame" x="335" y="157" width="34" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="uRI-TR-MM0" secondAttribute="trailing" constant="40" id="0xY-cw-mYm"/>
@@ -594,6 +598,7 @@
                                             <outlet property="cropImageView" destination="wnn-FS-ZLx" id="zfb-BB-U5H"/>
                                             <outlet property="cropNameLabel" destination="3GB-75-Lzd" id="7cD-hi-0qc"/>
                                             <outlet property="cropTypeByUseLabel" destination="Lsp-73-LwU" id="Dup-of-UYx"/>
+                                            <outlet property="recommendedImageView" destination="mZQ-52-cEU" id="OFi-yA-EK0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -610,6 +615,149 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkB-Yd-laB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2626.0869565217395" y="-1221.4285714285713"/>
+        </scene>
+        <!--Input Recommendation Form View Controller-->
+        <scene sceneID="JpF-tC-Rws">
+            <objects>
+                <viewController storyboardIdentifier="InputRecommendationFormViewController" id="yp6-uk-WUZ" customClass="InputRecommendationFormViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="szj-zJ-LKb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nitrogen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxK-6y-9U7">
+                                <rect key="frame" x="8" y="76" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phosphorous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWh-7d-1mg">
+                                <rect key="frame" x="8" y="118" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Potassium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kn-xZ-yGK">
+                                <rect key="frame" x="8" y="160" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ph level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cF-fZ-XxQ">
+                                <rect key="frame" x="8" y="202" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rainfall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYP-GI-WIg">
+                                <rect key="frame" x="8" y="248" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="OyH-tX-zx9">
+                                <rect key="frame" x="118" y="70" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="nitrogenValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="Y8g-fh-VSi"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="AQ8-0j-f7Z">
+                                <rect key="frame" x="118" y="114" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="phosphorousValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="8Am-Cq-txx"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="djV-RX-EDs">
+                                <rect key="frame" x="118" y="156" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="potassiumValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="eey-Ha-lIa"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-gn-y6F">
+                                <rect key="frame" x="118" y="202" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="phValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="bH4-w4-WM5"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-vN-Oej">
+                                <rect key="frame" x="118" y="244" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="rainfallValueChanged:" destination="yp6-uk-WUZ" eventType="valueChanged" id="nlU-OP-7qh"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWj-Fk-aBJ">
+                                <rect key="frame" x="242" y="70" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbV-fh-ay4">
+                                <rect key="frame" x="242" y="114" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TU4-UI-JeJ">
+                                <rect key="frame" x="242" y="160" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWc-Xq-Ckg">
+                                <rect key="frame" x="242" y="206" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDk-wN-xb8">
+                                <rect key="frame" x="242" y="248" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2k-x7-nkf">
+                                <rect key="frame" x="88" y="300" width="99" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="didTapSaveInput:" destination="yp6-uk-WUZ" eventType="touchUpInside" id="C1W-lI-ABe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CPe-hh-3T7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="nitrogenRatioLabel" destination="OWj-Fk-aBJ" id="VTa-17-PdT"/>
+                        <outlet property="nitrogenRatioSlider" destination="OyH-tX-zx9" id="ra8-Tr-sNZ"/>
+                        <outlet property="phLevelLabel" destination="vWc-Xq-Ckg" id="qyg-1L-WbZ"/>
+                        <outlet property="phSlider" destination="dJr-gn-y6F" id="iLf-J3-AHX"/>
+                        <outlet property="phosphorousRatioLabel" destination="wbV-fh-ay4" id="EIl-88-98t"/>
+                        <outlet property="phosphorousSlider" destination="AQ8-0j-f7Z" id="NzJ-xb-SsS"/>
+                        <outlet property="potassiumRatioLabel" destination="TU4-UI-JeJ" id="dlx-nW-uoR"/>
+                        <outlet property="potassiumSlider" destination="djV-RX-EDs" id="wmF-CG-aQI"/>
+                        <outlet property="rainfallLabel" destination="VDk-wN-xb8" id="r8u-m2-USY"/>
+                        <outlet property="rainfallSlider" destination="LO2-vN-Oej" id="2Mc-2x-iJ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FL1-Z1-Qi4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3515.9420289855075" y="-1221.4285714285713"/>
         </scene>
         <!--My Crops-->
         <scene sceneID="nt7-QP-Ftw">
@@ -1186,6 +1334,7 @@
         <image name="minus" width="128" height="128"/>
         <image name="plus-button" width="42.666667938232422" height="42.666667938232422"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="recommended" width="64" height="64"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <image name="trowel" width="128" height="128"/>

@@ -11,8 +11,8 @@
 #import "WeatherCardCell.h"
 #import "WeatherCard.h"
 #import "JHUD.h"
-
-@interface WeatherViewController () <UITableViewDelegate, UITableViewDataSource, WeatherCardCellDelegate>
+#import <CoreLocation/CoreLocation.h>
+@interface WeatherViewController () <UITableViewDelegate, UITableViewDataSource, WeatherCardCellDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *forecastWeatherTableView;
 @property (strong, nonatomic) NSMutableArray *arrayOfWeatherCards;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionIconImageView;
@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentHumidityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentPrecipLabel;
 @property (strong, nonatomic) JHUD *hudView;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) NSString *longitude;
+@property (strong, nonatomic) NSString *latitude;
 
 
 @end
@@ -30,6 +33,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadingAnimation];
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+}
+
+-(void) loadingAnimation{
     self.hudView = [[JHUD alloc]initWithFrame:self.view.bounds];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"growing-plant" ofType:@"gif"];
     self.hudView.gifImageData = [NSData dataWithContentsOfFile:path];
@@ -37,17 +50,23 @@
     self.hudView.messageLabel.text = @"Planting..";
     [self.hudView showAtView:self.view hudType:JHUDLoadingTypeGifImage];
     [self.hudView hideAfterDelay:2.5];
-    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    NSLog(@"Location %@", [locations lastObject]);
+    CLLocation *currentLocation = [locations lastObject];
+    self.longitude = [NSString stringWithFormat:@"%f", currentLocation.coordinate.longitude];
+    self.latitude = [NSString stringWithFormat:@"%f", currentLocation.coordinate.latitude];
     [self fetchForecastWeather];
     [self fetchCurrentWeather];
     self.forecastWeatherTableView.delegate = self;
     self.forecastWeatherTableView.dataSource = self;
-    
 }
 
+
 - (void) fetchForecastWeather{
-    //TODO: Allow farmers to input their location
-    [[APIManagers shared] getForecastWeatherData:@"98007" completion:^(NSMutableArray * _Nonnull weatherData, NSError * _Nonnull error) {
+    NSString *location = [self.latitude stringByAppendingString:[@"," stringByAppendingString: self.longitude]];
+    [[APIManagers shared] getForecastWeatherData:location completion:^(NSMutableArray * _Nonnull weatherData, NSError * _Nonnull error) {
         if(weatherData){
             NSLog(@"😎😎😎 Successfully loaded forecast weather API");
             self.arrayOfWeatherCards = weatherData;
@@ -59,8 +78,8 @@
 }
 
 - (void) fetchCurrentWeather{
-    //TODO: Allow farmers to input their location
-    [[APIManagers shared] getCurrentWeatherData:@"98007" completion:^(NSDictionary * _Nonnull weatherData, NSError * _Nonnull error) {
+    NSString *location = [self.latitude stringByAppendingString:[@"," stringByAppendingString: self.longitude]];
+    [[APIManagers shared] getCurrentWeatherData:location completion:^(NSDictionary * _Nonnull weatherData, NSError * _Nonnull error) {
         if(weatherData){
             NSLog(@"😎😎😎 Successfully loaded current weather API");
             float temperature = [weatherData[@"temp_f"] floatValue];
