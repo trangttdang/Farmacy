@@ -9,6 +9,7 @@
 
 @implementation Schedule
 @dynamic time;
+@dynamic isDone;
 
 + (nonnull NSString *)parseClassName {
     return @"Schedule";

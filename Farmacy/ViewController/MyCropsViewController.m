@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfMyCrops;
 @property (strong, nonatomic) NSMutableArray *arrayOfSeenIndexes;
+@property (weak, nonatomic) IBOutlet UIView *shadowView;
 
 @end
 
@@ -88,8 +89,6 @@
     cell.myCropTypeByUseLabel.text = myCrop.crop.typeByUse;
     cell.myCropImageView.file = myCrop.crop.image;
     [cell.myCropImageView loadInBackground];
-    cell.myCropImageView.layer.cornerRadius = 10;
-    cell.myCropImageView.clipsToBounds = YES;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // Configure the input format to parse the date string
@@ -102,10 +101,18 @@
     
     cell.myCrop = myCrop;
     cell.myCropProgressPercentageLabel.text = [[NSString stringWithFormat:@"%d", myCrop.progressPercentage]stringByAppendingString: @"%"];
+    //set up circular pogress bar
+    cell.progressBar.maxValue = 100;
+    cell.progressBar.progressColor = [UIColor colorWithRed:(100/255.0) green:(85/255.0) blue:(188/255.0) alpha:1];
+    cell.progressBar.progressStrokeColor = [UIColor colorWithRed:(100/255.0) green:(85/255.0) blue:(188/255.0) alpha:1];
+    cell.progressBar.progressLineWidth = 3;
+    cell.progressBar.fontColor = [UIColor blackColor];
+    [UIView animateWithDuration:1.f animations:^{
+        cell.progressBar.value = myCrop.progressPercentage;
+    }];
     cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt.time];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
-    
     return cell;
 }
 
