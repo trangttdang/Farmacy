@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyCropsViewController : UIViewController;
+@interface MyCropsViewController : UIViewController
 @property (nonatomic) Crop *crop;
 
 @end
