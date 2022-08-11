@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfMyCrops;
 @property (strong, nonatomic) NSMutableArray *arrayOfSeenIndexes;
+@property (weak, nonatomic) IBOutlet UIView *shadowView;
 
 @end
 
@@ -88,8 +89,6 @@
     cell.myCropTypeByUseLabel.text = myCrop.crop.typeByUse;
     cell.myCropImageView.file = myCrop.crop.image;
     [cell.myCropImageView loadInBackground];
-    cell.myCropImageView.layer.cornerRadius = 10;
-    cell.myCropImageView.clipsToBounds = YES;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // Configure the input format to parse the date string
@@ -114,7 +113,6 @@
     cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt.time];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
-    
     return cell;
 }
 
