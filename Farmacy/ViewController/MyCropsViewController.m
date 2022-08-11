@@ -89,7 +89,7 @@
     cell.myCropTypeByUseLabel.text = myCrop.crop.typeByUse;
     cell.myCropImageView.file = myCrop.crop.image;
     [cell.myCropImageView loadInBackground];
-    
+    cell.myCropImageView.layer.cornerRadius = 5;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // Configure the input format to parse the date string
     [formatter setDateFormat: @"E MMM d HH:mm:ss Z y"];
@@ -113,6 +113,12 @@
     cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt.time];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
+    cell.cardView.layer.shadowColor = [[UIColor grayColor] CGColor];
+    cell.cardView.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+    cell.cardView.layer.shadowOpacity = 0.5;
+    cell.cardView.layer.masksToBounds = false;
+    cell.cardView.layer.cornerRadius = 5;
+
     return cell;
 }
 
