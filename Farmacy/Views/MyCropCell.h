@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *plantedAtLabel;
 @property (weak, nonatomic) IBOutlet MBCircularProgressBarView *progressBar;
 @property (nonatomic) MyCrop *myCrop;
+@property (weak, nonatomic) IBOutlet UIView *cardView;
 
 @end
 
