@@ -6,19 +6,13 @@
 //
 
 #import "MyCropsViewController.h"
-#import "LoginViewController.h"
 #import "CropsViewController.h"
 #import "CropDetailViewController.h"
 #import "ChatViewController.h"
-#import "AppDelegate.h"
-#import "SceneDelegate.h"
 #import "MyCrop.h"
 #import "MyCropCell.h"
 #import "ConversationViewController.h"
 #import <STPopup/STPopup.h>
-#import "FBSDKCoreKit/FBSDKProfile.h"
-#import "FBSDKCoreKit/FBSDKCoreKit.h"
-#import "FBSDKLoginKit/FBSDKLoginKit.h"
 
 @interface MyCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
@@ -29,12 +23,10 @@
 @end
 
 @implementation MyCropsViewController
-@synthesize fbLogoutButtonView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self checkProfile];
     self.myCropsTableView.delegate = self;
     self.myCropsTableView.dataSource = self;
     self.arrayOfSeenIndexes = [[NSMutableArray alloc] init];
@@ -43,43 +35,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
    [self reloadData];
-}
-
-- (void) checkProfile{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [FBSDKProfile loadCurrentProfileWithCompletion:^(FBSDKProfile *profile, NSError *error) {
-            if(profile){
-                FBSDKLoginButton *logoutButton = [[FBSDKLoginButton alloc]init];
-                logoutButton.delegate = self;
-                logoutButton.center = self.fbLogoutButtonView.center;
-                [self.view addSubview:logoutButton];
-                
-            }
-        }];
-    });
-}
-
-- (void)loginButtonDidLogOut:(FBSDKLoginButton * _Nonnull)logoutButton{
-    NSLog(@"User log out");
-    SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    mySceneDelegate.window.rootViewController = loginViewController;
-    
-}
-
-- (IBAction)logoutUserWithParse:(id)sender {
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"User log out failed: %@", error.localizedDescription);
-        } else {
-            NSLog(@"User loged out successfully");
-            SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-            mySceneDelegate.window.rootViewController = loginViewController;
-        }
-    }];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

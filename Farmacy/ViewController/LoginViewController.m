@@ -6,11 +6,11 @@
 //
 
 #import "LoginViewController.h"
-#import "MyCropsViewController.h"
+#import "WeatherViewController.h"
 #import "SceneDelegate.h"
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "FBSDKLoginKit/FBSDKLoginKit.h"
-#import <PFFacebookUtils.h>
+#import <Parse/PFFacebookUtils.h>
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;

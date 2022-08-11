@@ -110,8 +110,8 @@
                                                 <color key="textColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eS5-xk-NcR">
-                                                <rect key="frame" x="0.0" y="480" width="414" height="333"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eS5-xk-NcR">
+                                                <rect key="frame" x="0.0" y="450" width="414" height="182"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WeatherCardCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCardCell" rowHeight="88" id="svy-xM-e2p" customClass="WeatherCardCell">
@@ -302,6 +302,26 @@
                                                     <constraint firstAttribute="width" constant="200" id="V9v-XT-z0B"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWZ-xN-Uf2">
+                                                <rect key="frame" x="132" y="694" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="AgV-jJ-2Fp"/>
+                                                    <constraint firstAttribute="height" constant="30" id="x01-J3-zAU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Logout">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="logoutUserWithParse:" destination="2eE-ff-Kvf" eventType="touchUpInside" id="Vm9-ob-mWv"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" id="191-Fa-WCV">
+                                                <rect key="frame" x="59" y="657" width="277" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -312,10 +332,13 @@
                                             <constraint firstItem="jFm-hq-58y" firstAttribute="top" secondItem="Cs8-9d-4TV" secondAttribute="bottom" constant="16" id="Pcr-lu-dfv"/>
                                             <constraint firstItem="4EP-Fe-LoJ" firstAttribute="top" secondItem="ABj-L6-DW2" secondAttribute="bottom" constant="16" id="R1c-bv-HqG"/>
                                             <constraint firstItem="ABj-L6-DW2" firstAttribute="centerX" secondItem="Cs8-9d-4TV" secondAttribute="centerX" id="SvP-ik-7zd"/>
-                                            <constraint firstAttribute="bottom" secondItem="eS5-xk-NcR" secondAttribute="bottom" constant="-28" id="eUi-A6-4xK"/>
-                                            <constraint firstItem="eS5-xk-NcR" firstAttribute="top" secondItem="4EP-Fe-LoJ" secondAttribute="bottom" constant="60" id="hmD-Na-R8U"/>
+                                            <constraint firstAttribute="bottom" secondItem="eS5-xk-NcR" secondAttribute="bottom" id="b3l-sh-3C7"/>
+                                            <constraint firstItem="YWZ-xN-Uf2" firstAttribute="centerX" secondItem="dy3-A7-2Ya" secondAttribute="centerX" id="h1v-ad-CYm"/>
+                                            <constraint firstItem="eS5-xk-NcR" firstAttribute="top" secondItem="4EP-Fe-LoJ" secondAttribute="bottom" constant="30" id="hmD-Na-R8U"/>
                                             <constraint firstItem="ABj-L6-DW2" firstAttribute="centerX" secondItem="jFm-hq-58y" secondAttribute="centerX" id="rjN-He-dbX"/>
                                             <constraint firstItem="ABj-L6-DW2" firstAttribute="centerX" secondItem="eS5-xk-NcR" secondAttribute="centerX" id="vFU-cE-A20"/>
+                                            <constraint firstItem="191-Fa-WCV" firstAttribute="top" secondItem="eS5-xk-NcR" secondAttribute="bottom" constant="25" id="xYP-eW-zVI"/>
+                                            <constraint firstItem="YWZ-xN-Uf2" firstAttribute="top" secondItem="191-Fa-WCV" secondAttribute="bottom" id="y5N-wi-vdg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -350,12 +373,14 @@
                         <outlet property="currentPrecipLabel" destination="k2s-bO-nRE" id="wZg-BJ-tZ0"/>
                         <outlet property="currentTemperatureLabel" destination="jFm-hq-58y" id="WDL-od-SSA"/>
                         <outlet property="currentWindLabel" destination="VRV-E1-e9Z" id="IlQ-NF-3T2"/>
+                        <outlet property="fbLogoutButtonView" destination="191-Fa-WCV" id="bRl-ho-UDb"/>
                         <outlet property="forecastWeatherTableView" destination="eS5-xk-NcR" id="BXQ-q4-sxG"/>
+                        <outlet property="logoutWithParseButton" destination="YWZ-xN-Uf2" id="tTh-Ra-5VI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vV9-Re-Ki8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="205"/>
+            <point key="canvasLocation" x="773.91304347826087" y="204.91071428571428"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="f4Y-vG-xjO">
@@ -789,7 +814,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qBX-Nh-7kQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="584"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -950,23 +975,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" id="eiC-mv-thM">
-                                <rect key="frame" x="69" y="680" width="277" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F35-a2-eag">
-                                <rect key="frame" x="144" y="726" width="126" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.70980392160000005" blue="0.61568627450000002" alpha="0.69803921570000005" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Logout">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logoutUserWithParse:" destination="AMg-o9-MJH" eventType="touchUpInside" id="e7t-b9-p4V"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iby-I9-TUv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -987,7 +995,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="fbLogoutButtonView" destination="eiC-mv-thM" id="Gwh-9B-sOu"/>
                         <outlet property="myCropsTableView" destination="qBX-Nh-7kQ" id="apO-e5-KAR"/>
                     </connections>
                 </viewController>

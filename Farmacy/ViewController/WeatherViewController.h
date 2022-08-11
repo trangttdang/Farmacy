@@ -6,10 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBSDKLoginKit/FBSDKLoginKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WeatherViewController : UIViewController
+@interface WeatherViewController : UIViewController <FBSDKLoginButtonDelegate>
+@property (weak, nonatomic) IBOutlet UIView *fbLogoutButtonView;
 
 @end
 
