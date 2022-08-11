@@ -7,7 +7,7 @@
 
 #import "CropsViewController.h"
 #import "CropCell.h"
-#import "MyCropsViewController.h"
+#import "MyCropsGeneralViewController.h"
 #import "CropRecommendation.h"
 #import "InputRecommendationFormViewController.h"
 #import <STPopup/STPopup.h>
@@ -43,7 +43,7 @@
 
 
 - (void)didAddCrop:(Crop *)crop {
-    MyCropsViewController *myCropViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCropsViewController"];
+    MyCropsGeneralViewController *myCropViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCropsGeneralViewController"];
     [Crop addToMyCrops:crop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded == false || error){
             NSLog(@"Error adding Crop: %@", error.localizedDescription);

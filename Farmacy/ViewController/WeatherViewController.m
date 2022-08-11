@@ -12,6 +12,14 @@
 #import "WeatherCard.h"
 #import "JHUD.h"
 #import <CoreLocation/CoreLocation.h>
+#import "FBSDKCoreKit/FBSDKProfile.h"
+#import "FBSDKCoreKit/FBSDKCoreKit.h"
+#import "FBSDKLoginKit/FBSDKLoginKit.h"
+#import "AppDelegate.h"
+#import "SceneDelegate.h"
+#import "LoginViewController.h"
+#import <Parse/Parse.h>
+
 @interface WeatherViewController () <UITableViewDelegate, UITableViewDataSource, WeatherCardCellDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *forecastWeatherTableView;
 @property (strong, nonatomic) NSMutableArray *arrayOfWeatherCards;
@@ -26,13 +34,16 @@
 @property (strong, nonatomic) NSString *longitude;
 @property (strong, nonatomic) NSString *latitude;
 
+@property (weak, nonatomic) IBOutlet UIButton *logoutWithParseButton;
 
 @end
 
 @implementation WeatherViewController
+@synthesize fbLogoutButtonView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self checkProfile];
     [self loadingAnimation];
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -40,6 +51,43 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     [self.locationManager startUpdatingLocation];
+}
+
+- (void) checkProfile{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [FBSDKProfile loadCurrentProfileWithCompletion:^(FBSDKProfile *profile, NSError *error) {
+            if(profile){
+                FBSDKLoginButton *logoutButton = [[FBSDKLoginButton alloc]init];
+                logoutButton.delegate = self;
+                logoutButton.center = self.fbLogoutButtonView.center;
+                [self.view addSubview:logoutButton];
+                self.logoutWithParseButton.hidden = YES;
+            }
+        }];
+    });
+}
+
+- (void)loginButtonDidLogOut:(FBSDKLoginButton * _Nonnull)logoutButton{
+    NSLog(@"User log out");
+    SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    mySceneDelegate.window.rootViewController = loginViewController;
+    
+}
+
+- (IBAction)logoutUserWithParse:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"User log out failed: %@", error.localizedDescription);
+        } else {
+            NSLog(@"User loged out successfully");
+            SceneDelegate *mySceneDelegate = (SceneDelegate * ) UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            mySceneDelegate.window.rootViewController = loginViewController;
+        }
+    }];
 }
 
 -(void) loadingAnimation{

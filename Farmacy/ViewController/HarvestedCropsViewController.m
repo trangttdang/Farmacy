@@ -1,42 +1,36 @@
 //
-//  MyCropsViewController.m
+//  HarvestedCropsViewController.m
 //  Farmacy
 //
-//  Created by Trang Dang on 7/7/22.
+//  Created by Trang Dang on 8/11/22.
 //
-
-#import "MyCropsViewController.h"
-#import "CropsViewController.h"
-#import "CropDetailViewController.h"
 #import "MyCrop.h"
 #import "MyCropCell.h"
+#import "HarvestedCropsViewController.h"
 #import <STPopup/STPopup.h>
-
-@interface MyCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *myCropsTableView;
-@property (strong, nonatomic) NSArray *arrayOfMyCrops;
-@property (strong, nonatomic) NSMutableArray *arrayOfSeenIndexes;
-
+#import "CropDetailViewController.h"
+@interface HarvestedCropsViewController () <MyCropCellDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *harvestedTableView;
+@property (strong, nonatomic) NSArray *arrayOfHarvestedCrops;
 @end
 
-@implementation MyCropsViewController
+@implementation HarvestedCropsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.myCropsTableView.delegate = self;
-    self.myCropsTableView.dataSource = self;
-    self.arrayOfSeenIndexes = [[NSMutableArray alloc] init];
-    
+    // Do any additional setup after loading the view.
+    self.harvestedTableView.delegate = self;
+    self.harvestedTableView.dataSource = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
    [self reloadData];
 }
 
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MyCropCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CropCell" forIndexPath:indexPath];
-    MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
+    MyCrop *myCrop = self.arrayOfHarvestedCrops[indexPath.row];
     cell.myCropNameLabel.text = myCrop.crop.name;
     cell.myCropTypeByUseLabel.text = myCrop.crop.typeByUse;
     cell.myCropImageView.file = myCrop.crop.image;
@@ -75,14 +69,14 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.arrayOfMyCrops.count;
+    return  self.arrayOfHarvestedCrops.count;
 }
 
 - (void)reloadData{
    //  construct query
     PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
     [query whereKey:@"farmer" equalTo:[PFUser currentUser]];
-    [query whereKey:@"progressPercentage" notEqualTo:@100];
+    [query whereKey:@"progressPercentage" equalTo:@100];
     [query includeKey:@"crop"];
     [query includeKey:@"fertilizeSchedule"];
     [query includeKey:@"irrigateSchedule"];
@@ -91,29 +85,17 @@
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *myCrops, NSError *error) {
         if (myCrops != nil) {
-            self.arrayOfMyCrops = myCrops;
+            self.arrayOfHarvestedCrops = myCrops;
         } else{
             NSLog(@"%@", error.localizedDescription);
         }
-        [self.myCropsTableView reloadData];
-    }];
-}
-
-- (void)didRemoveCrop:(MyCrop *)myCrop {
-    [MyCrop removeFromMyCrops:myCrop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
-        if(error){
-            NSLog(@"Error removing Crop: %@", error.localizedDescription);
-        }
-        else{
-            NSLog(@"Removing Crop from My Crops Success!");
-            [self reloadData];
-        }
+        [self.harvestedTableView reloadData];
     }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CropDetailViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetailViewController"];
-    MyCrop *myCrop = self.arrayOfMyCrops[indexPath.row];
+    MyCrop *myCrop = self.arrayOfHarvestedCrops[indexPath.row];
     viewController.myCrop = myCrop;
 //    [self.navigationController pushViewController: viewController animated:YES];
     STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:viewController];
@@ -124,20 +106,5 @@
     
 }
 
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (![self.arrayOfSeenIndexes containsObject:indexPath]){
-        [self.arrayOfSeenIndexes addObject:indexPath];
-        cell.transform = CGAffineTransformMakeTranslation(0, cell.frame.size.height*1.4);
-        [UIView animateWithDuration:0.85 delay:0.03*indexPath.row options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-            cell.transform = CGAffineTransformMakeTranslation(0, 0);
-        } completion:^(BOOL finished) {
-            if(finished){
-                NSLog(@"Animated My Crop Table View");
-            }
-        }];
-    }
-}
 
 @end

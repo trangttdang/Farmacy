@@ -7,9 +7,8 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-#import "MyCropsViewController.h"
-
-#import <PFFacebookUtils.h>
+#import "WeatherViewController.h"
+#import <Parse/PFFacebookUtils.h>
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
 #import "Parse/Parse.h"
 

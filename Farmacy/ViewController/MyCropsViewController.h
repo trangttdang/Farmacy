@@ -11,8 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyCropsViewController : UIViewController <FBSDKLoginButtonDelegate>;
-@property (weak, nonatomic) IBOutlet UIView *fbLogoutButtonView;
+@interface MyCropsViewController : UIViewController
 @property (nonatomic) Crop *crop;
 
 @end
