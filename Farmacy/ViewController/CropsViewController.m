@@ -68,11 +68,16 @@
     cell.cropNameLabel.text = crop.name;
     cell.cropTypeByUseLabel.text = crop.typeByUse;
     cell.cropImageView.file = crop.image;
-    cell.cropImageView.layer.cornerRadius = 10;
+    cell.cropImageView.layer.cornerRadius = 5;
     cell.cropImageView.clipsToBounds = YES;
     [cell.cropImageView loadInBackground];
     cell.crop = crop;
     cell.delegate = self;
+    cell.cardView.layer.shadowColor = [[UIColor grayColor] CGColor];
+    cell.cardView.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+    cell.cardView.layer.shadowOpacity = 0.5;
+    cell.cardView.layer.masksToBounds = false;
+    cell.cardView.layer.cornerRadius = 5;
     return cell;
 }
 
