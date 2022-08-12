@@ -23,7 +23,8 @@
 @property (nonatomic) NSArray *arrayOfMyCrops;
 @property (nonatomic,strong) NSCalendar *gregorian;
 @property (weak, nonatomic) IBOutlet FSCalendar *calendarView;
-@property (nonatomic, strong) PFLiveQuerySubscription *subscription;
+@property (nonatomic, strong) PFLiveQuerySubscription *addSubscription;
+@property (nonatomic, strong) PFLiveQuerySubscription *deleteSubscription;
 @property (nonatomic, strong) PFLiveQueryClient *liveQueryClient;
 @property (nonatomic, strong) PFQuery *myCropsQuery;
 @end
@@ -54,10 +55,15 @@
     [self.myCropsQuery includeKey:@"irrigateSchedule"];
     [self.myCropsQuery includeKey:@"harvestedAt"];
     [self.myCropsQuery includeKey:@"plantedAt"];
-    self.subscription = [self.liveQueryClient subscribeToQuery:self.myCropsQuery];
+    self.addSubscription = [self.liveQueryClient subscribeToQuery:self.myCropsQuery];
+    self.deleteSubscription = [self.liveQueryClient subscribeToQuery:self.myCropsQuery];
     __weak typeof(self) weakSelf = self;
-    [self.subscription addCreateHandler:^(PFQuery<PFObject *> *query, PFObject * object) {
-        NSLog(@"it works");
+    [self.deleteSubscription addDeleteHandler:^(PFQuery<PFObject *> * _Nonnull, PFObject * _Nonnull) {
+        weakSelf.arrayOfMyCrops = [[NSArray alloc]init];
+        weakSelf.arrayOfSchedules = [[NSMutableArray alloc]init];
+        [weakSelf fetchSchedules];
+    }];
+    [self.addSubscription addCreateHandler:^(PFQuery<PFObject *> *query, PFObject * object) {
         weakSelf.arrayOfMyCrops = [[NSArray alloc]init];
         weakSelf.arrayOfSchedules = [[NSMutableArray alloc]init];
         [weakSelf fetchSchedules];
