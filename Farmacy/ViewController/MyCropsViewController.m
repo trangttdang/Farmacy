@@ -83,6 +83,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"MyCrop"];
     [query whereKey:@"farmer" equalTo:[PFUser currentUser]];
     [query whereKey:@"progressPercentage" notEqualTo:@100];
+    [query orderByDescending:@"createdAt"];
     [query includeKey:@"crop"];
     [query includeKey:@"fertilizeSchedule"];
     [query includeKey:@"irrigateSchedule"];

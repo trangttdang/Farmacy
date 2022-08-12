@@ -13,6 +13,8 @@
 #import "ScheduleCell.h"
 #import "MyCrop.h"
 #import "MyCropsViewController.h"
+#import "ParseLiveQuery/ParseLiveQuery-Swift.h"
+
 
 @interface CalendarViewController ()<FSCalendarDelegate,FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic) NSMutableArray *arrayOfSchedules;
@@ -21,8 +23,9 @@
 @property (nonatomic) NSArray *arrayOfMyCrops;
 @property (nonatomic,strong) NSCalendar *gregorian;
 @property (weak, nonatomic) IBOutlet FSCalendar *calendarView;
-
-
+@property (nonatomic, strong) PFLiveQuerySubscription *subscription;
+@property (nonatomic, strong) PFLiveQueryClient *liveQueryClient;
+@property (nonatomic, strong) PFQuery *myCropsQuery;
 @end
 
 @implementation CalendarViewController
@@ -42,6 +45,24 @@
     self.scheduleTableView.delegate = self;
     self.scheduleTableView.dataSource = self;
     
+    NSString *path = [[NSBundle mainBundle] pathForResource: @"Keys" ofType: @"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile: path];
+    self.liveQueryClient = [[PFLiveQueryClient alloc] initWithServer:@"wss://farmacy.b4a.io" applicationId:[dict objectForKey: @"parse_app_id"] clientKey:[dict objectForKey:@"parse_client_key"]];
+    self.myCropsQuery = [PFQuery queryWithClassName:@"MyCrop"];
+    [self.myCropsQuery whereKey:@"farmer" equalTo:[PFUser currentUser]];
+    [self.myCropsQuery includeKey:@"fertilizeSchedule"];
+    [self.myCropsQuery includeKey:@"irrigateSchedule"];
+    [self.myCropsQuery includeKey:@"harvestedAt"];
+    [self.myCropsQuery includeKey:@"plantedAt"];
+    self.subscription = [self.liveQueryClient subscribeToQuery:self.myCropsQuery];
+    __weak typeof(self) weakSelf = self;
+    [self.subscription addCreateHandler:^(PFQuery<PFObject *> *query, PFObject * object) {
+        NSLog(@"it works");
+        weakSelf.arrayOfMyCrops = [[NSArray alloc]init];
+        weakSelf.arrayOfSchedules = [[NSMutableArray alloc]init];
+        [weakSelf fetchSchedules];
+        return;
+    }];
 }
 // ---------- Reminder ----------
 - (IBAction)didTapAskPermission:(id)sender {
@@ -146,6 +167,7 @@
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition{
     [self loadSchedulesOfSelectedDate:date];
     [self.scheduleTableView reloadData];
+    
 }
 
 - (void) loadSchedulesOfSelectedDate: (NSDate *)selectedDate{

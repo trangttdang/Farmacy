@@ -47,6 +47,7 @@
     [Crop addToMyCrops:crop withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded == false || error){
             NSLog(@"Error adding Crop: %@", error.localizedDescription);
+            [self cropAlreadyAddedAlertMessage];
         }
         else{
             NSLog(@"Add Crop to My Crops Success!");
@@ -154,4 +155,22 @@
     [self.hudView showAtView:self.view hudType:JHUDLoadingTypeGifImage];
     [self.hudView hideAfterDelay:2.5];
 }
+
+
+- (void)cropAlreadyAddedAlertMessage{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"This crop is added"
+                                                                   message:@"You added this crop to your crop list, please choose another one"
+                                                            preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    // create an OK action
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    // add the OK action to the alert controller
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end

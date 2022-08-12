@@ -24,11 +24,15 @@
         // Retrieve the object by id
         [query getObjectInBackgroundWithId:myCrop.objectId
                                      block:^(PFObject *crop, NSError *error) {
+            [myCrop[@"fertilizeSchedule"] deleteInBackground];
+            [myCrop[@"irrigateSchedule"] deleteInBackground];
+            [myCrop[@"plantedAt"] deleteInBackground];
+            [myCrop[@"harvestedAt"] deleteInBackground];
             [myCrop deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable newError) {
-                [myCrop[@"fertilizeSchedule"] deleteInBackground];
-                [myCrop[@"irrigateSchedule"] deleteInBackground];
-                [myCrop[@"plantedAt"] deleteInBackground];
-                [myCrop[@"harvestedAt"] deleteInBackground];
+//                [myCrop[@"fertilizeSchedule"] deleteInBackground];
+//                [myCrop[@"irrigateSchedule"] deleteInBackground];
+//                [myCrop[@"plantedAt"] deleteInBackground];
+//                [myCrop[@"harvestedAt"] deleteInBackground];
                 completion(succeeded, newError);
             }];
         }];
