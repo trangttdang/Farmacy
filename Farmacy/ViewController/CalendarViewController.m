@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet FSCalendar *calendarView;
 @property (nonatomic, strong) PFLiveQuerySubscription *addSubscription;
 @property (nonatomic, strong) PFLiveQuerySubscription *deleteSubscription;
+@property (nonatomic, strong) PFLiveQuerySubscription *updateSubscription;
 @property (nonatomic, strong) PFLiveQueryClient *liveQueryClient;
 @property (nonatomic, strong) PFQuery *myCropsQuery;
 @end
@@ -64,6 +65,12 @@
         [weakSelf fetchSchedules];
     }];
     [self.addSubscription addCreateHandler:^(PFQuery<PFObject *> *query, PFObject * object) {
+        weakSelf.arrayOfMyCrops = [[NSArray alloc]init];
+        weakSelf.arrayOfSchedules = [[NSMutableArray alloc]init];
+        [weakSelf fetchSchedules];
+        return;
+    }];
+    [self.updateSubscription addCreateHandler:^(PFQuery<PFObject *> *query, PFObject * object) {
         weakSelf.arrayOfMyCrops = [[NSArray alloc]init];
         weakSelf.arrayOfSchedules = [[NSMutableArray alloc]init];
         [weakSelf fetchSchedules];
@@ -218,6 +225,17 @@
     MGSwipeButton *doneButton = [MGSwipeButton buttonWithTitle:@"Done" backgroundColor:[UIColor colorWithRed:(115/255.0) green:(211/255.0) blue:(197/255.0) alpha:1] padding:25 callback:^BOOL(MGSwipeTableCell *sender) {
         cell.tickDoneImageView.hidden = false;
         schedule.isDone = true;
+        if([schedule.objectId isEqual: myCrop.fertilizeSchedule.objectId]){
+            NSLog(@"It's fertilize");
+        } else if ([schedule.objectId isEqual: myCrop.irrigateSchedule.objectId]){
+            //Change to next irrigation schedule
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            NSDate *currentIrrigationDate = myCrop.irrigateSchedule.time;
+            NSDateComponents *irrigateDayComp = [[NSDateComponents alloc] init];
+            irrigateDayComp.day = myCrop.irrigateIntervalDays;
+            myCrop.irrigateSchedule.time = [calendar dateByAddingComponents:irrigateDayComp toDate:currentIrrigationDate options:0];
+            schedule.isDone = false;
+        }
         [schedule saveInBackground];
         myCrop.progressPercentage += 10;
         [myCrop saveInBackground];

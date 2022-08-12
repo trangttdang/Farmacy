@@ -41,6 +41,10 @@
     [hQuery whereKey:@"harvestedAt" equalTo:schedule];
     PFQuery *query = [PFQuery orQueryWithSubqueries:@[iQuery ,fQuery, pQuery, hQuery]];
     [query includeKey:@"crop"];
+    [query includeKey:@"irrigateSchedule"];
+    [query includeKey:@"fertilizeSchedule"];
+    [query includeKey:@"plantedAt"];
+    [query includeKey:@"harvestedAt"];
     
     return [query getFirstObject];
 }
