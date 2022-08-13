@@ -120,13 +120,15 @@
             NSLog(@"Suggested plant date: %d", fromIdx);
             NSLog(@"Suggested harvest date: %d", toIdx);
             NSLog(@"X days interval: %d", toIdx-fromIdx);
-            
+            NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
             NSCalendar *gregorian = [NSCalendar currentCalendar];
             gregorian.timeZone =  [NSTimeZone systemTimeZone];
             NSDateComponents *plantDateCom = [[NSDateComponents alloc] init];
             plantDateCom.day = fromIdx;
+            plantDateCom.year = [dateComponents year];
             NSDateComponents *harvestDateCom = [[NSDateComponents alloc] init];
             harvestDateCom.day = toIdx;
+            harvestDateCom.year = [dateComponents year];
             NSDate *plantDate = [gregorian dateFromComponents:plantDateCom];
             NSDate *expectedHarvestDate = [gregorian dateFromComponents:harvestDateCom];
             NSMutableArray *dates = [[NSMutableArray alloc]init];
