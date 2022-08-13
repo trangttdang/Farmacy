@@ -1,5 +1,6 @@
 # FARMACY
 
+[DEMO VIDEO](https://drive.google.com/file/d/1_0W1GIKtifZTPuFtPafrB6vyOmJY14-7/view?usp=sharing)
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -23,6 +24,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implement calendar on when to plant/fertilize/irrigate and allow farmers to view schedule on the specific day. This calendar will be modified synchronously per change of crops addition/removal
 - Implement and push reminder notifications on when to plant/fertilize/irrigate based on calendar and tips of a day!
 - Implement chat feature allowing farmers to connect with experts in the real time
+- Implement crop recommendation and crop image classification
 
 ## Features
 - Implemented user authentication/persistence and ask for data access with Facebook SDK for iOS; Linked PFUser (Parse User) with Facebook account
@@ -31,6 +33,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implemented and managed database with Parse Server
 - Implemented farmers can add/remove from their favorite crops
 - Implemented a Calendar feature using the FSCalendar Library - a fully customizable iOS calendar library, allowing farmers to view the schedule on the specific day. This calendar is modified synchronously per change of crops addition/removal
+- Implemented once a task be done in calendar, the crop's progress and the next schedule will be updated accordingly.
 - Implemented register and push Reminder notifications feature to notify farmers when to plant, fertilize and irrigate based on calendar
 - Implemented real-time chat for farmers and experts using Parse Live Query,  decreasing response time, high network and server usage rather than traditional queries.
 - Implemented loading data animation with JHUD Library -  a full screen of the HUD when loading the data. 
@@ -42,6 +45,8 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implemented an iterative dynamic programming algorithm to find the maximum sum of contiguous growing degree days, suggesting plant and harvest date
 - Implemented mathematical model to find irrigation interval days for each crop to suggest irrigation schedule 
 - Implemented recommendation system based on time-series data using Latent Dirichlet Allocation (LDA) in python to recommend fertilize schedule for each crop
+- Implemented crop recommendation to provide farmers with top 5 crops they should plant according to their soil type and weather data at their farm
+- Implemented crop image classification with CoreML MobileNetV2 to tells farmers the name of crop in the given photo
 
 ## Product Spec
 
