@@ -62,7 +62,7 @@
     [UIView animateWithDuration:1.f animations:^{
         cell.progressBar.value = myCrop.progressPercentage;
     }];
-    cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.plantedAt.time];
+    cell.plantedAtLabel.text = [formatter stringFromDate:myCrop.harvestedAt.time];
     cell.delegate = self;
     cell.removeCropIconImageView.image = [UIImage imageNamed:@"minus"];
     cell.cardView.layer.shadowColor = [[UIColor grayColor] CGColor];

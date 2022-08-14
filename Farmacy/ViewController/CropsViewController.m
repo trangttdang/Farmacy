@@ -12,6 +12,7 @@
 #import "InputRecommendationFormViewController.h"
 #import <STPopup/STPopup.h>
 #import "JHUD.h"
+#import "CropDetectionViewController.h"
 @interface CropsViewController () <CropCellDelegate, UITableViewDelegate, UITableViewDataSource,InputRecomMendationFormDelegate>;
 @property (weak, nonatomic) IBOutlet UITableView *cropsTableView;
 @property (strong, nonatomic) NSArray *arrayOfCrops;
@@ -28,6 +29,10 @@
     self.cropsTableView.dataSource = self;
     self.cropsTableView.delegate = self;
     self.arrayOfSeenIndexes = [[NSMutableArray alloc] init];
+}
+- (IBAction)didTapCropDetection:(id)sender {
+    CropDetectionViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CropDetectionViewController"];
+    [self.navigationController pushViewController: viewController animated:YES];
 }
 
 - (void)activateInputForm{
