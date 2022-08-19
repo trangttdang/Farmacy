@@ -1,6 +1,6 @@
 # FARMACY
 
-[DEMO VIDEO](https://drive.google.com/file/d/1_0W1GIKtifZTPuFtPafrB6vyOmJY14-7/view?usp=sharing)
+[DEMO VIDEO](https://drive.google.com/file/d/1xkTM5PSdVzZqBVu_i9PYsa_q3X5NjrmY/view?usp=sharing)
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -47,6 +47,7 @@ Farmacy provides farmers with personalized plans on when to plant, fertilize, an
 - Implemented recommendation system based on time-series data using Latent Dirichlet Allocation (LDA) in python to recommend fertilize schedule for each crop
 - Implemented crop recommendation to provide farmers with top 5 crops they should plant according to their soil type and weather data at their farm
 - Implemented crop image classification with CoreML MobileNetV2 to tells farmers the name of crop in the given photo
+- Integrated Google Maps SDK
 
 ## Product Spec
 
