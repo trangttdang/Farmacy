@@ -29,6 +29,11 @@ PODS:
     - FBSDKCoreKit (~> 11.0.1)
     - FBSDKCoreKit_Basics (~> 11.0.1)
   - FSCalendar (2.8.4)
+  - GoogleMaps (7.0.0):
+    - GoogleMaps/Maps (= 7.0.0)
+  - GoogleMaps/Base (7.0.0)
+  - GoogleMaps/Maps (7.0.0):
+    - GoogleMaps/Base
   - JHUD (0.3.0)
   - MBCircularProgressBar (0.3.5)
   - MGSwipeTableCell (1.6.14)
@@ -53,6 +58,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - FSCalendar
+  - GoogleMaps
   - JHUD
   - MBCircularProgressBar
   - MGSwipeTableCell
@@ -72,6 +78,7 @@ SPEC REPOS:
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - FSCalendar
+    - GoogleMaps
     - JHUD
     - MBCircularProgressBar
     - MGSwipeTableCell
@@ -89,6 +96,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
   FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  GoogleMaps: 6e9c923ca035989709fcb5771544fda4cc5fa2a4
   JHUD: 17650f65045d9843a7ad19f6a0b1eac6c78a45d2
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   MGSwipeTableCell: d99ed6466f393b71cd488c6f798ba112ff5d1d01
@@ -98,6 +106,6 @@ SPEC CHECKSUMS:
   STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
   SwipeableTabBarController: 9a218bdee9426d1bfe36d7962f852024bb08d61b
 
-PODFILE CHECKSUM: 7ed03da992ef9053497c0820c7caefb2fad9514b
+PODFILE CHECKSUM: da3a3ca4c249f845c7776a704725d3ff2b049325
 
 COCOAPODS: 1.11.3

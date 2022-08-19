@@ -17,6 +17,7 @@ target 'Farmacy' do
   pod 'STPopup'
   pod 'MGSwipeTableCell'
   pod "MBCircularProgressBar"
+  pod 'GoogleMaps'
 
   target 'FarmacyTests' do
     inherit! :search_paths
